@@ -52,6 +52,7 @@ jobs:
             any::afex
             any::emmeans
             any::kableExtra
+            any::leaflet
 
 
       - name: Render and Publish
