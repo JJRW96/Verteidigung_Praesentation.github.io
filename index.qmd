@@ -1,6 +1,4 @@
 ---
-title: "Verteidigung-Masterarbeit"
-subtitle: "Empirische Studie zum Wirkungsgrad: Ein Vergleich zwischen sitzendem und stehendem Fahren auf dem Fahrradergometer"
 format:
   revealjs:
     embed-resources: true
@@ -8,68 +6,183 @@ format:
     slide-number: true
     #chalkboard: 
       #buttons: true
-    preview-links: auto
+    preview-links: true
     css: styles.css
-    footer: '[Website](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/about.html)'
+    footer: "Link: [Website](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/about.html)"
 #resources:
   #- Verteidigung.pdf
 ---
 
-## asdf
+# Verteidigung-Masterarbeit {.no-logo auto-animate=true style="font-size: 0.55em; text-align: center; margin-top: -30px;"}
 
-::: footer
-'[Website/Energieumsatzberechnung](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Theoretischer_Hintergrund/Energieumsatzberechnung/Aerobe_Energiebereitstellung.html#shiny-app-monoexponentielle-dotvo_2-modellfunktion)'
+<div style="text-align: center; font-size: 1.15em; margin-top: -5px;">
+Empirische Studie zum Wirkungsgrad: <br>
+Ein Vergleich zwischen sitzendem und stehendem Fahren auf dem Fahrradergometer
+</div>
+
+::: {data-id="logo" style="background-image: url('images/Logo_eta_2.png'); background-size: contain; background-repeat: no-repeat; margin: 15px auto; margin-right: 412px; width: 200px; height: 200px; display: block;"}
 :::
 
+<div style="text-align: center; font-size: 0.9em;">
+**Verfasser:**  
+Johannes Joachim Richard Will 
 
-## GIF
+**Betreuerin:**  
+Dr. Martina Clauß
 
-![](images/kinematik_stehen.gif){width="100%"}
+**Gutachterinnen:**  
+Dr. Martina Clauß  
+Dr. Anna Katharina Dunst
 
+**Datum:**  
+11.02.2025
+</div>
 
-## Layout
+## Inhalt {.show-logo}
 
-Incremental text display and animation with fragments:
+```{r}
+#::: {data-id="logo" style="background-image: url('images/Logo_eta_2.png'); background-size: 100px auto; #background-repeat: no-repeat; position: absolute; width: 100px; height: 120px; top: -15px; left: 100%;"}
+#:::
+```
 
-<br/>
-
-::: {.fragment .fade-in}
-Fade in
-:::
 
 ::: {.fragment .fade-up}
-Slide up while fading in
+1. MA als Webseite
+:::
+::: {.fragment .fade-up}
+2. Hinleitung zum Thema
+:::
+::: {.fragment .fade-up}
+    2.1. Welche literaturbasierte Theorie liegt vor und welche Probleme bzw. bisher nicht geklärte Zusammenhänge sind daraus ableitbar?
+:::
+::: {.fragment .fade-up}
+    2.2. Daraus ergaben sich dann theoriebezogene Fragestellungen.
+:::
+::: {.fragment .fade-up}
+    2.3. Wie wurde versucht, diese grundlegende mathematisch/physikalisch/chemisch/statistisch Fragestellungen zu beantworten?
+:::
+::: {.fragment .fade-up}
+3. Theoretische Hintergrund
+:::
+::: {.fragment .fade-up}
+    3.2. Mechanische und Innere Arbeit
+:::
+::: {.fragment .fade-up}
+4. Methodik & Statistik
+:::
+::: {.fragment .fade-up}
+5. Ergebnisse
+:::
+::: {.fragment .fade-up}
+6. Diskussion & Limitationen
 :::
 
-::: {.fragment .fade-left}
-Slide left while fading in
+::: footer
+Link: [Website](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io)
 :::
 
-::: {.fragment .fade-in-then-semi-out}
-Fade in then semi out
+## Umsetzung der Arbeit als Webseite {.show-logo}
+
+- Verwendung der Open-Source-Programmiersprache R und Quarto
+- Ermöglicht die Erstellung von Dokumenten, Präsentationen, Büchern oder Webseiten  
+- Unterstützung mehrerer Programmiersprachen (R, Python, Julia...)
+- Mithilfe von GitHub eine öffentlich zugängliche Webseite erstellt
+<br>
+<br>
+
+::::: columns
+::: {.column width="33%"}
+![](images/R_logo.png){width="auto" height="125" style="display: block; margin-left: auto; margin-right: auto;"}
 :::
 
-. . .
-
-::: {.fragment .strike}
-Strike
+::: {.column width="33%"}
+![](images/quarto.png){width="auto" height="120" style="display: block; margin-left: auto; margin-right: auto;"}
 :::
 
-::: {.fragment .highlight-red}
-Highlight red
+::: {.column width="33%"}
+![](images/github_logo.png){width="auto" height="115" style="display: block; margin-left: auto; margin-right: auto;"}
+:::
+:::::
+
+## Möglichkeiten der Web-basierten Masterarbeit {.smaller .show-logo}
+
+::: {.fragment}
+- Integration und Ausführung von Code-Segmenten direkt in der Arbeit
+- Erweiterte Möglichkeiten der Datenvisualisierung
+:::
+
+::: {.fragment}
+```{r}
+# Laden der benötigten Bibliotheken und Einlesen der Beispiel CSV-Datei
+library(ggplot2); library(readr); library(tidyverse); library(readxl); library(DT)
+df_spiro_beispiel <- read_delim("Spiro_Beispieldaten.csv", delim = ";", locale = locale(decimal_mark = ","))
+```
+
+```{r}
+#| echo: true
+#| fig-width: 10.0
+#| fig-height: 3.0
+#| warning: false
+#| message: false
+
+# Beispiel-Abbildung erstellen
+ggplot(df_spiro_beispiel, aes(x = t_s)) +
+  geom_line(aes(y = `V'O2`), color = "#1CADE4", size = 1) +
+  geom_line(aes(y = `V'CO2`), color = "#EF5350", size = 1) +
+  scale_x_continuous(limits = c(0, max(df_spiro_beispiel$t_s)),breaks = seq(0, max(df_spiro_beispiel$t_s), 100), 
+                     expand = c(0, 0)) +
+  scale_y_continuous(limits = c(0, 5),breaks = seq(0, 5, 1.0), labels = function(x) sprintf("%.1f", x)) +
+  labs(x = "Zeit [s]", y = "V̇O₂ & V̇CO₂ [l · min⁻¹]") +
+  theme_minimal()
+```
+::: 
+
+## Möglichkeiten der Web-basierten Masterarbeit {.smaller .show-logo}
+
+- Effiziente Verarbeitung und Einbindung großer Datensätze
+
+::: {.fragment}
+```{r}
+#| echo: true
+#| warning: false
+#| message: false
+
+# Excel-Datensatz laden und darstellen
+Stichprobe_df <- read_excel("Probanden_Daten 2.2.xlsm", sheet = "Stichprobe_final", range = "A1:Y10") %>%
+  mutate(across(everything(), ~gsub(",", ".", .))) %>%
+  mutate(across(-2, as.numeric)) %>%
+  mutate(across(c(8, 10, 13, 15, 17, 19, 21, 23), ~round(., 2)))
+datatable(Stichprobe_df, options = list(scrollX = TRUE, scrollY = "240px", dom = 't', order = list(list(0, 'asc')), 
+                                        initComplete = JS("function(settings, json) {$(this.api().table().container()).css({'font-size': '70%'});}")), rownames = FALSE)
+```
 :::
 
 
-## Energieanteile {auto-animate="true" auto-animate-easing="ease-in-out"}
+## Möglichkeiten der Web-basierten Masterarbeit {.show-logo style="font-size: 0.85em"}
+
+- Einbindung interaktiver Anwendungen (Shiny-Apps)
+- Transparente Darstellung des Quellcodes und der verwendeten Datensätze
+
+<br>
+
+::: {.fragment .r-stack}
+**Sehr hohe Reproduzierbarkeit der Analysen und der Ergebnisse**
+:::
+  
+::: footer
+Link: [Website/Anaerobe-alaktazide Energiebereitstellung](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Theoretischer_Hintergrund/Energieumsatzberechnung/Anaerobe_alaktazide_Energiebereitstellung.html)
+:::
+
+## Energieanteile {auto-animate="true" auto-animate-easing="ease-in-out" .show-logo style="font-size: 0.85em"}
 
 :::::: r-hstack
 
 :::: {.columns style="width: 100%; display: flex; justify-content: space-evenly;"}
 
-::: {.column width="33%" style="display: flex; flex-direction: column; align-items: center; text-align: center; font-size: 0.7em;" .fragment .fade-in}
+::: {.column width="33%" style="display: flex; flex-direction: column; align-items: center; text-align: center; font-size: 0.8em;" .fragment .fade-in}
 Aerobe Energiekomponente 
 
-::: {style="position: absolute; bottom: 450px; z-index: 1;"}
+::: {data-id="label1" style="position: absolute; bottom: 450px; z-index: 1; font-size: 1.0em;"}
 W~Aerob~
 :::
 
@@ -77,10 +190,10 @@ W~Aerob~
 :::
 :::
 
-::: {.column width="33%" style="display: flex; flex-direction: column; align-items: center; text-align: center; font-size: 0.7em;" .fragment .fade-in}
+::: {.column width="33%" style="display: flex; flex-direction: column; align-items: center; text-align: center; font-size: 0.8em;" .fragment .fade-in}
 Anaerobe-laktazide Energiekomponente 
 
-::: {style="position: absolute; bottom: 30px; z-index: 1;"}
+::: {data-id="label2" style="position: absolute; bottom: 30px; z-index: 1; font-size: 1.0em;"}
 W~BLC~
 :::
 
@@ -88,10 +201,10 @@ W~BLC~
 :::
 :::
 
-::: {.column width="33%" style="display: flex; flex-direction: column; align-items: center; text-align: center; font-size: 0.7em;" .fragment .fade-in}
+::: {.column width="33%" style="display: flex; flex-direction: column; align-items: center; text-align: center; font-size: 0.8em;" .fragment .fade-in}
 Anaerobe-alaktazide Energiekomponente 
 
-::: {style="position: absolute; bottom: 50px; z-index: 1;"}
+::: {data-id="label3" style="position: absolute; bottom: 50px; z-index: 1; font-size: 1.0em;"}
 W~PCr~
 :::
 
@@ -103,18 +216,14 @@ W~PCr~
 
 ::::::
 
-::: footer
-footer: '[Website/Energieumsatzberechnung](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Theoretischer_Hintergrund/Energieumsatzberechnung/index_Energieumsatzberechnung.html)'
-:::
-
-## Energieanteile {auto-animate="true" auto-animate-easing="ease-in-out"}
+## Energieanteile {auto-animate="true" auto-animate-easing="ease-in" .show-logo style="font-size: 0.85em"}
 
 :::: {.columns style="display: flex; width: 100%;"}
 
 ::: {.column width="75%" style="padding: 20px;"}
 - asdf
-- lol
-- ghjk
+- ...
+- ...
 :::
 
 ::: {.column width="25%" style="display: flex; justify-content: center;"}
@@ -122,22 +231,29 @@ footer: '[Website/Energieumsatzberechnung](https://jjrw96.github.io/Wirkungsgrad
 ::: {data-id="box1" style="background: #42BA97; width: 200px; height: 440px; position: absolute; bottom: 0;"}
 :::
 
+::: {data-id="label1" style="position: absolute; bottom: 220px; left: 86%; transform: translateX(-50%); z-index: 1; font-size: 0.6em;"}
+W~Aerob~
+:::
+
 ::: {data-id="box2" style="background: #F4737A; width: 200px; height: 20px; position: absolute; bottom: 440px;"}
 :::
 
+::: {data-id="label2" style="position: absolute; bottom: 427px; left: 86%; transform: translateX(-50%); z-index: 1; font-size: 0.35em;"}
+W~BLC~
+:::
+
 ::: {data-id="box3" style="background: #1CADE4; width: 200px; height: 40px; position: absolute; bottom: 460px;"}
+:::
+
+::: {data-id="label3" style="position: absolute; bottom: 448px; left: 86%; transform: translateX(-50%); z-index: 1; font-size: 0.6em;"}
+W~PCr~
 :::
 ::::::
 :::
 
 ::::
 
-::: footer
-footer: '[Website/Energieumsatzberechnung](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Theoretischer_Hintergrund/Energieumsatzberechnung/index_Energieumsatzberechnung.html)'
-:::
-
-
-## Link zur Webseite
+## Link zur Webseite {.show-logo style="font-size: 0.85em"}
 
 Links zur Seite
 
@@ -148,408 +264,1126 @@ Links zur Seite
 
 [Anaerobe-alaktazide Energiekomponente (W~PCr~)](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Theoretischer_Hintergrund/Energieumsatzberechnung/Anaerobe_alaktazide_Energiebereitstellung.html){preview-link="true" style="text-align: left"}
 
+[EPOC: Shiny-App](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Theoretischer_Hintergrund/Energieumsatzberechnung/Anaerobe_alaktazide_Energiebereitstellung.html#shiny-app-epoc-modellfunktion){preview-link="true" style="text-align: left"}
 
 :::
 
 
 
+## Innere Arbeit {.show-logo}
 
-
-
-
-
-
-
-
-## Pretty Code {auto-animate="true"}
-
--   Over 20 syntax highlighting themes available
--   Default theme optimized for accessibility
-
-``` r
-# Define a server for the Shiny app
-function(input, output) {
-  
-  # Fill in the spot we created for a plot
-  output$phonePlot <- renderPlot({
-    # Render a barplot
-  })
-}
-```
-
-
-## Code Animations {auto-animate="true"}
-
--   Over 20 syntax highlighting themes available
--   Default theme optimized for accessibility
-
-``` r
-# Define a server for the Shiny app
-function(input, output) {
-  
-  # Fill in the spot we created for a plot
-  output$phonePlot <- renderPlot({
-    # Render a barplot
-    barplot(WorldPhones[,input$region]*1000, 
-            main=input$region,
-            ylab="Number of Telephones",
-            xlab="Year")
-  })
-}
-```
-
-::: footer
-Learn more: [Code Animations](https://{{< meta prerelease-subdomain >}}quarto.org/docs/presentations/revealjs/advanced.html#code-animations)
+:::: {.columns style="display: flex;"}
+::: {.column style="position: relative; width: 75%;"}
+::: {.fragment fragment-index=0}
+- test 1
+:::
+::: {.fragment fragment-index=1}
+- test 2
 :::
 
-## Line Highlighting
+::: {.fragment fragment-index=2}
+![](images/Innere Arbeit/Innere_Leistung_Tokui.png){.fragment .fade-out fragment-index=3 height="400px"}
 
--   Highlight specific lines for emphasis
--   Incrementally highlight additional lines
-
-``` {.python code-line-numbers="4-5|7|10"}
-import numpy as np
-import matplotlib.pyplot as plt
-
-r = np.arange(0, 2, 0.01)
-theta = 2 * np.pi * r
-fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
-ax.plot(theta, r)
-ax.set_rticks([0.5, 1, 1.5, 2])
-ax.grid(True)
-plt.show()
-```
-
-::: footer
-Learn more: [Line Highlighting](https://{{< meta prerelease-subdomain >}}quarto.org/docs/presentations/revealjs/#line-highlighting)
+::: {.fragment .fade-in fragment-index=3 style="position: absolute; top: 160px; left: 0; width: 100%;"}
+![](images/Innere Arbeit/Hintzy-Cloutier_linear.png){height="400px"}
+:::
+:::
 :::
 
-## Executable Code
+::: {.column style="width: 25%;"}
+![](images/Innere Arbeit/kinematik_sitzen_cropped.gif){height="320px"}
+:::
+::::
 
-```{r}
-#| echo: true
-#| fig-width: 10
-#| fig-height: 4.5
+## Innere Arbeit {.show-logo}
+
+:::: {.columns}
+::: {.column width="75%"}
+- test 2
+- test 2
+:::
+
+::: {.column width="25%"}
+![](images/Innere Arbeit/kinematik_sitzen_HAT_cropped.gif){height="320px"}
+:::
+::::
+## Innere Arbeit - nach Winter(1979) {.show-logo style="font-size: 0.85em"}
+
+```{r echo=FALSE, output=FALSE}
+# Library und dfs laden
+library(plotly)
 library(ggplot2)
-ggplot(mtcars, aes(hp, mpg, color = am)) +
-  geom_point() +
-  geom_smooth(formula = y ~ x, method = "loess")
+library(dplyr)
+library(tidyr)
+library(htmltools)
+library(htmlwidgets)
+library(shiny)
+library(DT)
+library(RColorBrewer)
+library(patchwork)
+library(minpack.lm)
+library(zoo)
+library(purrr)
+library(readxl)
+
+EPOC_data_df <- readRDS("rds/EPOC_data_df.rds")
+Erg_data_df <- readRDS("rds/Erg_data_df.rds")
+Erg_data_komplett <- readRDS("rds/Erg_data_komplett.rds")
+Messwerte_Bedingungen_df <- readRDS("rds/Messwerte_Bedingungen_df.rds")
+Messwerte_Intensitäten_df <- readRDS("rds/Messwerte_Intensitäten_df.rds")
+Messwerte_Bedingung_Intensität_df <- readRDS("rds/Messwerte_Bedingung_Intensität_df.rds")
+Bedingungen_data <- readRDS("rds/Bedingungen_data.rds")
+P_Ges_df <- readRDS("rds/Efficiency_Daten_df.rds")
+Efficiency_df <- readRDS("rds/Efficiency_Daten_df.rds")
+P_Int_Drehzahl_Masse <- readRDS("rds/P_Int_Drehzahl_Masse.rds")
+Simulation_df <- readRDS("rds/Simulation_df.rds")
+ΔBLC_list <- readRDS("rds/BLC_list.rds")
+proband_data <- readRDS("rds/proband_data.rds")
+ΔBLC_data_df <- readRDS("rds/BLC_data_df.rds")
+BLC_Modell_list <- readRDS("rds/BLC_Modell_list.rds")
+Efficiency_Daten_df <- readRDS("rds/Efficiency_Daten_df.rds")
+P_R_list <- readRDS("rds/P_R_list.rds")
+P_L_list <- readRDS("rds/P_L_list.rds")
+start_vals_list <- readRDS("rds/start_vals_list.rds")
+VO2_list <- readRDS("rds/VO2_list.rds")
+df_anthropometrisch_female <- readRDS("rds/df_anthropometrisch_female.rds")
+df_anthropometrisch_male <- readRDS("rds/df_anthropometrisch_male.rds")
+Kinematik_list <- readRDS("rds/Kinematik_list.rds")
 ```
 
-::: footer
-Learn more: [Executable Code](https://{{< meta prerelease-subdomain >}}quarto.org/docs/presentations/revealjs/#executable-code)
-:::
+```{r echo=FALSE, eval=FALSE}
 
-## LaTeX Equations
+###### Konstanten und Parameter ######
+Masse <- Erg_data_df[Erg_data_df$Name == name, "Masse"]
+uOS <- Erg_data_df[Erg_data_df$Name == name, "uOS"]
+uUS <- Erg_data_df[Erg_data_df$Name == name, "uUS"]
+lBein <- Erg_data_df[Erg_data_df$Name == name, "lBein"]
+Faktor <- 1.0
+S <- lBein * 0.883 * Faktor
+rRelOS <- 0.1416
+rRelUS <- 0.0433
+lambdaOS <- 0.433
+lambdaUS <- 0.433
+mOS <- Masse * rRelOS
+mUS <- Masse * rRelUS
+thetaKurbel <- 0.002
+  
+##### Rechenweg ####
 
-[MathJax](https://www.mathjax.org/) rendering of equations to HTML
+# Linkes Bein
+L_phi1 = ifelse(atan2(L_P1y, L_P1x) < 0, atan2(L_P1y, L_P1x) + 2 * pi, atan2(L_P1y, L_P1x))
+L_Grad = L_phi1 * (180 / pi)
+delta_t = 1 / 100
+L_delta_phi1 = corrected_delta_phi1(L_phi1)
+L_omega = L_delta_phi1 / delta_t
+L_nD = L_omega / (2 * pi) * 60
+L_nD_avg = mean(L_omega, na.rm = TRUE) / (2 * pi) * 60
 
-::::: columns
-::: {.column width="40%"}
-``` tex
-\begin{gather*}
-a_1=b_1+c_1\\
-a_2=b_2+c_2-d_2+e_2
-\end{gather*}
+# Rechtes Bein
+R_phi1 = ifelse(atan2(R_P1y, R_P1x) < 0, atan2(R_P1y, R_P1x) + 2 * pi, atan2(R_P1y, R_P1x))
+R_Grad = R_phi1 * (180 / pi)
+R_delta_phi1 = corrected_delta_phi1(R_phi1)
+R_omega = R_delta_phi1 / delta_t
 
-\begin{align}
-a_{11}& =b_{11}&
-  a_{12}& =b_{12}\\
-a_{21}& =b_{21}&
-  a_{22}& =b_{22}+c_{22}
-\end{align}
+# Längen und Trägheitsmomente für beide Beine
+L_lOS = sqrt((L_P3x-L_P2x)^2+(L_P3y-L_P2y)^2)
+L_lUS = sqrt((L_P2x-LAJC_X)^2+(L_P2y-LAJC_Y)^2)
+R_lOS = sqrt((R_P3x-R_P2x)^2+(R_P3y-R_P2y)^2)
+R_lUS = sqrt((R_P2x-RAJC_X)^2+(R_P2y-RAJC_Y)^2)
+
+L_lOS_avg = mean(L_lOS)
+L_lUS_avg = mean(L_lUS)
+R_lOS_avg = mean(R_lOS)
+R_lUS_avg = mean(R_lUS)
+
+thetaOS = (1/4) * mOS * (uOS / (2 * pi))^2 + (1/12) * mOS * L_lOS_avg^2
+thetaUS = (1/4) * mUS * (uUS / (2 * pi))^2 + (1/12) * mUS * L_lUS_avg^2
+
+# HAT Berechnungen
+m_HAT = Masse * 0.678
+lHAT = sqrt((HAT_COMx - L_P3x)^2 + (HAT_COMy - L_P3y)^2)
+thetaHAT = m_HAT * (lHAT * 0.496)^2
+
+# Schwerpunkte für beide Beine
+L_SpOS_X = L_P3x - lambdaOS * (L_P3x-L_P2x)
+L_SpOS_Y = L_P3y - lambdaOS * (L_P3y-L_P2y)
+L_SpUS_X = L_P2x - lambdaOS * (L_P2x-LAJC_X)
+L_SpUS_Y = L_P2y - lambdaOS * (L_P2y-LAJC_Y)
+
+R_SpOS_X = R_P3x - lambdaOS * (R_P3x-R_P2x)
+R_SpOS_Y = R_P3y - lambdaOS * (R_P3y-R_P2y)
+R_SpUS_X = R_P2x - lambdaOS * (R_P2x-RAJC_X)
+R_SpUS_Y = R_P2y - lambdaOS * (R_P2y-RAJC_Y)
+
+# Geschwindigkeiten der Schwerpunkte
+L_d_SpOS = sqrt((lead(L_SpOS_X) - L_SpOS_X)^2 + (lead(L_SpOS_Y) - L_SpOS_Y)^2)
+L_d_SpUS = sqrt((lead(L_SpUS_X) - L_SpUS_X)^2 + (lead(L_SpUS_Y) - L_SpUS_Y)^2)
+R_d_SpOS = sqrt((lead(R_SpOS_X) - R_SpOS_X)^2 + (lead(R_SpOS_Y) - R_SpOS_Y)^2)
+R_d_SpUS = sqrt((lead(R_SpUS_X) - R_SpUS_X)^2 + (lead(R_SpUS_Y) - R_SpUS_Y)^2)
+
+L_v_SpOS = ifelse(is.na(L_d_SpOS), NA, L_d_SpOS / delta_t)
+L_v_SpUS = ifelse(is.na(L_d_SpUS), NA, L_d_SpUS / delta_t)
+R_v_SpOS = ifelse(is.na(R_d_SpOS), NA, R_d_SpOS / delta_t)
+R_v_SpUS = ifelse(is.na(R_d_SpUS), NA, R_d_SpUS / delta_t)
+
+# HAT Bewegungen
+d_HAT_COM = sqrt((lead(HAT_COMx) - HAT_COMx)^2 + (lead(HAT_COMy) - HAT_COMy)^2)
+v_HAT_COM = ifelse(is.na(d_HAT_COM), NA, d_HAT_COM / delta_t)
+phi_HAT = atan2(HAT_COMy - L_P3y, HAT_COMx - L_P3x)
+omega_HAT = (lead(phi_HAT) - phi_HAT) / delta_t
+
+# Winkel und Winkelgeschwindigkeiten für beide Beine
+L_phi2 = acos((L_P2x-L_P1x) / L_lUS)
+L_phi3 = acos((L_P3x-L_P2x) / L_lOS)
+R_phi2 = acos((R_P2x-R_P1x) / R_lUS)
+R_phi3 = acos((R_P3x-R_P2x) / R_lOS)
+
+L_omega_SpOS = (lead(L_phi2) - L_phi2) / delta_t
+L_omega_SpUS = (lead(L_phi3) - L_phi3) / delta_t
+L_omega_Kurbel = (lead(L_phi2) - L_phi2) / delta_t
+
+R_omega_SpOS = (lead(R_phi2) - R_phi2) / delta_t
+R_omega_SpUS = (lead(R_phi3) - R_phi3) / delta_t
+R_omega_Kurbel = (lead(R_phi2) - R_phi2) / delta_t
+
+# Energieberechnungen für beide Beine
+L_Ekin_rot_leg = 0.5 * (thetaOS * L_omega_SpOS^2 + thetaUS * L_omega_SpUS^2 + thetaKurbel * L_omega_Kurbel^2)
+L_Ekin_trans_leg = 0.5 * (mOS * L_v_SpOS^2 + mUS * L_v_SpUS^2)
+L_Ekin_leg = L_Ekin_rot_leg + L_Ekin_trans_leg
+L_Epot_leg = (mOS * 9.81 * L_SpOS_Y) + (mUS * 9.81 * L_SpUS_Y)
+
+R_Ekin_rot_leg = 0.5 * (thetaOS * R_omega_SpOS^2 + thetaUS * R_omega_SpUS^2 + thetaKurbel * R_omega_Kurbel^2)
+R_Ekin_trans_leg = 0.5 * (mOS * R_v_SpOS^2 + mUS * R_v_SpUS^2)
+R_Ekin_leg = R_Ekin_rot_leg + R_Ekin_trans_leg
+R_Epot_leg = (mOS * 9.81 * R_SpOS_Y) + (mUS * 9.81 * R_SpUS_Y)
+
+# Energieberechnungen für HAT
+Ekin_trans_HAT = 0.5 * m_HAT * v_HAT_COM^2
+Ekin_rot_HAT = 0.5 * thetaHAT * omega_HAT^2
+Ekin_HAT = Ekin_trans_HAT + Ekin_rot_HAT
+Epot_HAT = m_HAT * 9.81 * HAT_COMy
+
+# Energieänderungen für beide Beine
+L_delta_Ekin_rot_leg = lead(L_Ekin_rot_leg) - L_Ekin_rot_leg
+L_delta_Ekin_trans_leg = lead(L_Ekin_trans_leg) - L_Ekin_trans_leg
+L_delta_Epot_leg = lead(L_Epot_leg) - L_Epot_leg
+
+R_delta_Ekin_rot_leg = lead(R_Ekin_rot_leg) - R_Ekin_rot_leg
+R_delta_Ekin_trans_leg = lead(R_Ekin_trans_leg) - R_Ekin_trans_leg
+R_delta_Epot_leg = lead(R_Epot_leg) - R_Epot_leg
+
+# Energieänderungen für HAT
+delta_Ekin_trans_HAT = lead(Ekin_trans_HAT) - Ekin_trans_HAT
+delta_Ekin_rot_HAT = lead(Ekin_rot_HAT) - Ekin_rot_HAT
+delta_Epot_HAT = lead(Epot_HAT) - Epot_HAT
+delta_E_ges_HAT = delta_Ekin_trans_HAT + delta_Ekin_rot_HAT + delta_Epot_HAT
+
+# Gesamte Energieänderung und Leistung für beide Beine
+L_delta_E_ges = L_delta_Ekin_rot_leg + L_delta_Ekin_trans_leg + L_delta_Epot_leg + delta_E_ges_HAT
+R_delta_E_ges = R_delta_Ekin_rot_leg + R_delta_Ekin_trans_leg + R_delta_Epot_leg + delta_E_ges_HAT
+
+E_gesamt = L_Ekin_rot_leg + L_Ekin_trans_leg + L_Epot_leg +
+R_Ekin_rot_leg + R_Ekin_trans_leg + R_Epot_leg +
+Ekin_trans_HAT + Ekin_rot_HAT + Epot_HAT
+
+# Energieänderungen berechnen
+delta_E_gesamt = c(NA, diff(E_gesamt))
+
+# Wint: nur positive Energieänderungen
+Wint = pmax(0, delta_E_gesamt)
+
+# PInt aus den positiven Energieänderungen
+PInt_Kinematik = Wint / delta_t
+
+PInt_Kinematik_HAT_avg = mean(PInt_Kinematik, na.rm = TRUE)
+    
 ```
-:::
 
-::: {.column width="60%"}
-\begin{gather*}
-a_1=b_1+c_1\\
-a_2=b_2+c_2-d_2+e_2
-\end{gather*}
-\begin{align}
-a_{11}& =b_{11}&
-  a_{12}& =b_{12}\\
-a_{21}& =b_{21}&
-  a_{22}& =b_{22}+c_{22}
-\end{align}
-:::
-:::::
+```{r echo=FALSE, output=FALSE}
+library(readxl)
+library(dplyr)
+library(kableExtra)
+library(ggplot2)
+library(plotly)
+library(RColorBrewer)
+library(tidyr)
+library(zoo)
+library(htmlwidgets)
+library(ggplot2)
+library(minpack.lm) 
 
-::: footer
-Learn more: [LaTeX Equations](https://{{< meta prerelease-subdomain >}}quarto.org/docs/authoring/markdown-basics.html#equations)
-:::
+Kinematik_list_HAT <- readRDS("rds/Kinematik_list_HAT.rds")
+Bedingungen_data <- readRDS("rds/Bedingungen_data.rds")
 
-## Column Layout {.smaller}
+Erg_data_df_base <- readRDS("rds/Erg_data_df_base.rds")
+Erg_data_df_base <- subset(Erg_data_df_base, !Proband %in% c(2, 3))
 
-Arrange content into columns of varying widths:
+Erg_data_df <- Erg_data_df_base
+Erg_data_df <- subset(Erg_data_df, !Proband %in% c(2, 3))
+
+Erg_data_komplett <- readRDS("rds/Erg_data_komplett.rds")
+Erg_data_komplett  <- subset(Erg_data_komplett , !Proband %in% c(2, 3))
+
+###### PInt anhand der Kinematik Daten berechnen ######
+
+# Initialisiere die Listen für die Ergebnisse
+PInt_Kinematik_list_HAT <- list()
+PInt_Kinematik_HAT_avg_list <- list()
+plotly_Pint_list <- list()
+
+# Schleife durch alle Einträge in Kinematik_list_HAT
+for (name in names(Kinematik_list_HAT)) {
+  # Lese die Daten ein
+  df <- Kinematik_list_HAT[[name]]
+  current_name <- name 
+  Bedingung <- Erg_data_df$Bedingung[Erg_data_df$Name == current_name]
+  
+  # Entferne die erste und letzte Zeile und fügt Masse hinzu
+  df <- df[-c(1, nrow(df)), ] %>% 
+    mutate(Masse = Erg_data_df[Erg_data_df$Name == name, "Masse"])
+  
+  # Definiere die ausgewählten Spalten und deren neue Namen direkt
+  selected_columns <- c(Frame = "Frame",
+                        L_P0x = "Kurbelachse_X", L_P0y = "Kurbelachse_Y",
+                        L_P3x = "LHJC_X", L_P3y = "LHJC_Y",
+                        L_P2x = "LKJC_X", L_P2y = "LKJC_Y",
+                        L_P1x = "LToe_X", L_P1y = "LToe_Y",
+                        LAJC_X = "LAJC_X", LAJC_Y = "LAJC_Y",
+                        HAT_COMx = "HAT_COM_X", HAT_COMy = "HAT_COM_Y")
+  
+  # Bestimme die Zykluslänge anhand der linken Seite
+  phi1_left <- atan2(df$LToe_Y, df$LToe_X)
+  phi1_left[phi1_left < 0] <- phi1_left[phi1_left < 0] + 2 * pi
+  
+  # Finde Zykluslänge
+  starts <- which(abs(diff(phi1_left)) > pi)
+  if(length(starts) >= 3) {  # Prüfe ob mindestens 3 Startpunkte gefunden wurden
+    Laenge_Zyklus <- starts[3] - starts[2]  # Nimm den zweiten kompletten Zyklus
+  } else if(length(starts) >= 2) {
+    Laenge_Zyklus <- starts[2] - starts[1]  # Fallback auf ersten Zyklus
+  } else {
+    Laenge_Zyklus <- nrow(df)  # Fallback wenn keine klaren Zyklen gefunden
+  }
+  
+  # Verschiebe die linken Koordinaten um einen halben Zyklus für die rechte Seite
+  shift_amount <- round(Laenge_Zyklus/2)
+  
+  # Erstelle neue Spalten für die rechte Seite
+  df$R_P0x <- c(df$Kurbelachse_X[-(1:shift_amount)], df$Kurbelachse_X[1:shift_amount])
+  df$R_P0y <- c(df$Kurbelachse_Y[-(1:shift_amount)], df$Kurbelachse_Y[1:shift_amount])
+  df$R_P3x <- c(df$LHJC_X[-(1:shift_amount)], df$LHJC_X[1:shift_amount])
+  df$R_P3y <- c(df$LHJC_Y[-(1:shift_amount)], df$LHJC_Y[1:shift_amount])
+  df$R_P2x <- c(df$LKJC_X[-(1:shift_amount)], df$LKJC_X[1:shift_amount])
+  df$R_P2y <- c(df$LKJC_Y[-(1:shift_amount)], df$LKJC_Y[1:shift_amount])
+  df$R_P1x <- c(df$LToe_X[-(1:shift_amount)], df$LToe_X[1:shift_amount])
+  df$R_P1y <- c(df$LToe_Y[-(1:shift_amount)], df$LToe_Y[1:shift_amount])
+  df$RAJC_X <- c(df$LAJC_X[-(1:shift_amount)], df$LAJC_X[1:shift_amount])
+  df$RAJC_Y <- c(df$LAJC_Y[-(1:shift_amount)], df$LAJC_Y[1:shift_amount])
+  
+  # Definiere die ausgewählten Spalten und deren neue Namen
+  selected_columns <- c(Frame = "Frame",
+                        L_P0x = "Kurbelachse_X", L_P0y = "Kurbelachse_Y",
+                        L_P3x = "LHJC_X", L_P3y = "LHJC_Y",
+                        L_P2x = "LKJC_X", L_P2y = "LKJC_Y",
+                        L_P1x = "LToe_X", L_P1y = "LToe_Y",
+                        LAJC_X = "LAJC_X", LAJC_Y = "LAJC_Y",
+                        R_P0x = "R_P0x", R_P0y = "R_P0y",
+                        R_P3x = "R_P3x", R_P3y = "R_P3y",
+                        R_P2x = "R_P2x", R_P2y = "R_P2y",
+                        R_P1x = "R_P1x", R_P1y = "R_P1y",
+                        RAJC_X = "RAJC_X", RAJC_Y = "RAJC_Y",
+                        HAT_COMx = "HAT_COM_X", HAT_COMy = "HAT_COM_Y")
+  
+  # Nur ausgewälte Spalten
+  df <- df %>%
+    select(all_of(selected_columns))
+
+  # Funktion, um korrekten Winkelunterschied für zyklische Bewegungen zu berechnen
+  corrected_delta_phi1 <- function(phi1) {
+    # Berechnet die Winkeldifferenz zwischen aufeinanderfolgenden Werten. Fügt 'NA' für den letzten Wert ein.
+    delta_phi1 = diff(phi1)
+    
+    # Korrigiert die Winkeldifferenzen, die die Grenzen einer zyklischen Bewegung überschreiten.
+    # Für Übergänge nahe der Grenzen (0 und 360 Grad oder 0 und 2*pi), passen wir die Differenz an, um korrekte kleine Werte zu erhalten statt großer Sprünge.
+    delta_phi1 = ifelse(delta_phi1 > pi, delta_phi1 - 2*pi, delta_phi1)
+    delta_phi1 = ifelse(delta_phi1 < -pi, delta_phi1 + 2*pi, delta_phi1)
+    
+    # Nimmt die letzten 3 Änderungen oder alle vorhandenen, falls weniger als 3
+    num_values = min(length(delta_phi1), 3)
+    last_values = tail(delta_phi1, num_values)
+    
+    # Berechnet die durchschnittliche Differenz der letzten Werte
+    avg_difference = mean(last_values, na.rm = TRUE)
+    
+    # Fügt die durchschnittliche Differenz zum letzten verfügbaren Wert hinzu, um den nächsten Wert zu schätzen
+    extrapolated_value = last(phi1) + avg_difference  # Der neue Wert basiert auf dem letzten phi1-Wert
+    
+    # Fügt den extrapolierten Wert zum Vektor hinzu
+    delta_phi1 = c(delta_phi1, extrapolated_value - last(phi1))  # Differenz zum letzten phi1
+    
+    return(delta_phi1)
+  }
+  
+  # Konstanten und Parameter
+  Masse <- Erg_data_df[Erg_data_df$Name == name, "Masse"]
+  uOS <- Erg_data_df[Erg_data_df$Name == name, "uOS"]
+  uUS <- Erg_data_df[Erg_data_df$Name == name, "uUS"]
+  lBein <- Erg_data_df[Erg_data_df$Name == name, "lBein"]
+  Faktor <- 1.0
+  S <- lBein * 0.883 * Faktor
+  rRelOS <- 0.1416
+  rRelUS <- 0.0433
+  lambdaOS <- 0.433
+  lambdaUS <- 0.433
+  mOS <- Masse * rRelOS
+  mUS <- Masse * rRelUS
+  thetaKurbel <- 0.002
+  
+  # Berechne Energien für beide Beine
+  df <- df %>%
+    mutate(
+      # Linkes Bein
+      L_phi1 = ifelse(atan2(L_P1y, L_P1x) < 0, atan2(L_P1y, L_P1x) + 2 * pi, atan2(L_P1y, L_P1x)),
+      L_Grad = L_phi1 * (180 / pi),
+      delta_t = 1 / 100,
+      L_delta_phi1 = corrected_delta_phi1(L_phi1),
+      L_omega = L_delta_phi1 / delta_t,
+      L_nD = L_omega / (2 * pi) * 60,
+      L_nD_avg = mean(L_omega, na.rm = TRUE) / (2 * pi) * 60,
+      
+      # Rechtes Bein
+      R_phi1 = ifelse(atan2(R_P1y, R_P1x) < 0, atan2(R_P1y, R_P1x) + 2 * pi, atan2(R_P1y, R_P1x)),
+      R_Grad = R_phi1 * (180 / pi),
+      R_delta_phi1 = corrected_delta_phi1(R_phi1),
+      R_omega = R_delta_phi1 / delta_t,
+      
+      # Längen und Trägheitsmomente für beide Beine
+      L_lOS = sqrt((L_P3x-L_P2x)^2+(L_P3y-L_P2y)^2),
+      L_lUS = sqrt((L_P2x-LAJC_X)^2+(L_P2y-LAJC_Y)^2),
+      R_lOS = sqrt((R_P3x-R_P2x)^2+(R_P3y-R_P2y)^2),
+      R_lUS = sqrt((R_P2x-RAJC_X)^2+(R_P2y-RAJC_Y)^2),
+      
+      L_lOS_avg = mean(L_lOS),
+      L_lUS_avg = mean(L_lUS),
+      R_lOS_avg = mean(R_lOS),
+      R_lUS_avg = mean(R_lUS),
+      
+      thetaOS = (1/4) * mOS * (uOS / (2 * pi))^2 + (1/12) * mOS * L_lOS_avg^2,
+      thetaUS = (1/4) * mUS * (uUS / (2 * pi))^2 + (1/12) * mUS * L_lUS_avg^2,
+      
+      # HAT Berechnungen
+      m_HAT = Masse * 0.678,
+      lHAT = sqrt((HAT_COMx - L_P3x)^2 + (HAT_COMy - L_P3y)^2),
+      thetaHAT = m_HAT * (lHAT * 0.496)^2,
+      
+      # Schwerpunkte für beide Beine
+      L_SpOS_X = L_P3x - lambdaOS * (L_P3x-L_P2x),
+      L_SpOS_Y = L_P3y - lambdaOS * (L_P3y-L_P2y),
+      L_SpUS_X = L_P2x - lambdaOS * (L_P2x-LAJC_X),
+      L_SpUS_Y = L_P2y - lambdaOS * (L_P2y-LAJC_Y),
+      
+      R_SpOS_X = R_P3x - lambdaOS * (R_P3x-R_P2x),
+      R_SpOS_Y = R_P3y - lambdaOS * (R_P3y-R_P2y),
+      R_SpUS_X = R_P2x - lambdaOS * (R_P2x-RAJC_X),
+      R_SpUS_Y = R_P2y - lambdaOS * (R_P2y-RAJC_Y),
+      
+      # Geschwindigkeiten der Schwerpunkte
+      L_d_SpOS = sqrt((lead(L_SpOS_X) - L_SpOS_X)^2 + (lead(L_SpOS_Y) - L_SpOS_Y)^2),
+      L_d_SpUS = sqrt((lead(L_SpUS_X) - L_SpUS_X)^2 + (lead(L_SpUS_Y) - L_SpUS_Y)^2),
+      R_d_SpOS = sqrt((lead(R_SpOS_X) - R_SpOS_X)^2 + (lead(R_SpOS_Y) - R_SpOS_Y)^2),
+      R_d_SpUS = sqrt((lead(R_SpUS_X) - R_SpUS_X)^2 + (lead(R_SpUS_Y) - R_SpUS_Y)^2),
+      
+      L_v_SpOS = ifelse(is.na(L_d_SpOS), NA, L_d_SpOS / delta_t),
+      L_v_SpUS = ifelse(is.na(L_d_SpUS), NA, L_d_SpUS / delta_t),
+      R_v_SpOS = ifelse(is.na(R_d_SpOS), NA, R_d_SpOS / delta_t),
+      R_v_SpUS = ifelse(is.na(R_d_SpUS), NA, R_d_SpUS / delta_t),
+      
+      # HAT Bewegungen
+      d_HAT_COM = sqrt((lead(HAT_COMx) - HAT_COMx)^2 + (lead(HAT_COMy) - HAT_COMy)^2),
+      v_HAT_COM = ifelse(is.na(d_HAT_COM), NA, d_HAT_COM / delta_t),
+      phi_HAT = atan2(HAT_COMy - L_P3y, HAT_COMx - L_P3x),
+      omega_HAT = (lead(phi_HAT) - phi_HAT) / delta_t,
+      
+      # Winkel und Winkelgeschwindigkeiten für beide Beine
+      L_phi2 = acos((L_P2x-L_P1x) / L_lUS),
+      L_phi3 = acos((L_P3x-L_P2x) / L_lOS),
+      R_phi2 = acos((R_P2x-R_P1x) / R_lUS),
+      R_phi3 = acos((R_P3x-R_P2x) / R_lOS),
+      
+      L_omega_SpOS = (lead(L_phi2) - L_phi2) / delta_t,
+      L_omega_SpUS = (lead(L_phi3) - L_phi3) / delta_t,
+      L_omega_Kurbel = (lead(L_phi2) - L_phi2) / delta_t,
+      
+      R_omega_SpOS = (lead(R_phi2) - R_phi2) / delta_t,
+      R_omega_SpUS = (lead(R_phi3) - R_phi3) / delta_t,
+      R_omega_Kurbel = (lead(R_phi2) - R_phi2) / delta_t,
+      
+      # Energieberechnungen für beide Beine
+      L_Ekin_rot_leg = 0.5 * (thetaOS * L_omega_SpOS^2 + thetaUS * L_omega_SpUS^2 + thetaKurbel * L_omega_Kurbel^2),
+      L_Ekin_trans_leg = 0.5 * (mOS * L_v_SpOS^2 + mUS * L_v_SpUS^2),
+      L_Ekin_leg = L_Ekin_rot_leg + L_Ekin_trans_leg,
+      L_Epot_leg = (mOS * 9.81 * L_SpOS_Y) + (mUS * 9.81 * L_SpUS_Y),
+      
+      R_Ekin_rot_leg = 0.5 * (thetaOS * R_omega_SpOS^2 + thetaUS * R_omega_SpUS^2 + thetaKurbel * R_omega_Kurbel^2),
+      R_Ekin_trans_leg = 0.5 * (mOS * R_v_SpOS^2 + mUS * R_v_SpUS^2),
+      R_Ekin_leg = R_Ekin_rot_leg + R_Ekin_trans_leg,
+      R_Epot_leg = (mOS * 9.81 * R_SpOS_Y) + (mUS * 9.81 * R_SpUS_Y),
+      
+      # Energieberechnungen für HAT
+      Ekin_trans_HAT = 0.5 * m_HAT * v_HAT_COM^2,
+      Ekin_rot_HAT = 0.5 * thetaHAT * omega_HAT^2,
+      Ekin_HAT = Ekin_trans_HAT + Ekin_rot_HAT,
+      Epot_HAT = m_HAT * 9.81 * HAT_COMy,
+      
+      # Energieänderungen für beide Beine
+      L_delta_Ekin_rot_leg = lead(L_Ekin_rot_leg) - L_Ekin_rot_leg,
+      L_delta_Ekin_trans_leg = lead(L_Ekin_trans_leg) - L_Ekin_trans_leg,
+      L_delta_Epot_leg = lead(L_Epot_leg) - L_Epot_leg,
+      
+      R_delta_Ekin_rot_leg = lead(R_Ekin_rot_leg) - R_Ekin_rot_leg,
+      R_delta_Ekin_trans_leg = lead(R_Ekin_trans_leg) - R_Ekin_trans_leg,
+      R_delta_Epot_leg = lead(R_Epot_leg) - R_Epot_leg,
+      
+      # Energieänderungen für HAT
+      delta_Ekin_trans_HAT = lead(Ekin_trans_HAT) - Ekin_trans_HAT,
+      delta_Ekin_rot_HAT = lead(Ekin_rot_HAT) - Ekin_rot_HAT,
+      delta_Epot_HAT = lead(Epot_HAT) - Epot_HAT,
+      delta_E_ges_HAT = delta_Ekin_trans_HAT + delta_Ekin_rot_HAT + delta_Epot_HAT,
+      
+      # Gesamte Energieänderung und Leistung für beide Beine
+      L_delta_E_ges = L_delta_Ekin_rot_leg + L_delta_Ekin_trans_leg + L_delta_Epot_leg + delta_E_ges_HAT,
+      R_delta_E_ges = R_delta_Ekin_rot_leg + R_delta_Ekin_trans_leg + R_delta_Epot_leg + delta_E_ges_HAT,
+      
+      E_gesamt = L_Ekin_rot_leg + L_Ekin_trans_leg + L_Epot_leg + 
+        R_Ekin_rot_leg + R_Ekin_trans_leg + R_Epot_leg +
+        Ekin_trans_HAT + Ekin_rot_HAT + Epot_HAT
+    ) %>%
+    slice(1:(n() - 2))
+  
+  # Funktion zur Ausreißerbehandlung
+  fensterbreite <- 15
+  fensterbreite_mittel <- 10
+  fensterbreite_klein <- 5
+  
+  handle_outliers <- function(df, column_name) {
+    # Berechne Quartile und IQR
+    Q1 <- quantile(df[[column_name]], 0.25, na.rm = TRUE)
+    Q3 <- quantile(df[[column_name]], 0.75, na.rm = TRUE)
+    IQR <- Q3 - Q1
+    
+    # Definiere Grenzen
+    lower_bound <- Q1 - 1.5 * IQR
+    upper_bound <- Q3 + 1.5 * IQR
+    
+    # Ersetze Ausreißer mit NA
+    df[[column_name]] <- ifelse(df[[column_name]] < lower_bound | df[[column_name]] > upper_bound, 
+                                NA, df[[column_name]])
+    
+    # Imputiere NA-Werte
+    for (i in 1:length(df[[column_name]])) {
+      if (is.na(df[[column_name]][i])) {
+        valid_indices_above <- which(!is.na(df[[column_name]][i:min(i+2, nrow(df))]))
+        valid_indices_below <- which(!is.na(df[[column_name]][max(i-2, 1):i]))
+        
+        if (length(valid_indices_above) > 0 && length(valid_indices_below) > 0) {
+          upper_mean <- mean(df[[column_name]][i + valid_indices_above], na.rm = TRUE)
+          lower_mean <- mean(df[[column_name]][i - valid_indices_below], na.rm = TRUE)
+          df[[column_name]][i] <- mean(c(upper_mean, lower_mean), na.rm = TRUE)
+        } else if (length(valid_indices_above) > 0) {
+          df[[column_name]][i] <- mean(df[[column_name]][i + valid_indices_above], na.rm = TRUE)
+        } else if (length(valid_indices_below) > 0) {
+          df[[column_name]][i] <- mean(df[[column_name]][i - valid_indices_below], na.rm = TRUE)
+        }
+      }
+    }
+    
+    return(df)
+  }
+  
+  # Liste der Energiespalten
+  energy_columns <- c(
+    "L_Ekin_rot_leg",      
+    "L_Ekin_trans_leg",    
+    "L_Epot_leg",          
+    "R_Ekin_rot_leg",      
+    "R_Ekin_trans_leg",    
+    "R_Epot_leg",          
+    "Ekin_trans_HAT",      
+    "Ekin_rot_HAT",        
+    "Epot_HAT",            
+    "R_Ekin_leg",          
+    "L_Ekin_leg",          
+    "Ekin_HAT",
+    "E_gesamt"
+  )
+  
+  # Ausreißer für alle Spalten entfernen
+  for (col in energy_columns) {
+    df <- handle_outliers(df, col)
+  }
+  
+  
+  # Frame manuell bearbeiten falls fehlerhaft
+  df$Frame <- as.numeric(df$Frame)
+  df <- df %>%
+    filter(case_when(
+      current_name == "01_1" ~ Frame <= 954,
+      current_name == "01_2" ~ Frame <= 930,
+      current_name == "01_3" ~ Frame <= 954,
+      current_name == "06_2" ~ Frame <= 952,
+      current_name == "06_4" ~ Frame >= 119,
+      current_name == "06_6" ~ Frame <= 390 | Frame > 551,
+      current_name == "15_2" ~ Frame <= 926,
+      current_name == "15_4" ~ Frame <= 940,
+      current_name == "15_5" ~ Frame <= 939,
+      current_name == "15_6" ~ Frame <= 977,
+      current_name == "19_2" ~ Frame <= 980,
+      current_name == "19_3" ~ Frame <= 983,
+      current_name == "19_5" ~ Frame <= 957,
+      TRUE ~ TRUE
+    ))
+  
+  # Filterung der Frames 
+  df <- df %>%
+    mutate(Frame = as.numeric(as.character(Frame))) %>%
+    filter(Frame >= Laenge_Zyklus) %>%
+    filter(Frame <= max(Frame) - (max(Frame) %% Laenge_Zyklus))
+  
+  # Wint und Pint aus den ungeglätteten Daten berechnen
+  df <- df %>%
+    mutate(
+      # Energieänderungen berechnen
+      delta_E_gesamt = c(NA, diff(E_gesamt)),
+      
+      # Wint: nur positive Energieänderungen
+      Wint = pmax(0, delta_E_gesamt),
+      
+      # PInt aus den positiven Energieänderungen
+      PInt_Kinematik = Wint / delta_t,
+      PInt_Kinematik_HAT_avg = mean(PInt_Kinematik, na.rm = TRUE)
+    )
+  
+  # Teil 2: Neue geglättete Spalten erstellen
+  for (col in energy_columns) {
+    # Neue Spalte mit _smooth Suffix erstellen
+    smooth_col <- paste0(col, "_smooth")
+    # Glättung mit definierter Fensterbreite durchführen
+    df[[smooth_col]] <- stats::filter(df[[col]], 
+                                      rep(1/fensterbreite, fensterbreite), 
+                                      sides = 2)
+  }
+  
+  # Pint und Wint nach Glättung berechnen
+  #df <- df %>%
+    # Energieänderungen berechnen
+    #mutate(delta_E_gesamt = c(NA, diff(E_gesamt)),
+           
+           # Wint: nur positive Energieänderungen
+           #Wint = pmax(0, delta_E_gesamt),
+           
+           # PInt aus den positiven Energieänderungen
+           #PInt_Kinematik = Wint / delta_t,
+           #PInt_Kinematik_avg = mean(PInt_Kinematik, na.rm = TRUE))
+  
+  # Ausreißerbehandlung für PInt_Kinematik
+  df <- handle_outliers(df, "PInt_Kinematik")
+  
+  # Glättung für PInt_Kinematik
+  df$PInt_Kinematik_smooth <- stats::filter(df$PInt_Kinematik,rep(1/fensterbreite_klein, fensterbreite_klein),sides = 2)
+  # Glättung für WInt
+  df$WInt_smooth <- stats::filter(df$Wint, rep(1/fensterbreite_klein, fensterbreite_klein), sides = 2)
+  # Glättung für delta_E_gesamt
+  df$delta_E_gesamt_smooth <- stats::filter(df$delta_E_gesamt, rep(1/fensterbreite_klein, fensterbreite_klein), sides = 2)
+  
+  # Berechne PInt Durchschnittswerte mit der geglätteten Version
+  #PInt_Kinematik_HAT_avg = mean(df$PInt_Kinematik, na.rm = TRUE)
+  
+  # Speichere das bearbeitete DataFrame
+  PInt_Kinematik_list_HAT[[name]] <- df
+  
+  # Berechne Mittelwert von nD_avg für Plots
+  mean_nD_avg <- mean(df$L_nD_avg, na.rm = TRUE)
+  
+  df$Epot_gesamt_smooth <- df$Epot_HAT_smooth + df$L_Epot_leg_smooth + df$R_Epot_leg_smooth
+  df$Ekin_gesamt_smooth <- df$Ekin_HAT_smooth + df$L_Ekin_leg_smooth + df$R_Ekin_leg_smooth
+  
+  df$Ekin_trans_gesamt_smooth <- df$Ekin_trans_HAT_smooth + df$L_Ekin_trans_leg_smooth + df$R_Ekin_trans_leg_smooth
+  df$Ekin_rot_gesamt_smooth <- df$Ekin_rot_HAT_smooth + df$L_Ekin_rot_leg_smooth + df$R_Ekin_rot_leg_smooth
+  
+  PInt_Kinematik_HAT_avg = mean(df$PInt_Kinematik_HAT_avg, na.rm = TRUE)
+  
+  PInt_Kinematik_HAT_avg_list[[name]] <- list(
+    Laenge_Zyklus = Laenge_Zyklus,
+    nD = mean_nD_avg,
+    PInt_Kinematik_HAT_avg = PInt_Kinematik_HAT_avg
+  )
+  
+  plot1 <- plot_ly(df, x = ~Frame, y = ~PInt_Kinematik_smooth, type = "scatter", mode = "lines", 
+                   name = "P<sub>Int</sub>", line = list(color = '#80CDC1')) %>%
+    add_trace(x = c(min(df$Frame), max(df$Frame)), 
+              y = rep(PInt_Kinematik_HAT_avg, 2),
+              type = "scatter",
+              mode = "lines",
+              line = list(color = "lightgray", dash = "dash"),
+              showlegend = FALSE) %>%
+    add_annotations(x = min(df$Frame),
+                    y = PInt_Kinematik_HAT_avg,
+                    text = paste("P<sub>Int</sub> =", round(PInt_Kinematik_HAT_avg, 2), "Watt"),
+                    showarrow = FALSE,
+                    yanchor = "bottom",
+                    xanchor = "left",
+                    yshift = 10) %>%
+    layout(margin = list(t = 40),
+           xaxis = list(
+             title = "Frame", 
+             dtick = 50,
+             range = c(100, 800)
+                     ),
+           yaxis = list(
+             title = "P<sub>Int</sub> [Watt]", 
+             range = c(0, 300)
+           ),
+          legend = list(
+              x = 0.98,
+              y = 0.995,
+              xanchor = 'right',
+              yanchor = 'top',
+              orientation = 'h',
+              bgcolor = "rgba(0,0,0,0)"
+          ),
+           annotations = list(
+             list(
+               x = 0.00, y = 0.98, xref = 'paper', yref = 'paper',
+               text = paste("Drehzahl =", round(mean_nD_avg, 2), "U · min<sup>-1</sup>"),
+               showarrow = FALSE,
+               font = list(size = 12)
+             )
+           ))
+
+  plot2 <- plot_ly(df, x = ~Frame, y = ~delta_E_gesamt_smooth, type = "scatter", mode = "lines", 
+                   name = "ΔE<sub>Gesamt</sub>", line = list(color = "#35978F")) %>%
+    layout(margin = list(t = 40),
+           yaxis = list(
+             title = "ΔE<sub>Gesamt</sub> [J]", 
+             dtick = 1, 
+             range = c(-5, 5)
+           ),
+           xaxis = list(
+             title = "Frame", 
+             dtick = 50,
+             range = c(100, 800)
+                     ),
+          legend = list(
+              x = 0.98,
+              y = 0.995,
+              xanchor = 'right',
+              yanchor = 'top',
+              orientation = 'h',
+              bgcolor = "rgba(0,0,0,0)"
+          ),
+           annotations = list(
+             list(
+               x = 0.00, y = 0.98, xref = 'paper', yref = 'paper',
+               text = paste("Drehzahl =", round(mean_nD_avg, 2), "U · min<sup>-1</sup>"),
+               showarrow = FALSE,
+               font = list(size = 12)
+             )
+           ))
+  
+  
+  plot3 <- plot_ly(df, x = ~Frame, y = ~WInt_smooth, type = "scatter", mode = "lines", 
+                   name = "W<sub>Int<sub>", line = list(color = "#9C85C0")) %>%
+    layout(margin = list(t = 40),
+           yaxis = list(
+             title = "W<sub>Int</sub> [J]", 
+             dtick = 0.5, 
+             range = c(0, 5.0)
+           ),
+           xaxis = list(
+             title = "Frame", 
+             dtick = 50,
+             range = c(100, 800)
+                     ),
+          legend = list(
+              x = 0.98,
+              y = 0.995,
+              xanchor = 'right',
+              yanchor = 'top',
+              orientation = 'h',
+              bgcolor = "rgba(0,0,0,0)"
+          ),
+           annotations = list(
+             list(
+               x = 0.00, y = 0.98, xref = 'paper', yref = 'paper',
+               text = paste("Drehzahl =", round(mean_nD_avg, 2), "U · min<sup>-1</sup>"),
+               showarrow = FALSE,
+               font = list(size = 12)
+             )
+           ))
+  
+  plot4 <- plot_ly(df, x = ~Frame, y = ~Epot_HAT_smooth, type = "scatter", mode = "lines", 
+                   name = "E<sub>Pot,HAT</sub>", line = list(color = "#2683C6")) %>%
+    add_trace(y = ~R_Epot_leg_smooth, name = "E<sub>Pot,,Rechts</sub>", mode = "lines", 
+              line = list(color = "#62A39F")) %>%
+    add_trace(y = ~L_Epot_leg_smooth, name = "E<sub>Pot,,Links</sub>", mode = "lines", 
+              line = list(color = "#C8133B")) %>%
+    add_trace(y = ~Epot_gesamt_smooth, name = "E<sub>Pot,,Gesamt</sub>", mode = "lines",
+              line = list(color = "darkgrey", dash = "dot")) %>%
+    layout(margin = list(t = 40),
+           yaxis = list(
+             title = "E<sub>Pot</sub> [J]", 
+             dtick = 100, 
+             range = c(0, 700)
+           ),
+           xaxis = list(
+             title = "Frame", 
+             dtick = 50,
+             range = c(100, 800)
+                     ),
+          legend = list(
+              x = 0.98,
+              y = 0.995,
+              xanchor = 'right',
+              yanchor = 'top',
+              orientation = 'h',
+              bgcolor = "rgba(0,0,0,0)"
+          ),
+           annotations = list(
+             list(
+               x = 0.00, y = 0.98, xref = 'paper', yref = 'paper',
+               text = paste("Drehzahl =", round(mean_nD_avg, 2), "U · min<sup>-1</sup>"),
+               showarrow = FALSE,
+               font = list(size = 12)
+             )
+           ))
+  
+  
+  plot5 <- plot_ly(df, x = ~Frame, y = ~Ekin_trans_HAT, type = "scatter", mode = "lines", 
+                   name = "E<sub>Kin,trans,HAT</sub>", line = list(color = "#1CADE4")) %>%
+    add_trace(y = ~R_Ekin_trans_leg_smooth, name = "E<sub>Kin,trans,Rechts</sub>", mode = "lines", 
+              line = list(color = "#42BA97")) %>%
+    add_trace(y = ~L_Ekin_trans_leg_smooth, name = "E<sub>Kin,trans,Links</sub>", mode = "lines", 
+              line = list(color = "#F4737A")) %>%
+    add_trace(y = ~Ekin_trans_gesamt_smooth, name = "E<sub>Kin,trans,Gesamt</sub>", mode = "lines",
+              line = list(color = "darkgrey", dash = "dot")) %>%
+    layout(margin = list(t = 40),
+           yaxis = list(
+             title = "E<sub>Kin,trans</sub> [J]", 
+             dtick = 5.0, 
+             range = c(0, 20.0),
+             tickformat = ".1f"
+           ),
+           xaxis = list(
+             title = "Frame", 
+             dtick = 50,
+             range = c(100, 800)
+                     ),
+          legend = list(
+              x = 0.98,
+              y = 0.995,
+              xanchor = 'right',
+              yanchor = 'top',
+              orientation = 'h',
+              bgcolor = "rgba(0,0,0,0)"
+          ),
+           annotations = list(
+             list(
+               x = 0.00, y = 0.98, xref = 'paper', yref = 'paper',
+               text = paste("Drehzahl =", round(mean_nD_avg, 2), "U · min<sup>-1</sup>"),
+               showarrow = FALSE,
+               font = list(size = 12)
+             )
+           ))
+  
+  plot6 <- plot_ly(df, x = ~Frame, y = ~Ekin_rot_HAT_smooth, type = "scatter", mode = "lines", 
+                   name = "E<sub>Kin,rot,HAT</sub>", line = list(color = "#1CADE4")) %>%
+    add_trace(y = ~R_Ekin_rot_leg_smooth, name = "E<sub>Kin,rot,Rechts</sub>", mode = "lines", 
+              line = list(color = "#42BA97")) %>%
+    add_trace(y = ~L_Ekin_rot_leg_smooth, name = "E<sub>Kin,rot,Links</sub>", mode = "lines", 
+              line = list(color = "#F4737A")) %>%
+    add_trace(y = ~Ekin_rot_gesamt_smooth, name = "E<sub>Kin,rot,Gesamt</sub>", mode = "lines",
+              line = list(color = "darkgrey", dash = "dot")) %>%
+    layout(margin = list(t = 40),
+           yaxis = list(
+             title = "E<sub>Kin,rot</sub> [J]", 
+             dtick = 0.5, 
+             range = c(0, 3.0),
+             tickformat = ".1f"
+           ),
+           xaxis = list(
+             title = "Frame", 
+             dtick = 50,
+             range = c(100, 800)
+                     ),
+          legend = list(
+              x = 0.98,
+              y = 0.995,
+              xanchor = 'right',
+              yanchor = 'top',
+              orientation = 'h',
+              bgcolor = "rgba(0,0,0,0)"
+          ),
+           annotations = list(
+             list(
+               x = 0.00, y = 0.98, xref = 'paper', yref = 'paper',
+               text = paste("Drehzahl =", round(mean_nD_avg, 2), "U · min<sup>-1</sup>"),
+               showarrow = FALSE,
+               font = list(size = 12)
+             )
+           ))
+  
+  plot7 <- plot_ly(df, x = ~Frame, y = ~Ekin_HAT, type = "scatter", mode = "lines", 
+                   name = "E<sub>Kin,HAT</sub>", line = list(color = "#1CADE4")) %>%
+    add_trace(y = ~R_Ekin_leg_smooth, name = "E<sub>Kin,Rechts</sub>", mode = "lines", 
+              line = list(color = "#42BA97")) %>%
+    add_trace(y = ~L_Ekin_leg_smooth, name = "E<sub>Kin,Links</sub>", mode = "lines", 
+              line = list(color = "#F4737A")) %>%
+    add_trace(y = ~Ekin_gesamt_smooth, name = "E<sub>Kin,gesamt</sub>", mode = "lines",
+              line = list(color = "darkgrey", dash = "dot")) %>%
+    layout(margin = list(t = 40),
+           yaxis = list(
+             title = "E<sub>Kin</sub> [J]", 
+             dtick = 5.0, 
+             range = c(0, 20.0),
+             tickformat = ".1f"
+           ),
+           xaxis = list(
+             title = "Frame", 
+             dtick = 50,
+             range = c(100, 800)
+                     ),
+          legend = list(
+              x = 0.98,
+              y = 0.995,
+              xanchor = 'right',
+              yanchor = 'top',
+              orientation = 'h',
+              bgcolor = "rgba(0,0,0,0)"
+          ),
+           annotations = list(
+             list(
+               x = 0.00, y = 0.98, xref = 'paper', yref = 'paper',
+               text = paste("Drehzahl =", round(mean_nD_avg, 2), "U · min<sup>-1</sup>"),
+               showarrow = FALSE,
+               font = list(size = 12)
+             )
+           ))
+  
+  plot8 <- plot_ly(df, x = ~Frame, y = ~E_gesamt, type = "scatter", mode = "lines", 
+                   name = "E<sub>Gesamt</sub>", line = list(color = "#35978F")) %>%
+    layout(margin = list(t = 40),
+           yaxis = list(
+             title = "E<sub>Gesamt</sub> [J]", 
+             dtick = 20, 
+             range = c(500.0, 660.0)
+           ),
+           xaxis = list(
+             title = "Frame", 
+             dtick = 50,
+             range = c(100, 800)
+                     ),
+          legend = list(
+              x = 0.98,
+              y = 0.995,
+              xanchor = 'right',
+              yanchor = 'top',
+              orientation = 'h',
+              bgcolor = "rgba(0,0,0,0)"
+          ),
+           annotations = list(
+             list(
+               x = 0.00, y = 0.98, xref = 'paper', yref = 'paper',
+               text = paste("Drehzahl =", round(mean_nD_avg, 2), "U · min<sup>-1</sup>"),
+               showarrow = FALSE,
+               font = list(size = 12)
+             )
+           ))
+  
+  # Speichere die Plots
+  plotly_Pint_list[[name]] <- list(plot1, plot2, plot3, plot4, plot5, plot6, plot7, plot8)
+}
+```
 
 :::::: columns
-::: {.column width="35%"}
-#### Motor Trend Car Road Tests
-
-The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles.
+::: {.column width="49%"}
+![](images/Innere Arbeit/kinematik_sitzen_cropped.gif){style="height: 400px;"}
 :::
 
-::: {.column width="3%"}
+::: {.column width="2%"}
 :::
 
-::: {.column width="62%"}
-```{r}
-knitr::kable(head(mtcars)[,c("mpg",	"cyl", "disp", "hp", "wt")])
-```
+::: {.column width="49%"}
+![](images/Innere Arbeit/kinematik_stehen_cropped.gif){style="height: 400px;"}
 :::
 ::::::
 
 ::: footer
-Learn more: [Multiple Columns](https://{{< meta prerelease-subdomain >}}quarto.org/docs/presentations/revealjs/#multiple-columns)
+Link: [Website/Innere Arbeit - Winter (1979)](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Theoretischer_Hintergrund/Innere_Arbeit.html#explorativ-wint-berechnung-nach-winter1979)
 :::
 
-## Incremental Lists
+## E~Pot~ {.smaller .show-logo}
 
-Lists can optionally be displayed incrementally:
-
-::: incremental
--   First item
--   Second item
--   Third item
-:::
-
-. . .
-
-<br/> Insert pauses to make other types of content display incrementally.
-
-::: footer
-Learn more: [Incremental Lists](https://{{< meta prerelease-subdomain >}}quarto.org/docs/presentations/revealjs/#incremental-lists)
-:::
-
-
-
-
-
-
-
-
-
-## Slide Transitions {.smaller}
-
-The next few slides will transition using the `slide` transition
-
-| Transition | Description |
-|---------------|---------------------------------------------------------|
-| `none` | No transition (default, switch instantly) |
-| `fade` | Cross fade |
-| `slide` | Slide horizontally |
-| `convex` | Slide at a convex angle |
-| `concave` | Slide at a concave angle |
-| `zoom` | Scale the incoming slide so it grows in from the center of the screen. |
-
-::: footer
-Learn more: [Slide Transitions](https://{{< meta prerelease-subdomain >}}quarto.org/docs/presentations/revealjs/advanced.html#slide-transitions)
-:::
-
-## Tabsets {.smaller .scrollable transition="slide"}
-
-::: panel-tabset
-### Plot
+:::::: columns
+::: {.column width="80%"}
 
 ```{r}
-library(ggplot2)
-ggplot(mtcars, aes(hp, mpg, color = am)) +
-  geom_point() +
-  geom_smooth(formula = y ~ x, method = "loess")
+#| fig.height: 3.2
+#| fig.width: 8.5
+plotly_Pint_list[["15_6"]][[4]]
+plotly_Pint_list[["15_5"]][[4]]
 ```
+:::
 
-### Data
+::: {.column width="1%"}
+:::
+
+::: {.column width="19%"}
+![](images/Innere Arbeit/kinematik_sitzen_HAT_cropped.gif){style="height: 240px; margin-top: 30px; margin-bottom: 20px;"}
+
+![](images/Innere Arbeit/kinematik_stehen_HAT_cropped.gif){style="height: 240px; margin-top: 20px; margin-bottom: 20px;"}
+:::
+::::::
+
+## E~Kin,trans~ {.smaller .show-logo}
+
+:::::: columns
+::: {.column width="80%"}
 
 ```{r}
-knitr::kable(mtcars)
+#| fig.height: 3.2
+#| fig.width: 8.5
+plotly_Pint_list[["15_6"]][[5]]
+plotly_Pint_list[["15_5"]][[5]]
 ```
 :::
 
-::: footer
-Learn more: [Tabsets](https://{{< meta prerelease-subdomain >}}quarto.org/docs/presentations/revealjs/#tabsets)
+::: {.column width="1%"}
 :::
 
-## Interactive Slides {.smaller transition="slide"}
+::: {.column width="19%"}
+![](images/Innere Arbeit/kinematik_sitzen_HAT_cropped.gif){style="height: 240px; margin-top: 30px; margin-bottom: 20px;"}
 
-Include Jupyter widgets and htmlwidgets in your presentations
+![](images/Innere Arbeit/kinematik_stehen_HAT_cropped.gif){style="height: 240px; margin-top: 20px; margin-bottom: 20px;"}
+:::
+::::::
+
+## E~Kin,rot~ {.smaller .show-logo}
+
+:::::: columns
+::: {.column width="80%"}
 
 ```{r}
-#| echo: false
-#| fig-height: 5
-library(leaflet)
-leaflet() %>%
-  addTiles() %>%  # Add default OpenStreetMap map tiles
-  addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")
+#| fig.height: 3.2
+#| fig.width: 8.5
+plotly_Pint_list[["15_6"]][[6]]
+plotly_Pint_list[["15_5"]][[6]]
 ```
-
-
-::: footer
-Learn more: [Jupyter widgets](https://{{< meta prerelease-subdomain >}}quarto.org/docs/interactive/widgets/jupyter.html), [htmlwidgets](https://{{< meta prerelease-subdomain >}}quarto.org/docs/interactive/widgets/htmlwidgets.html)
 :::
 
-## Interactive Slides {.smaller transition="slide"}
+::: {.column width="1%"}
+:::
 
-Turn presentations into applications with Observable and Shiny. Use component layout to position inputs and outputs.
+::: {.column width="19%"}
+![](images/Innere Arbeit/kinematik_sitzen_HAT_cropped.gif){style="height: 240px; margin-top: 30px; margin-bottom: 20px;"}
+
+![](images/Innere Arbeit/kinematik_stehen_HAT_cropped.gif){style="height: 240px; margin-top: 20px; margin-bottom: 20px;"}
+:::
+::::::
+
+## E~Kin,gesamt~ {.smaller .show-logo}
+
+:::::: columns
+::: {.column width="80%"}
 
 ```{r}
-ojs_define(actors = data.frame(
-  x = rnorm(100),
-  y = rnorm(100)
-))
+#| fig.height: 3.2
+#| fig.width: 8.5
+plotly_Pint_list[["15_6"]][[7]]
+plotly_Pint_list[["15_5"]][[7]]
 ```
+:::
 
-```{ojs}
-//| panel: sidebar
-viewof talentWeight = Inputs.range([-2, 2], { value: 0.7, step: 0.01, label: "talent weight" })
-viewof looksWeight = Inputs.range([-2, 2], { value: 0.7, step: 0.01, label: "looks weight" })
-viewof minimum = Inputs.range([-2, 2], { value: 1, step: 0.01, label: "min fame" })
+::: {.column width="1%"}
+:::
+
+::: {.column width="19%"}
+![](images/Innere Arbeit/kinematik_sitzen_HAT_cropped.gif){style="height: 240px; margin-top: 30px; margin-bottom: 20px;"}
+
+![](images/Innere Arbeit/kinematik_stehen_HAT_cropped.gif){style="height: 240px; margin-top: 20px; margin-bottom: 20px;"}
+:::
+::::::
+
+## E~Gesamt~ {.smaller .show-logo}
+
+:::::: columns
+::: {.column width="80%"}
+
+```{r}
+#| fig.height: 3.2
+#| fig.width: 8.5
+plotly_Pint_list[["15_6"]][[8]]
+plotly_Pint_list[["15_5"]][[8]]
 ```
+:::
 
-```{ojs}
-//| panel: fill
-import { plotActors } from './actors.js';
-plotActors(actors, talentWeight, looksWeight, minimum)
+::: {.column width="1%"}
+:::
+
+::: {.column width="19%"}
+![](images/Innere Arbeit/kinematik_sitzen_HAT_cropped.gif){style="height: 240px; margin-top: 30px; margin-bottom: 20px;"}
+
+![](images/Innere Arbeit/kinematik_stehen_HAT_cropped.gif){style="height: 240px; margin-top: 20px; margin-bottom: 20px;"}
+:::
+::::::
+
+## ΔE~Gesamt~ {.smaller .show-logo}
+
+:::::: columns
+::: {.column width="80%"}
+
+```{r}
+#| fig.height: 3.2
+#| fig.width: 8.5
+plotly_Pint_list[["15_6"]][[2]]
+plotly_Pint_list[["15_5"]][[2]]
 ```
-
-::: footer
-Learn more: [Observable](https://{{< meta prerelease-subdomain >}}quarto.org/docs/interactive/ojs/), [Shiny](https://{{< meta prerelease-subdomain >}}quarto.org/docs/interactive/shiny/), [Component Layout](https://{{< meta prerelease-subdomain >}}quarto.org/docs/interactive/layout.html)
 :::
 
-
-## Themes
-
-10 Built-in Themes (or [create your own](https://{{< meta prerelease-subdomain >}}quarto.org/docs/presentations/revealjs/themes.html#creating-themes))
-
-::: {layout-ncol="2"}
-![](images/moon.png)
-
-![](images/sky.png)
+::: {.column width="1%"}
 :::
 
-::: footer
-Learn more: [Themes](https://{{< meta prerelease-subdomain >}}quarto.org/docs/presentations/revealjs/themes.html)
+::: {.column width="19%"}
+![](images/Innere Arbeit/kinematik_sitzen_HAT_cropped.gif){style="height: 240px; margin-top: 30px; margin-bottom: 20px;"}
+
+![](images/Innere Arbeit/kinematik_stehen_HAT_cropped.gif){style="height: 240px; margin-top: 20px; margin-bottom: 20px;"}
+:::
+::::::
+
+## P~Int~ {.smaller .show-logo}
+
+:::::: columns
+::: {.column width="80%"}
+
+```{r}
+#| fig.height: 3.2
+#| fig.width: 8.5
+plotly_Pint_list[["15_6"]][[1]]
+plotly_Pint_list[["15_5"]][[1]]
+```
 :::
 
-## Easy Navigation
-
-::: {style="margin-bottom: 0.9em;"}
-Quickly jump to other parts of your presentation
+::: {.column width="1%"}
 :::
 
-::: {layout="[1, 20]"}
-![](images/presentation-menu.png){width="41"}
+::: {.column width="19%"}
+![](images/Innere Arbeit/kinematik_sitzen_HAT_cropped.gif){style="height: 240px; margin-top: 30px; margin-bottom: 20px;"}
 
-Toggle the slide menu with the menu button (bottom left of slide) to go to other slides and access presentation tools.
+![](images/Innere Arbeit/kinematik_stehen_HAT_cropped.gif){style="height: 240px; margin-top: 20px; margin-bottom: 20px;"}
 :::
+::::::
 
-You can also press {{< kbd m >}} to toggle the menu open and closed.
 
-You can also press {{< kbd g >}} to toggle 'Jump To Slide' modal box to quickly go to one of your slide using its number or id.
 
-::: footer
-Learn more: [Navigation](/docs/presentations/revealjs/presenting.qmd#navigation-menu) / [Jump To Slide](/docs/presentations/revealjs/presenting.qmd#jump-to-slide)
-:::
 
-## Jump To Slide
 
-::: {style="margin-bottom: 0.9em;"}
-Quickly jump to other parts of your presentation
-:::
 
-## Chalkboard {chalkboard-buttons="true"}
-
-::: {style="margin-bottom: 0.9em;"}
-Free form drawing and slide annotations
-:::
-
-::: {layout="[1, 20]"}
-![](images/presentation-chalkboard.png){width="41"}
-
-Use the chalkboard button at the bottom left of the slide to toggle the chalkboard.
-:::
-
-::: {layout="[1, 20]"}
-![](images/presentation-notes-canvas.png){width="41"}
-
-Use the notes canvas button at the bottom left of the slide to toggle drawing on top of the current slide.
-:::
-
-You can also press {{< kbd b >}} to toggle the chalkboard or {{< kbd c >}} to toggle the notes canvas.
-
-::: footer
-Learn more: [Chalkboard](https://{{< meta prerelease-subdomain >}}quarto.org/docs/presentations/revealjs/presenting.html#chalkboard)
-:::
-
-## Point of View
-
-press {{< kbd o >}} to toggle overview mode:
-
-![](images/overview-mode.png){.border}
-
-Hold down the {{< kbd Alt linux=Ctrl >}} and click on any element to zoom towards it---try it now on this slide.
-
-::: footer
-Learn more: [Overview Mode](https://{{< meta prerelease-subdomain >}}quarto.org/docs/presentations/revealjs/presenting.html#overview-mode), [Slide Zoom](https://{{< meta prerelease-subdomain >}}quarto.org/docs/presentations/revealjs/presenting.html#slide-zoom)
-:::
-
-## Speaker View
-
-press {{< kbd s >}} (or use the tools in presentation menu ![](../images/navigation-menu-icon.png){style="padding-bottom: 1px; margin: 0" width="0.5em" height="0.5em"}) to open speaker view
-
-![](images/speaker-view.png){fig-align="center" style="border: 3px solid #dee2e6;" width="780"}
-
-::: footer
-Learn more: [Speaker View](https://{{< meta prerelease-subdomain >}}quarto.org/docs/presentations/revealjs/presenting.html#speaker-view)
-:::
-
-## Scroll View {#scroll-view}
-
-Press {{< kbd r >}} (or use the tools in presentation menu ![](../images/navigation-menu-icon.png){style="padding-bottom: 1px; margin: 0" width="0.5em" height="0.5em"}) to open scroll view
-
-Try it now on this slide --- You'll see a scroll bar on the right and you can scroll down the presentation using your mouse.
-
-Scroll view behavior can be configured using `scroll-view` configuration.
-
-::: footer
-Learn more: [Scroll View](https://{{< meta prerelease-subdomain >}}quarto.org/docs/presentations/revealjs/presenting.html#scroll-view)
-:::
-
-## Authoring Tools {.smaller}
-
-Live side-by-side preview for any notebook or text editor including Jupyter and VS Code
-
-::::: columns
-::: {.column width="50%"}
-![](images/jupyter-edit.png){.border .border-thick}
-:::
-
-::: {.column width="50%"}
-![](images/jupyter-preview.png){.border .border-thick}
-:::
-:::::
-
-::: footer
-Learn more: [Jupyter](https://{{< meta prerelease-subdomain >}}quarto.org/docs/tools/jupyter-lab.html), [VS Code](https://{{< meta prerelease-subdomain >}}quarto.org/docs/tools/vscode.html), [Text Editors](https://{{< meta prerelease-subdomain >}}quarto.org/docs/tools/text-editors.html)
-:::
-
-## Authoring Tools {.smaller}
-
-RStudio includes an integrated presentation preview pane
-
-![](images/rstudio.png){.border width="900"}
-
-::: footer
-Learn more: [RStudio](https://{{< meta prerelease-subdomain >}}quarto.org/docs/tools/rstudio.html)
-:::
-
-## And More...
-
--   [Touch](https://{{< meta prerelease-subdomain >}}quarto.org/docs/presentations/revealjs/advanced.html#touch-navigation) optimized (presentations look great on mobile, swipe to navigate slides)
--   [Footer & Logo](https://{{< meta prerelease-subdomain >}}quarto.org/docs/presentations/revealjs/#footer-logo) (optionally specify custom footer per-slide or hide global footer)
--   [Auto-Slide](https://{{< meta prerelease-subdomain >}}quarto.org/docs/presentations/revealjs/presenting.html#auto-slide) (step through slides automatically, without any user input)
--   [Multiplex](https://{{< meta prerelease-subdomain >}}quarto.org/docs/presentations/revealjs/presenting.html#multiplex) (allows your audience to follow the slides of the presentation you are controlling on their own phone, tablet or laptop).
-
-::: footer
-Learn more: [Quarto Presentations](https://{{< meta prerelease-subdomain >}}quarto.org/docs/presentations/revealjs/)
-:::

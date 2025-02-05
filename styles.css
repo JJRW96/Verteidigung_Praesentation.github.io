@@ -7,9 +7,84 @@
 }
 
 .reveal .slide-background {
-  background-image: url('images/Logo_η_2.png');
-  background-position: 94% 25px; 
+  background-image: none;  /* Standard: kein Hintergrundbild */
+}
+
+.reveal .slide-background.show-logo {
+  background-image: url('images/Logo_eta_2.png');
+  background-position: 94% 25px;
   background-repeat: no-repeat;
-  background-size: 100px auto;
+  background-size: 130px auto;
   padding: 20px;
+}
+
+/* Überschriften */
+.reveal h1 { font-size: 2.20em !important; }   
+.reveal h2 { font-size: 1.50em !important; }
+.reveal h3 { font-size: 1.25em !important; }
+
+/* Standardtext (p) */
+.reveal p { font-size: 0.9em !important; }
+
+/* Aufzählungen/Listen */
+.reveal ul { 
+  font-size: 0.8em !important;
+}
+
+.reveal ul li {
+  visibility: hidden;  /* Versteckt den gesamten Listenpunkt initial */
+}
+
+.reveal ul li:before {
+  visibility: hidden;  /* Versteckt den Bullet Point */
+}
+
+/* Zeige den Listenpunkt und seinen Bullet Point, wenn er kein Fragment ist */
+.reveal ul li:not(.fragment) {
+  visibility: visible;
+}
+
+.reveal ul li:not(.fragment):before {
+  visibility: visible;
+}
+
+/* Zeige den Listenpunkt und seinen Bullet Point, wenn er ein sichtbares Fragment ist */
+.reveal ul li.fragment.visible {
+  visibility: visible;
+}
+
+.reveal ul li.fragment.visible:before {
+  visibility: visible;
+}
+
+/* Code-Blöcke */
+.reveal pre { font-size: 0.7em !important; }
+.reveal code { font-size: 0.7em !important; }
+
+/* Blockzitate */
+.reveal blockquote { font-size: 0.8em !important; }
+
+/* Tabellen */
+.reveal table { font-size: 0.7em !important; }
+
+/* Bildunterschriften */
+.reveal .caption { font-size: 0.6em !important; }
+
+/* Fußnoten */
+.reveal .footnote { font-size: 0.5em !important; }
+
+/* Kleine Texte/Anmerkungen */
+.reveal small { font-size: 0.5em !important; }
+
+/* Hauptpunkte */
+.reveal ol { 
+  font-size: 0.8em !important; 
+}
+
+/* Unterpunkte */
+.reveal p:has(+ p:contains("2.1")),
+.reveal p:has(+ p:contains("2.2")),
+.reveal p:has(+ p:contains("2.3")),
+.reveal p:has(+ p:contains("3.2")) {
+  font-size: 0.72em !important; /* 90% von 0.8em */
 }
