@@ -1,5 +1,12 @@
 project:
+  type: website
   title: "Verteidigung"
 
-editor: visual
+format:
+  revealjs:
+    embed-resources: true
+    theme: white
+    slide-number: true
+    preview-links: true
 
+editor: visual
