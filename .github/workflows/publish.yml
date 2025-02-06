@@ -45,6 +45,7 @@ jobs:
             any::RColorBrewer
             any::purrr
             any::readxl
+            any::readr
             any::extrafont
             any::flextable
             any::curl
