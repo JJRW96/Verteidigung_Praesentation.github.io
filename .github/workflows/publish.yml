@@ -54,6 +54,7 @@ jobs:
             any::emmeans
             any::kableExtra
             any::leaflet
+            any::tidyverse
 
 
       - name: Render and Publish

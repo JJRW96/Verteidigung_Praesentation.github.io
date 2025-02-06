@@ -81,6 +81,7 @@ Dr. Anna Katharina Dunst
 Link: [Website](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io)
 :::
 
+
 ## Umsetzung der Arbeit als Webseite {.show-logo}
 
 - Verwendung der Open-Source-Programmiersprache R und Quarto
