@@ -13,12 +13,14 @@ format:
   #- Verteidigung.pdf
 ---
 
+```{r}
+# ::: {data-id="logo" style="background-image: url('images/Logo_eta_2.png'); background-size: contain; background-repeat: # no-repeat; margin: 15px auto; margin-right: 412px; width: 200px; height: 200px; display: block;"}
+# :::
+```
+
 # Verteidigung-Masterarbeit {.no-logo auto-animate=true style="font-size: 0.55em; text-align: center; margin-top: -30px;"}
 
-<div style="text-align: center; font-size: 1.15em; margin-top: -5px;">
-Empirische Studie zum Wirkungsgrad: <br>
-Ein Vergleich zwischen sitzendem und stehendem Fahren auf dem Fahrradergometer
-</div>
+![](./images/Logo_eta_2.png){.absolute top=200 left=400 width=0}
 
 ::: {data-id="logo" style="background-image: url('images/Logo_eta_2.png'); background-size: contain; background-repeat: no-repeat; margin: 15px auto; margin-right: 412px; width: 200px; height: 200px; display: block;"}
 :::
@@ -37,6 +39,21 @@ Dr. Anna Katharina Dunst
 **Datum:**  
 11.02.2025
 </div>
+
+## Links zur Webseite {.show-logo style="font-size: 0.85em"}
+
+Links zur Seite
+
+::: {style="text-align: center; margin-top: 1em"}
+[Hauptseite](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/about.html){preview-link="true" style="text-align: center"}
+
+[Innere Arbeit](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Theoretischer_Hintergrund/Innere_Arbeit.html){preview-link="true" style="text-align: left"}
+
+[Anaerobe-alaktazide Energiekomponente (W~PCr~)](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Theoretischer_Hintergrund/Energieumsatzberechnung/Anaerobe_alaktazide_Energiebereitstellung.html){preview-link="true" style="text-align: left"}
+
+[EPOC: Shiny-App](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Theoretischer_Hintergrund/Energieumsatzberechnung/Anaerobe_alaktazide_Energiebereitstellung.html#shiny-app-epoc-modellfunktion){preview-link="true" style="text-align: left"}
+
+:::
 
 ## Inhalt {.show-logo}
 
@@ -105,7 +122,7 @@ Link: [Website](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io)
 :::
 :::::
 
-## Möglichkeiten der Web-basierten Masterarbeit {.smaller .show-logo}
+## Möglichkeiten der Web-basierten Masterarbeit {auto-animate=true auto-animate-duration="1.5" .smaller .show-logo}
 
 ::: {.fragment}
 - Integration und Ausführung von Code-Segmenten direkt in der Arbeit
@@ -138,11 +155,11 @@ ggplot(df_spiro_beispiel, aes(x = t_s)) +
 ```
 ::: 
 
-## Möglichkeiten der Web-basierten Masterarbeit {.smaller .show-logo}
+## Möglichkeiten der Web-basierten Masterarbeit {auto-animate=true auto-animate-duration="1.5" .smaller .show-logo}
 
 - Effiziente Verarbeitung und Einbindung großer Datensätze
 
-::: {.fragment}
+
 ```{r}
 #| echo: true
 #| warning: false
@@ -156,7 +173,7 @@ Stichprobe_df <- read_excel("Probanden_Daten 2.2.xlsm", sheet = "Stichprobe_fina
 datatable(Stichprobe_df, options = list(scrollX = TRUE, scrollY = "240px", dom = 't', order = list(list(0, 'asc')), 
                                         initComplete = JS("function(settings, json) {$(this.api().table().container()).css({'font-size': '70%'});}")), rownames = FALSE)
 ```
-:::
+
 
 
 ## Möglichkeiten der Web-basierten Masterarbeit {.show-logo style="font-size: 0.85em"}
@@ -174,10 +191,371 @@ datatable(Stichprobe_df, options = list(scrollX = TRUE, scrollY = "240px", dom =
 Link: [Website/Anaerobe-alaktazide Energiebereitstellung](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Theoretischer_Hintergrund/Energieumsatzberechnung/Anaerobe_alaktazide_Energiebereitstellung.html)
 :::
 
-## Energieanteile {auto-animate="true" auto-animate-easing="ease-in-out" .show-logo style="font-size: 0.85em"}
+
+## Hinleitung zum Thema {.show-logo style="font-size: 0.85em"}
+
+- Forschungsstand:
+  - Meiste Studien nur in sitzender Position
+  - 22-34% der Bergauf-Zeit im Stehen
+  - Hohe praktische Relevanz, aber wenig systematische Forschung
+
+- Bisherige Wirkungsgradanalysen:
+  - Fokus auf η~Brutto~ und η~Netto~
+  - Keine Berücksichtigung innerer Arbeit
+  - η~muskulär~ bisher nicht im Stehen untersucht
+
+- Forschungslücke:
+  - Systematischer Vergleich η~muskulär~ Sitzen vs. Stehen
+  - Einfluss von Trittfrequenz und Intensität
+  - Integration innerer Arbeit beim Stehen
+
+::: {.notes}
+- Wirkungsgrad im Stehen wenig erforscht
+- Bisherige Parameter unvollständig
+- Hohe praktische Bedeutung
+:::
+
+## Unterschiede Sitzen vs. Stehen {.show-logo style="font-size: 0.85em"}
+
+- Biomechanische Unterschiede:
+  - Körperschwerpunkt nach vorne verlagert
+  - Höhere tangentiale Pedalkräfte
+  - Niedrigere selbstgewählte Trittrate
+  - Mehr Freiheitsgrade der Bewegung
+
+- Physiologische Anpassungen:
+  - Veränderte Muskelaktivierung:
+    - ↓ Untere Beinmuskulatur
+    - ↑ Obere Beinmuskulatur
+    - ↑ Rumpf- & Oberkörpermuskulatur
+  - Höhere Kurzzeitleistung möglich (+26%)
+  - Intensitätsabhängige metabolische Anpassung
+
+::: {.notes}
+- Komplexe biomechanische Änderungen
+- Differenzierte Muskelaktivierung
+- Leistungsvorteile bei hoher Intensität
+:::
+
+## Wirkungsgrad (η) {auto-animate=true auto-animate-duration="1.2" .show-logo style="font-size: 0.85em"}
+
+- Der Wirkungsgrad beim Radfahren beschreibt das Verhältnis zwischen erzeugter externer Arbeit und aufgewendeter metabolischer Energie...
+
+::: {.center}
+$$
+\scriptsize
+\text{η} = \frac{\text{W}_{mech} + \text{W}_{Int}}{\text{W}_{metabolisch}}
+$$
+:::
+
+
+:::::: {.r-stack data-auto-animate-delay="0"}
+::: {data-id="text1" style="position: absolute; bottom: 265px; left: 100px; text-align: center; width: 200px; font-size: 80%; white-space: nowrap;"}
+Metabolische Arbeit
+:::
+
+::: {data-id="text3" style="position: absolute; bottom: 265px; left: 410px; text-align: center; width: 200px; font-size: 80%; white-space: nowrap;"}
+Mechanische\ +\ Innere Arbeit
+:::
+
+::: {data-id="text5" style="position: absolute; bottom: 265px; left: 790px; text-align: center; width: 100px; font-size: 80%; white-space: nowrap;"}
+η
+:::
+
+::: {data-id="box1" style="width: 100px; height: 20px; position: absolute; bottom: 0; left: 150px; background: repeating-linear-gradient(45deg, #42BA97, #42BA97 5px, #79cfb6 5px, #79cfb6 10px);"}
+:::
+
+::: {data-id="box2" style="background: #42BA97; width: 100px; height: 200px; position: absolute; bottom: 20px; left: 150px;"}
+:::
+
+::: {data-id="box3" style="background: #F4737A; width: 100px; height: 10px; position: absolute; bottom: 220px; left: 150px;"}
+:::
+
+::: {data-id="box4" style="background: #1CADE4; width: 100px; height: 20px; position: absolute; bottom: 230px; left: 150px;"}
+:::
+
+::: {data-id="arrow" style="position: absolute; bottom: 90px; left: 363px; font-size: 36px;"}
+→
+:::
+
+::: {data-id="box5" style="background: #969696; width: 100px; height: 46px; position: absolute; bottom: 92px; left: 475px;"}
+:::
+
+::: {data-id="box6" style="background: #D9D9D9; width: 100px; height: 20px; position: absolute; bottom: 138px; left: 475px;"}
+:::
+
+::: {data-id="equals" style="position: absolute; bottom: 90px; left: 687px; font-size: 36px;"}
+≈
+:::
+
+::: {data-id="percentage" style="position: absolute; bottom: 90px; left: 800px; font-size: 33px;"}
+10-30%
+:::
+::::::
+
+## Bruttowirkungsgrad (η~Brutto~) {auto-animate=true auto-animate-duration="1.2" .show-logo style="font-size: 0.85em"}
+
+- Der Wirkungsgrad beim Radfahren beschreibt das Verhältnis zwischen erzeugter externer Arbeit und aufgewendeter metabolischer Energie...
+
+::: {.center}
+$$
+\scriptsize
+\text{η}_{Brutto} = \frac{\text{W}_{mech}}{\text{W}_{Aerob}}
+$$
+:::
+
+
+
+:::::: {.r-stack data-auto-animate-delay="0"}
+::: {data-id="text1" style="position: absolute; bottom: 265px; left: 100px; text-align: center; width: 200px; font-size: 80%; white-space: nowrap;"}
+Metabolische Arbeit
+:::
+
+::: {data-id="text3" style="position: absolute; bottom: 265px; left: 425px; text-align: center; width: 200px; font-size: 80%; white-space: nowrap;"}
+Mechanische Arbeit
+:::
+
+::: {data-id="text5" style="position: absolute; bottom: 265px; left: 790px; text-align: center; width: 100px; font-size: 80%; white-space: nowrap;"}
+η~Brutto~
+:::
+
+::: {data-id="box2" style="background: #42BA97; width: 100px; height: 250px; position: absolute; bottom: 0px; left: 150px;"}
+:::
+
+::: {data-id="arrow" style="position: absolute; bottom: 90px; left: 363px; font-size: 36px;"}
+→
+:::
+
+::: {data-id="box5" style="background: #969696; width: 100px; height: 66px; position: absolute; bottom: 92px; left: 475px;"}
+:::
+
+::: {data-id="equals" style="position: absolute; bottom: 90px; left: 687px; font-size: 36px;"}
+≈
+:::
+
+::: {data-id="percentage" style="position: absolute; bottom: 90px; left: 800px; font-size: 33px;"}
+10-20%
+:::
+::::::
+
+
+## Nettowirkungsgrad (η~Netto~) {auto-animate=true auto-animate-duration="1.2" .show-logo style="font-size: 0.85em"}
+
+- Der Wirkungsgrad beim Radfahren beschreibt das Verhältnis zwischen erzeugter externer Arbeit und aufgewendeter metabolischer Energie...
+
+:::::: {.center}
+$$
+\scriptsize
+\text{η}_{Netto} = \frac{\text{W}_{mech}}{\text{W}_{Aerob} - \text{W}_{Ruhe}}
+$$
+::::::
+
+:::::: {.r-stack data-auto-animate-delay="0"}
+::: {data-id="text1" style="position: absolute; bottom: 265px; left: 100px; text-align: center; width: 200px; font-size: 80%; white-space: nowrap;"}
+Metabolische Arbeit
+:::
+
+::: {data-id="text3" style="position: absolute; bottom: 265px; left: 425px; text-align: center; width: 200px; font-size: 80%; white-space: nowrap;"}
+Mechanische Arbeit
+:::
+
+::: {data-id="text5" style="position: absolute; bottom: 265px; left: 790px; text-align: center; width: 100px; font-size: 80%; white-space: nowrap;"}
+η~Netto~
+:::
+
+::: {data-id="box1" style="width: 100px; height: 20px; position: absolute; bottom: 0; left: 150px; background: repeating-linear-gradient(45deg, #42BA97, #42BA97 5px, #79cfb6 5px, #79cfb6 10px);"}
+:::
+
+::: {data-id="box2" style="background: #42BA97; width: 100px; height: 230px; position: absolute; bottom: 20px; left: 150px;"}
+:::
+
+::: {data-id="arrow" style="position: absolute; bottom: 90px; left: 363px; font-size: 36px;"}
+→
+:::
+
+::: {data-id="box5" style="background: #969696; width: 100px; height: 66px; position: absolute; bottom: 92px; left: 475px;"}
+:::
+
+::: {data-id="equals" style="position: absolute; bottom: 90px; left: 687px; font-size: 36px;"}
+≈
+:::
+
+::: {data-id="percentage" style="position: absolute; bottom: 90px; left: 800px; font-size: 33px;"}
+10-20%
+:::
+::::::
+
+
+## Gesamtwirkungsgrad (η~Total~) {auto-animate=true auto-animate-duration="1.2" .show-logo style="font-size: 0.85em"}
+
+- Der Wirkungsgrad beim Radfahren beschreibt das Verhältnis zwischen erzeugter externer Arbeit und aufgewendeter metabolischer Energie...
+
+::: {.center}
+$$
+\scriptsize
+\text{η}_{Total} = \frac{\text{W}_{mech}}{\text{W}_{Tot} - \text{W}_{Ruhe}}
+$$
+:::
+
+:::::: {.r-stack data-auto-animate-delay="0"}
+::: {data-id="text1" style="position: absolute; bottom: 265px; left: 100px; text-align: center; width: 200px; font-size: 80%; white-space: nowrap;"}
+Metabolische Arbeit
+:::
+
+::: {data-id="text3" style="position: absolute; bottom: 265px; left: 425px; text-align: center; width: 200px; font-size: 80%; white-space: nowrap;"}
+Mechanische Arbeit
+:::
+
+::: {data-id="text5" style="position: absolute; bottom: 265px; left: 790px; text-align: center; width: 100px; font-size: 80%; white-space: nowrap;"}
+η~Total~
+:::
+
+::: {data-id="box1" style="width: 100px; height: 20px; position: absolute; bottom: 0; left: 150px; background: repeating-linear-gradient(45deg, #42BA97, #42BA97 5px, #79cfb6 5px, #79cfb6 10px);"}
+:::
+
+::: {data-id="box2" style="background: #42BA97; width: 100px; height: 201px; position: absolute; bottom: 20px; left: 150px;"}
+:::
+
+::: {data-id="box3" style="background: #F4737A; width: 100px; height: 10px; position: absolute; bottom: 220px; left: 150px;"}
+:::
+
+::: {data-id="box4" style="background: #1CADE4; width: 100px; height: 20px; position: absolute; bottom: 230px; left: 150px;"}
+:::
+
+::: {data-id="arrow" style="position: absolute; bottom: 90px; left: 363px; font-size: 36px;"}
+→
+:::
+
+::: {data-id="box5" style="background: #969696; width: 100px; height: 66px; position: absolute; bottom: 92px; left: 475px;"}
+:::
+
+::: {data-id="equals" style="position: absolute; bottom: 90px; left: 687px; font-size: 36px;"}
+≈
+:::
+
+::: {data-id="percentage" style="position: absolute; bottom: 90px; left: 800px; font-size: 33px;"}
+10-30%
+:::
+::::::
+
+
+## Arbeitswirkungsgrad (η~Arbeit~) {auto-animate=true auto-animate-duration="1.2" .show-logo style="font-size: 0.85em"}
+
+- Der Wirkungsgrad beim Radfahren beschreibt das Verhältnis zwischen erzeugter externer Arbeit und aufgewendeter metabolischer Energie...
+
+::: {.center}
+$$
+\scriptsize
+\text{η}_{Arbeit} = \frac{\text{W}_{mech}}{\text{W}_{Tot} - \text{W}_{Ruhe} - \text{W}_{Leerbewegung}}
+$$
+:::
+
+
+
+:::::: {.r-stack data-auto-animate-delay="0"}
+::: {data-id="text1" style="position: absolute; bottom: 265px; left: 100px; text-align: center; width: 200px; font-size: 80%; white-space: nowrap;"}
+Metabolische Arbeit
+:::
+
+::: {data-id="text3" style="position: absolute; bottom: 265px; left: 425px; text-align: center; width: 200px; font-size: 80%; white-space: nowrap;"}
+Mechanische Arbeit
+:::
+
+::: {data-id="text5" style="position: absolute; bottom: 265px; left: 790px; text-align: center; width: 100px; font-size: 80%; white-space: nowrap;"}
+η~Arbeit~
+:::
+
+::: {data-id="box1" style="width: 100px; height: 20px; position: absolute; bottom: 0; left: 150px; background: repeating-linear-gradient(45deg, #42BA97, #42BA97 5px, #79cfb6 5px, #79cfb6 10px);"}
+:::
+
+::: {data-id="box2" style="background: #42BA97; width: 100px; height: 201px; position: absolute; bottom: 20px; left: 150px;"}
+:::
+
+::: {data-id="box3" style="background: #F4737A; width: 100px; height: 10px; position: absolute; bottom: 220px; left: 150px;"}
+:::
+
+::: {data-id="box4" style="background: #1CADE4; width: 100px; height: 20px; position: absolute; bottom: 230px; left: 150px;"}
+:::
+
+::: {data-id="box6" style="width: 100px; height: 20px; position: absolute; bottom: -20px; left: 150px; background: repeating-linear-gradient(45deg, #D9D9D9, #D9D9D9 5px, #BDBDBD 5px, #BDBDBD 10px);"}
+:::
+
+::: {data-id="arrow" style="position: absolute; bottom: 90px; left: 363px; font-size: 36px;"}
+→
+:::
+
+::: {data-id="box5" style="background: #969696; width: 100px; height: 66px; position: absolute; bottom: 92px; left: 475px;"}
+:::
+
+::: {data-id="equals" style="position: absolute; bottom: 90px; left: 687px; font-size: 36px;"}
+≈
+:::
+
+::: {data-id="percentage" style="position: absolute; bottom: 90px; left: 800px; font-size: 33px;"}
+10-30%
+:::
+::::::
+
+## Muskulärer Wirkungsgrad (η~muskulär~) {auto-animate=true auto-animate-duration="1.2" .show-logo style="font-size: 0.85em"}
+
+- Der Wirkungsgrad beim Radfahren beschreibt das Verhältnis zwischen erzeugter externer Arbeit und aufgewendeter metabolischer Energie...
+
+::: {.center}
+$$
+\scriptsize
+\text{η}_{muskulär} = \frac{\text{W}_{mech} + \text{W}_{Int}}{\text{W}_{Tot} - \text{W}_{Ruhe}}
+$$
+:::
+
+
+:::::: {.r-stack data-auto-animate-delay="0"}
+::: {data-id="text1" style="position: absolute; bottom: 265px; left: 100px; text-align: center; width: 200px; font-size: 80%; white-space: nowrap;"}
+Metabolische Arbeit
+:::
+
+::: {data-id="text3" style="position: absolute; bottom: 265px; left: 410px; text-align: center; width: 200px; font-size: 80%; white-space: nowrap;"}
+Mechanische\ +\ Innere Arbeit
+:::
+
+::: {data-id="text5" style="position: absolute; bottom: 265px; left: 790px; text-align: center; width: 100px; font-size: 80%; white-space: nowrap;"}
+η~muskulär~
+:::
+
+::: {data-id="box1" style="width: 100px; height: 20px; position: absolute; bottom: 0; left: 150px; background: repeating-linear-gradient(45deg, #42BA97, #42BA97 5px, #79cfb6 5px, #79cfb6 10px);"}
+:::
+
+::: {data-id="box2" style="background: #42BA97; width: 100px; height: 201px; position: absolute; bottom: 20px; left: 150px;"}
+:::
+
+::: {data-id="box3" style="background: #F4737A; width: 100px; height: 10px; position: absolute; bottom: 220px; left: 150px;"}
+:::
+
+::: {data-id="box4" style="background: #1CADE4; width: 100px; height: 20px; position: absolute; bottom: 230px; left: 150px;"}
+:::
+
+::: {data-id="arrow" style="position: absolute; bottom: 90px; left: 363px; font-size: 36px;"}
+→
+:::
+
+::: {data-id="box5" style="background: #969696; width: 100px; height: 46px; position: absolute; bottom: 92px; left: 475px;"}
+:::
+
+::: {data-id="box6" style="background: #D9D9D9; width: 100px; height: 20px; position: absolute; bottom: 138px; left: 475px;"}
+:::
+
+::: {data-id="equals" style="position: absolute; bottom: 90px; left: 687px; font-size: 36px;"}
+≈
+:::
+
+::: {data-id="percentage" style="position: absolute; bottom: 90px; left: 800px; font-size: 33px;"}
+10-30%
+:::
+::::::
+
+
+## Energieanteile {auto-animate=true auto-animate-duration="1.2" .show-logo style="font-size: 0.85em"}
 
 :::::: r-hstack
-
 :::: {.columns style="width: 100%; display: flex; justify-content: space-evenly;"}
 
 ::: {.column width="33%" style="display: flex; flex-direction: column; align-items: center; text-align: center; font-size: 0.8em;" .fragment .fade-in}
@@ -217,82 +595,351 @@ W~PCr~
 
 ::::::
 
-## Energieanteile {auto-animate="true" auto-animate-easing="ease-in" .show-logo style="font-size: 0.85em"}
+## Aerobe Energiekomponente (W~Aerob~) {auto-animate=true auto-animate-duration="1.2" .show-logo style="font-size: 0.85em"}
 
 :::: {.columns style="display: flex; width: 100%;"}
 
-::: {.column width="75%" style="padding: 20px;"}
-- asdf
-- ...
-- ...
+::: {.column style="width: 75%; font-size: 0.85em; flex: 1 1 75%; min-width: 0;"}
+- Messung des Sauerstoffvolumenstrom in Ruhe $\dot{V}O_{2, Ruhe}(t)$ mittels Spirometrie und des kalorischen Äquivalents (kÄ) anhand des individuell gemessenen RQ (t)
+
+- Berechnung von W~Aerob~:
+$$
+\scriptsize
+\dot{V}O_{2,Netto}(t) = \dot{V}O_{2,Belastung}(t) - \dot{V}O_{2,Ruhe}(t)
+\\
+\scriptsize
+W_{Aerob} = \overline{\dot{V}O_{2,Netto}} \cdot \overline{kÄ}_{Bel} \cdot t
+$$
+
+![](images/VO2_plot.png)
 :::
 
-::: {.column width="25%" style="display: flex; justify-content: center;"}
+::: {.column style="width: 25%; display: flex; justify-content: center; flex: 0 0 25%;"}
 :::::: r-stack
 ::: {data-id="box1" style="background: #42BA97; width: 200px; height: 440px; position: absolute; bottom: 0;"}
 :::
 
-::: {data-id="label1" style="position: absolute; bottom: 220px; left: 86%; transform: translateX(-50%); z-index: 1; font-size: 0.6em;"}
-W~Aerob~
+::: {data-id="box2" style="background: rgba(244, 115, 122, 0.4); width: 200px; height: 20px; position: absolute; bottom: 440px;"}
 :::
 
-::: {data-id="box2" style="background: #F4737A; width: 200px; height: 20px; position: absolute; bottom: 440px;"}
-:::
-
-::: {data-id="label2" style="position: absolute; bottom: 427px; left: 86%; transform: translateX(-50%); z-index: 1; font-size: 0.35em;"}
-W~BLC~
-:::
-
-::: {data-id="box3" style="background: #1CADE4; width: 200px; height: 40px; position: absolute; bottom: 460px;"}
-:::
-
-::: {data-id="label3" style="position: absolute; bottom: 448px; left: 86%; transform: translateX(-50%); z-index: 1; font-size: 0.6em;"}
-W~PCr~
+::: {data-id="box3" style="background: rgba(28, 173, 228, 0.4); width: 200px; height: 40px; position: absolute; bottom: 460px;"}
 :::
 ::::::
 :::
 
 ::::
 
-## Link zur Webseite {.show-logo style="font-size: 0.85em"}
+---
 
-Links zur Seite
+## Aerobe Energiekomponente (W~Aerob~) {auto-animate=true auto-animate-duration="1.2" .show-logo style="font-size: 0.85em"}
 
-::: {style="text-align: center; margin-top: 1em"}
-[Hauptseite](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/about.html){preview-link="true" style="text-align: center"}
+:::: {.columns style="display: flex; width: 100%;"}
 
-[Innere Arbeit](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Theoretischer_Hintergrund/Innere_Arbeit.html){preview-link="true" style="text-align: left"}
+::: {.column style="width: 75%; font-size: 0.85em; flex: 1 1 75%; min-width: 0;"}
+- Berechnung des $\dot{V}O_{2, Ruhe}(t)$ nach Harris-Benedict (1918)
 
-[Anaerobe-alaktazide Energiekomponente (W~PCr~)](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Theoretischer_Hintergrund/Energieumsatzberechnung/Anaerobe_alaktazide_Energiebereitstellung.html){preview-link="true" style="text-align: left"}
+$$
+\scriptsize
+\!\begin{aligned}
+\text{Grundumsatz:} \rightarrow h_{f, m}\,[kcal] &= 
+\begin{cases} 
+h_{f} = 655.1 + (9.563 \cdot M) + (1.850 \cdot L) - (4.676 \cdot A)\\    
+h_{m} = 66.5 \,+  (13.75 \cdot M) + (5.003 \cdot L) - (6.775 \cdot A) 
+\end{cases}
+\end{aligned}
+$$
 
-[EPOC: Shiny-App](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Theoretischer_Hintergrund/Energieumsatzberechnung/Anaerobe_alaktazide_Energiebereitstellung.html#shiny-app-epoc-modellfunktion){preview-link="true" style="text-align: left"}
+$$
+\scriptsize
+\!\begin{aligned}
+\text{Ruheumsatz:} \rightarrow RMR_{f, m}\,[l \cdot min^{-1}] &= 
+\begin{cases} 
+RMR_{f} = \left( \frac{h_{f}}{24 \, \cdot 60 \cdot kÄ} \right) \cdot 4.1868 \cdot 1.278\\
+RMR_{m} = \left( \frac{h_{m}}{24 \cdot 60 \cdot kÄ} \right) \cdot 4.1868 \cdot 1.287
+\end{cases}
+\end{aligned}
+$$
+
+- Berechnung von W~Aerob~:
+$$
+\scriptsize
+\dot{V}O_{2,Netto}(t) = \dot{V}O_{2,Belastung}(t) - \dot{V}O_{2,Ruhe}(t)
+\\
+\scriptsize
+W_{Aerob} = \overline{\dot{V}O_{2,Netto}} \cdot \overline{kÄ}_{Bel} \cdot t
+$$
+:::
+
+::: {.column style="width: 25%; display: flex; justify-content: center; flex: 0 0 25%;"}
+:::::: r-stack
+::: {data-id="box1" style="background: #42BA97; width: 200px; height: 440px; position: absolute; bottom: 0;"}
+:::
+
+::: {data-id="box2" style="background: rgba(244, 115, 122, 0.4); width: 200px; height: 20px; position: absolute; bottom: 440px;"}
+:::
+
+::: {data-id="box3" style="background: rgba(28, 173, 228, 0.4); width: 200px; height: 40px; position: absolute; bottom: 460px;"}
+:::
+::::::
+:::
+
+::::
+
+## Anaerobe-laktazide Energiekomponente (W~BLC~) {auto-animate=true auto-animate-duration="1.2" .show-logo style="font-size: 0.85em"}
+
+:::: {.columns style="display: flex; width: 100%;"}
+
+::: {.column style="width: 75%; font-size: 0.85em; flex: 1 1 75%; min-width: 0;"}
+- Berechnung von W~BLC~ aus:
+  - Blutlaktatwert vor Belastung (BLC~Pre~)
+  - Maximaler Laktatwert nach Belastung (BLC~max~)
+  - Nettoblutlaktatwert: BLC~Netto~ = BLC~max~ - BLC~Pre~
+
+- Berechnung von W~BLC~:
+$$
+\scriptsize
+W_{BLC} \, [\text{kJ}] = 
+\frac{
+BLC_{Netto} \, [\text{mmol} \cdot \text{l}^{-1}] \cdot 
+3.0 \, [\text{ml O}_2 \cdot \text{kg}^{-1} \cdot \text{mmol}^{-1} \cdot \text{l}] \cdot 
+\text{Körpermasse} \, [\text{kg}] \cdot 
+kÄ_{\text{KH}} \, [\text{J} \cdot \text{ml}^{-1} \,\text{O}_2]
+}{1000}
+$$
 
 :::
 
-
-
-## Innere Arbeit {.show-logo}
-
-:::: {.columns style="display: flex;"}
-::: {.column style="position: relative; width: 75%;"}
-::: {.fragment fragment-index=0}
-- test 1
-:::
-::: {.fragment fragment-index=1}
-- test 2
+::: {.column style="width: 25%; display: flex; justify-content: center; flex: 0 0 25%;"}
+:::::: r-stack
+::: {data-id="box1" style="background: rgba(66, 186, 151, 0.4); width: 200px; height: 440px; position: absolute; bottom: 0;"}
 :::
 
-::: {.fragment fragment-index=2}
-![](images/Innere Arbeit/Innere_Leistung_Tokui.png){.fragment .fade-out fragment-index=3 height="400px"}
+::: {data-id="box2" style="background: #F4737A; width: 200px; height: 20px; position: absolute; bottom: 440px;"}
+:::
 
-::: {.fragment .fade-in fragment-index=3 style="position: absolute; top: 160px; left: 0; width: 100%;"}
-![](images/Innere Arbeit/Hintzy-Cloutier_linear.png){height="400px"}
+::: {data-id="box3" style="background: rgba(28, 173, 228, 0.4); width: 200px; height: 40px; position: absolute; bottom: 460px;"}
 :::
+::::::
 :::
+
+::::
+
+:::{.notes}
+- Sauerstoff-Laktat-Äquivalent: 3.0 [ml O~2~·kg^-1^·mmol^-1^·l]
+- Kalorisches Äquivalent für Kohlenhydrate (kÄ~KH~): 21.131 [kJ·l^-1^ O~2~] bei RQ = 1.0
+:::
+
+## Anaerob-alaktazide Energiekomponente (W~PCr~) {auto-animate=true auto-animate-duration="1.2" .show-logo style="font-size: 0.85em"}
+
+:::: {.columns style="display: flex; width: 100%;"}
+
+::: {.column style="width: 75%; font-size: 0.80em; flex: 1 1 75%; min-width: 0;"}
+- Bestimmung durch Excess Post-Exercise Oxygen Consumption (EPOC)
+  - Sauerstoffmehraufnahme nach Belastungsende über Ruhebedarf
+  - EPOC~fast~: ATP/PCr- und O~2~-Speicher Wiederauffüllung (alaktazide anaerobe Energiebereitstellung)
+  - EPOC~slow~: Metabolische Nachbelastungseffekte (Sympathikus, Stoffwechsel, Laktat)
+
+![](images/EPOC_Astrand_mod.jpg){height="390px" style="margin-left: 50px;"}
+:::
+
+::: {.column style="width: 25%; display: flex; justify-content: center; flex: 0 0 25%;"}
+:::::: r-stack
+::: {data-id="box1" style="background: rgba(66, 186, 151, 0.4); width: 200px; height: 440px; position: absolute; bottom: 0;"}
+:::
+
+::: {data-id="box2" style="background: rgba(244, 115, 122, 0.4); width: 200px; height: 20px; position: absolute; bottom: 440px;"}
+:::
+
+::: {data-id="box3" style="background: #1CADE4; width: 200px; height: 40px; position: absolute; bottom: 460px;"}
+:::
+::::::
+:::
+
+::::
+
+## Anaerob-alaktazide Energiekomponente (W~PCr~) {auto-animate=true auto-animate-duration="1.2" .show-logo style="font-size: 0.85em"}
+
+:::: {.columns style="display: flex; width: 100%;"}
+
+::: {.column style="width: 75%; font-size: 0.85em; flex: 1 1 75%; min-width: 0;"}
+- Dreistufige EPOC-Modellierung mittels bi-exponentieller Funktion:
+
+::: {style="margin-top: -1.2em;"}
+$$
+\scriptsize
+\dot{V}O_{2EPOC}\,(t) = A_{fast} \cdot e^{-(t / \tau_{fast})} + A_{slow} \cdot e^{-(t / \tau_{slow})} + \dot{V}O_{2,Referenz}
+$$
+:::
+
+1. Bestimmung von $\tau$ zur Abgrenzung der Komponenten
+
+![](images/EPOC_tau.png){style="height: 400px; width: auto;"}
+:::
+
+::: {.column style="width: 25%; display: flex; justify-content: center; flex: 0 0 25%;"}
+:::::: r-stack
+::: {data-id="box1" style="background: rgba(66, 186, 151, 0.4); width: 200px; height: 440px; position: absolute; bottom: 0;"}
+:::
+
+::: {data-id="box2" style="background: rgba(244, 115, 122, 0.4); width: 200px; height: 20px; position: absolute; bottom: 440px;"}
+:::
+
+::: {data-id="box3" style="background: #1CADE4; width: 200px; height: 40px; position: absolute; bottom: 460px;"}
+:::
+::::::
+:::
+
+::::
+
+:::{.notes}
+- $A_{fast}$: Amplitude der schnellen EPOC-Komponente
+- $A_{slow}$: Amplitude der langsamen EPOC-Komponente
+- $\tau_{fast}$: Zeitkonstante der schnellen Komponente
+- $\tau_{slow}$: Zeitkonstante der langsamen Komponente
+- $\dot{V}O_{2,Referenz}$: Referenz-Sauerstoffaufnahme
+:::
+
+## Anaerob-alaktazide Energiekomponente (W~PCr~) {.show-logo style="font-size: 0.85em"}
+
+:::: {.columns style="display: flex; width: 100%;"}
+
+::: {.column style="width: 75%; font-size: 0.85em; flex: 1 1 75%; min-width: 0;"}
+- Dreistufige EPOC-Modellierung mittels bi-exponentieller Funktion:
+
+::: {style="margin-top: -1.2em;"}
+$$
+\scriptsize
+\dot{V}O_{2EPOC}\,(t) = A_{fast} \cdot e^{-(t / \tau_{fast})} + A_{slow} \cdot e^{-(t / \tau_{slow})} + \dot{V}O_{2,Referenz}
+$$
+:::
+
+2. Modellierung der EPOC~slow~
+
+![](images/EPOC_slow.png){style="height: 400px; width: auto;"}
+:::
+
+::: {.column style="width: 25%; display: flex; justify-content: center; flex: 0 0 25%;"}
+:::::: r-stack
+::: {data-id="box1" style="background: rgba(66, 186, 151, 0.4); width: 200px; height: 440px; position: absolute; bottom: 0;"}
+:::
+
+::: {data-id="box2" style="background: rgba(244, 115, 122, 0.4); width: 200px; height: 20px; position: absolute; bottom: 440px;"}
+:::
+
+::: {data-id="box3" style="background: #1CADE4; width: 200px; height: 40px; position: absolute; bottom: 460px;"}
+:::
+::::::
+:::
+
+::::
+
+:::{.notes}
+- $A_{fast}$: Amplitude der schnellen EPOC-Komponente
+- $A_{slow}$: Amplitude der langsamen EPOC-Komponente
+- $\tau_{fast}$: Zeitkonstante der schnellen Komponente
+- $\tau_{slow}$: Zeitkonstante der langsamen Komponente
+- $\dot{V}O_{2,Referenz}$: Referenz-Sauerstoffaufnahme
+:::
+
+## Anaerob-alaktazide Energiekomponente (W~PCr~) {.show-logo style="font-size: 0.85em"}
+
+:::: {.columns style="display: flex; width: 100%;"}
+
+::: {.column style="width: 75%; font-size: 0.85em; flex: 1 1 75%; min-width: 0;"}
+- Dreistufige EPOC-Modellierung mittels bi-exponentieller Funktion:
+
+::: {style="margin-top: -1.2em;"}
+$$
+\scriptsize
+\dot{V}O_{2EPOC}\,(t) = A_{fast} \cdot e^{-(t / \tau_{fast})} + A_{slow} \cdot e^{-(t / \tau_{slow})} + \dot{V}O_{2,Referenz}
+$$
+:::
+
+3. Modellierung der EPOC~fast~ (= W~PCr~)
+
+![](images/EPOC.png){style="height: 400px; width: auto;"}
+:::
+
+::: {.column style="width: 25%; display: flex; justify-content: center; flex: 0 0 25%;"}
+:::::: r-stack
+::: {data-id="box1" style="background: rgba(66, 186, 151, 0.4); width: 200px; height: 440px; position: absolute; bottom: 0;"}
+:::
+
+::: {data-id="box2" style="background: rgba(244, 115, 122, 0.4); width: 200px; height: 20px; position: absolute; bottom: 440px;"}
+:::
+
+::: {data-id="box3" style="background: #1CADE4; width: 200px; height: 40px; position: absolute; bottom: 460px;"}
+:::
+::::::
+:::
+
+::::
+
+:::{.notes}
+- $A_{fast}$: Amplitude der schnellen EPOC-Komponente
+- $A_{slow}$: Amplitude der langsamen EPOC-Komponente
+- $\tau_{fast}$: Zeitkonstante der schnellen Komponente
+- $\tau_{slow}$: Zeitkonstante der langsamen Komponente
+- $\dot{V}O_{2,Referenz}$: Referenz-Sauerstoffaufnahme
+:::
+
+## Mechanische Gesamtarbeit {.show-logo style="font-size: 0.85em"}
+
+- Die mechanische Gesamtarbeit beim Radfahren setzt sich aus zwei Komponenten zusammen:
+
+$$
+\scriptsize
+\text{Mechanische Gesamtarbeit}\,\text{(W}_{Tot}\text{)} = \text{Mechanischen Arbeit}\,\text{(W}_{mech}\text{)} + \text{Innere Arbeit}\,\text{(W}_{Int}\text{)}
+$$
+
+
+:::: {.columns}
+::: {.column style="width: 75%;"}
+![](images/Innere Arbeit/Innere_Leistung_Tokui.png){height="400px"}
 :::
 
 ::: {.column style="width: 25%;"}
-![](images/Innere Arbeit/kinematik_sitzen_cropped.gif){height="320px"}
+![](images/Innere Arbeit/kinematik_sitzen_cropped.gif){height="400px"}
+:::
+::::
+
+
+## Innere Arbeit {.show-logo style="font-size: 0.85em"}
+
+- Die innere Arbeit (W~Int~) beschreibt die energetischen Aufwendungen für die Bewegung der unteren Extremitäten zur Aufrechterhaltung der zyklischen Tretbewegung
+- Segmente der unteren Extremitäten bewegen sich entlang eines spezifischen Pfades
+- Aus physikalischer Perspektive entsteht dabei keine Nettoarbeit 
+
+:::: {.columns}
+::: {.column style="width: 75%;"}
+![](images/Innere Arbeit/Marker.png){height="400px"}
+:::
+
+::: {.column style="width: 25%;"}
+![](images/Innere Arbeit/kinematik_stehen_cropped.gif){height="400px"}
+:::
+::::
+
+## Innere Arbeit {.show-logo style="font-size: 0.85em"}
+
+- Die innere Arbeit (W~Int~) beschreibt die energetischen Aufwendungen für die Bewegung der unteren Extremitäten zur Aufrechterhaltung der zyklischen Tretbewegung
+- Segmente der unteren Extremitäten bewegen sich entlang eines spezifischen Pfades
+- Aus physikalischer Perspektive entsteht dabei keine Nettoarbeit 
+
+:::: {.columns}
+::: {.column style="width: 75%;"}
+:::: {.columns}
+::: {.column style="width: 50%;"}
+![](images/Innere Arbeit/PInt_Simulation.png){height="400px"}
+:::
+::: {.column style="width: 50%;"}
+![](images/Innere Arbeit/Viergelenkkette.png){height="400px"}
+:::
+::::
+:::
+
+::: {.column style="width: 25%;"}
+![](images/Innere Arbeit/kinematik_sitzen_cropped.gif){height="400px"}
 :::
 ::::
 
@@ -1382,6 +2029,345 @@ plotly_Pint_list[["15_5"]][[1]]
 ![](images/Innere Arbeit/kinematik_stehen_HAT_cropped.gif){style="height: 240px; margin-top: 20px; margin-bottom: 20px;"}
 :::
 ::::::
+
+## Limitationen und Vorteile der verschiedenen Wirkungsgrade
+
+## Literaturübersicht der Wirkungsgrade
+
+## Welcher Probleme gehen aus der bestehenden Literatur hervor
+
+## Forschungsfrage
+
+## Hypothese
+
+## Methodik: Einschlusskriterien & Stichprobe {.show-logo style="font-size: 0.85em"}
+- Experimentelles ??? Design mit drei Intensitäten jewiels im Sitzen und Stehen
+- 2 Testtage: 1. EIngangsuntersucuhungen 2. Tatächihce Tests
+
+Einshclusskriterien:
+- ausdauertrainierte Personen ♀︎ &  ♂
+- Größteil aus Radsport oder Triathlon
+- $\dot{V}O_{2,max}$ > 65 [ml·min^-1^]
+
+## Methodik: Einschlusskriterien & Stichprobe {.show-logo style="font-size: 0.85em"}
+- Insgesamt 24 Testpersonen  
+- 11 erfüllten die Einschlusskriterien (2 entfernt)
+- 9 Testpersonen: (2 Frauen | 7 Männer)
+- $\dot{V}O_{2,max}$: 3900 - 6181 [ml·min^-1^] | 67.8 - 81.3 [ml·min^-1^·kg^-1^]
+
+```{r}
+#| warning: false
+#| message: false
+
+# Excel-Datensatz laden und darstellen
+Stichprobe_df <- read_excel("Probanden_Daten 2.2.xlsm", sheet = "Stichprobe_final", range = "A1:Y10") %>%
+  mutate(across(everything(), ~gsub(",", ".", .))) %>%
+  mutate(across(-2, as.numeric)) %>%
+  mutate(across(c(8, 10, 13, 15, 17, 19, 21, 23), ~round(., 2)))
+datatable(Stichprobe_df, options = list(scrollX = TRUE, scrollY = "310px", dom = 't', order = list(list(0, 'asc')), 
+                                        initComplete = JS("function(settings, json) {$(this.api().table().container()).css({'font-size': '70%'});}")), rownames = FALSE)
+```
+
+
+
+
+## Methodik - Messmethoden {.show-logo style="font-size: 0.85em"}
+
+::: {style="font-size: 0.78em"}
+- **Anthropometrische Messungen:** Körpermasse, Körperlänge, Umfang & Durchmesser der Gleidmaßen
+- **Fahrradergometer:** Lode - Excalibur Sport
+- **Atemgasanalyse:** Cortex - MetaMax 3B 
+- **Blutlaktatanalysegerät:** EKF diagnostic- Biosen S-Line Lab+
+- **Herzratenmessung:** Polar - H10 
+- **3D-Kinematik Daten:** Reflektierende Marker + Vicon Vero Kameras
+:::
+
+
+:::: {.columns}
+::: {.column width="50%" style="text-align: center"}
+![](./images/Innere Arbeit/Marker.png){height=330px}
+:::
+
+::: {.column width="50%" style="text-align: center"}
+![](./images/Lode.jpg){height=330px}
+:::
+::::
+
+
+## Methodik - Testtag 1 {.show-logo style="font-size: 0.85em"}
+
+:::: {.columns}
+::: {.column width="33%"}
+::: {style="font-size: 0.85em"}
+**1. Stufentest~sitzen~**
+:::
+::: {style="font-size: 0.7em"}
+Startlast: 60/80 [Watt] <br> Stufen: 15/20 [Watt] <br> Stufendauer: 30 [s]
+:::
+:::
+
+::: {.column width="33%"}
+::: {style="font-size: 0.85em"}
+**2. Stufentest~stehen~**
+:::
+::: {style="font-size: 0.7em"}
+Startlast: 150/200 [Watt] <br> Stufen: 15/20 [Watt] <br> Stufendauer: 30 [s]
+:::
+:::
+
+::: {.column width="33%"}
+::: {style="font-size: 0.85em"}
+**3. Drehzahltest**
+:::
+::: {style="font-size: 0.7em"}
+Start-Drehzahl: 70 [U·min^-1^] <br> Stufen: 5 [U·min^-1^] <br> Stufendauer: 30 [s]
+:::
+:::
+::::
+
+<br>
+
+![](./images/Versuchsablauf_1.png){}
+
+## Methodik - Testtag 2 {.show-logo style="font-size: 0.85em"}
+
+:::: {.columns}
+::: {.column width="36%"}
+::: {style="font-size: 0.85em"}
+**1. Leicht**
+:::
+::: {style="font-size: 0.7em"}
+Last: $\small P_{mech,VT_1}-0.075 \cdot P_{mech,max}$ [Watt] <br> Dauer: 300 [s]
+:::
+:::
+
+::: {.column width="30%"}
+::: {style="font-size: 0.85em"}
+**2. Moderat**  
+:::
+::: {style="font-size: 0.7em"}
+Last: $\small P_{mech,VT_1}$ [Watt] <br> Dauer: 300 [s]
+:::
+:::
+
+::: {.column width="33%"}
+::: {style="font-size: 0.85em"}
+**3. Schwer**
+:::
+::: {style="font-size: 0.7em"}
+Last: $\frac{P_{mech,VT_1} + P_{mech,VT_2}}{2}$ [Watt] <br> Dauer: 300 [s]
+:::
+:::
+::::
+
+<br>
+
+![](./images/Versuchsablauf_2.png){}
+
+## Methodik: Statistische Analyse {.show-logo style="font-size: 0.85em"}
+
+::: {style="font-size: 0.80em"}
+- **Voraussetzungsprüfungen**: 
+  - Shapiro-Wilk (Normalverteilung), Levene (Varianzhomogenität), Mauchly (Sphärizität)
+
+- **Hauptanalyse**:
+  - 2x3 ANOVA mit Messwiederholung
+    - Faktor A: Körperposition (sitzen, stehen)
+    - Faktor B: Intensität (leicht, moderat, schwer)
+
+
+- **Post-hoc Tests**:
+  - Gepaarte t-Tests mit Bonferroni-Korrektur
+  - Bei Voraussetzungsverletzung: Wilcoxon-Tests
+
+- **Signifikanz**: 
+  - ANOVA: ηp² (klein ≥ 0.01, mittel ≥ 0.06, groß ≥ 0.14)
+  - Paarvergleiche: d (trivial < 0.2, klein ≥ 0.2, mittel ≥ 0.5, groß ≥ 0.8)
+  - Signifikanzniveau: α = .05 (*** p < .001, ** p < .01, * p < .05)
+:::
+
+## Ergebnisse 1 {.show-logo style="font-size: 0.85em"}
+
+![](./images/Barplots_Wirk_muskulaer.png){height=400px}
+
+::: footer
+Link: [Website/Wirkungsgrad- und Stoffwechselparameter](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Ergebnisse/Wirkungsgrad_Statistik.html)
+:::
+
+## Ergebnisse - Wirkungsgrade {.show-logo style="font-size: 0.85em"}
+
+![](./images/Tabelle_ANOVA_Bed_Wirk_muskulaer.png)
+
+
+## Ergebnisse - Muskulärer Wirkungsgrad {.show-logo style="font-size: 0.85em"}
+
+- Muskulärer Wirkungsgrad:
+  - Sitzen > Stehen (24.98 ± 1.06% vs. 24.07 ± 0.96%)
+  - Systematischer Abfall mit steigender Intensität
+
+![](./images/Boxplots_Wirk_muskulaer.png){height=250px}
+
+::: {.notes}
+- Größter Unterschied bei leichter Belastung
+- Effekt nimmt mit steigender Intensität ab
+- Signifikante Haupteffekte für Bedingung (p = .024) und Intensität (p = .018)
+:::
+
+::: footer
+Link: [Website/Wirkungsgrad- und Stoffwechselparameter](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Ergebnisse/Wirkungsgrad_Statistik.html)
+:::
+
+## Ergebnisse {.show-logo style="font-size: 0.85em"}
+
+- Hypothesenprüfung:
+  - H~0~ wird für leichte Intensität abgelehnt
+  - H~1~ wird angenommen: Signifikante Unterschiede zwischen Positionen
+  - Intensitätsabhängiger Effekt bestätigt (p = .003)
+
+- Intensitätsspezifische Unterschiede:
+  - Leicht: Signifikant (p = .011, d = 1.36)
+  - Moderat: Nicht signifikant (p = .153, d = .76) 
+  - Schwer: Nicht signifikant (p = .807, d = .40)
+
+![](./images/Boxplots_Wirk_muskulaer.png){height=250px}
+
+::: {.notes}
+- Größter Unterschied bei leichter Belastung
+- Effekt nimmt mit steigender Intensität ab
+- Signifikante Haupteffekte für Bedingung (p = .024) und Intensität (p = .018)
+:::
+
+::: footer
+Link: [Website/Wirkungsgrad- und Stoffwechselparameter](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Ergebnisse/Wirkungsgrad_Statistik.html)
+:::
+
+## Explorative Ergebnisse {.show-logo style="font-size: 0.85em"}
+
+## Explorative Ergebnisse {.show-logo style="font-size: 0.85em"}
+
+- Weitere untersuchte Wirkungsgrade:
+  - Bruttowirkungsgrad:
+    - Sitzen: 22.30 ± 0.78% vs. Stehen: 22.55 ± 1.47%
+  - Nettowirkungsgrad:
+    - Sitzen: 24.81 ± 0.82% vs. Stehen: 25.07 ± 1.55%
+  - Gesamtwirkungsgrad:
+    - Sitzen: 22.06 ± 0.70% vs. Stehen: 22.32 ± 1.34%
+  - Arbeitswirkungsgrad:
+    - Nur sitzend: 25.91 ± 1.39%
+
+- Zentrale Befunde:
+  - Keine signifikanten Positionsunterschiede bei allen Wirkungsgraden
+  - Signifikanter Intensitätseffekt bei η~Brutto~ (p = .019)
+
+| Wirkungsgrade | Berechnung |
+|---------------|:----------:|
+| η~Brutto~     | W~mech~ / W~Aerob~ |
+| η~Netto~      | W~mech~ / (W~Aerob~ - W~Ruhe~) |
+| η~Total~      | W~mech~ / (W~Tot~ - W~Ruhe~) |
+| η~muskulär~   | (W~mech~ + W~Int~) / (W~Tot~ - W~Ruhe~) |
+| η~Arbeit~     | W~mech~ / (W~Tot~ - W~Ruhe~ - W~Leerbewegung~) |
+| η~delta~      | ΔW~mech~ / ΔW~Tot~ |
+
+
+::: {.notes}
+- η~Total~: Stabil über Intensitäten
+- η~Netto~: Leichter Anstieg mit Intensität
+- η~Brutto~: Signifikanter Anstieg (leicht zu schwer)
+- η~Arbeit~: Deutlicher Abfall mit Intensität
+- Alle Wirkungsgrade zeigen spezifische Intensitätsabhängigkeit
+:::
+
+## Diskussion: Besprechung der Ergebnisse {.show-logo style="font-size: 0.85em"}
+
+- Hypothesen:
+  - H0 für leichte Intensität widerlegt
+  - Signifikante Interaktion: Position × Intensität (p = .003)
+
+- Intensitätsabhängige Unterschiede:
+  - Leicht: Signifikant höherer η~muskulär~ im Sitzen (p = .011)
+  - Moderat/Schwer: Keine signifikanten Unterschiede
+  - Systematische Angleichung mit steigender Intensität
+
+- Ursachenanalyse:
+  - Signifikant höhere W~Int~ im Sitzen 
+  - Unterschiedliche Trittraten (Sitzen: 89 vs. Stehen: 70 U·min^-1^)
+  - η~Total~ ohne W~Int~ zeigt keine Positionsunterschiede
+
+::: {.notes}
+- Bestätigung der intensitätsabhängigen Beziehung
+- W~Int~ im Stehen möglicherweise unterschätzt
+- Physiologische Parameter sonst vergleichbar
+:::
+
+## Diskussion: Praktische Relevanz {.show-logo style="font-size: 0.85em"}
+
+- Stehen als valide Alternative zum Sitzen:
+  - Vergleichbare Wirkungsgrade (außer η~muskulär~)
+  - Ermöglicht Variation der Muskelbelastung
+  - Tendenziell sogar minimal höhere Werte im Stehen
+
+- Praxisempfehlungen:
+  - Vorzugsweise bei steilen Anstiegen
+  - Bei niedrigen Geschwindigkeiten
+  - Für kurzzeitige Maximalleistungen
+  - Berücksichtigung erhöhter Luftwiderstand
+
+::: {.notes}
+- Laborwerte nicht 1:1 übertragbar
+- Mehr Freiheitsgrade auf realem Rad
+- Luftwiderstand als limitierender Faktor
+:::
+
+## Diskussion: Methodenkritik & Limitationen {.show-logo style="font-size: 0.85em"}
+
+- Stichprobe:
+  - Geringe Größe (n=9)
+  - Unausgewogenes Geschlechterverhältnis
+  - Eingeschränkte statistische Power
+
+- Methodische Aspekte:
+  - Überschätzte ventilatorische Schwellen
+  - "Leichte" Intensität zu hoch (73% VO~2max~)
+  - Kurze Erholungszeiten (10 min)
+  - Aktive statt passive Nachbelastung
+
+- W~Int~-Berechnung im Stehen:
+  - Möglicherweise unterschätzt
+  - Modell bedarf Optimierung
+  - Fehlende Validierung
+
+::: {.notes}
+- Eingeschränkte Generalisierbarkeit
+- Intensitätsabstufung suboptimal
+- EPOC-Messung problematisch
+:::
+
+## Diskussion: Ausblick {.show-logo style="font-size: 0.85em"}
+
+- Methodische Verbesserungen:
+  - Größere, ausgewogene Stichprobe
+  - Optimierte Intensitätsabstufung
+  - Längere Erholungsphasen
+  - Passive Nachbelastungsphasen
+
+- W~Int~-Modellierung:
+  - Alternative Berechnungsansätze
+  - Validierung durch P~TOT~-Vergleiche
+  - Integration von Lenker-/Sattelkräften
+  - Individuelle Segmentparameter
+
+- Weitere Forschungsaspekte:
+  - Torque Efficiency & negative Leistung
+  - Ermüdungseffekte bei Leistungsspitzen
+  - Wärmeenergieanteil & -messung
+
+::: {.notes}
+- Fokus auf Methodenverbesserung
+- W~Int~-Modell als Kernthema
+- Neue Forschungsansätze identifiziert
+:::
+
+
 
 
 

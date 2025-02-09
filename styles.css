@@ -31,15 +31,24 @@
   font-size: 0.8em !important;
 }
 
+/* Zweite Ebene etwas kleiner */
+.reveal ul ul {
+  font-size: 0.95em !important;
+}
+
+/* Dritte Ebene nur minimal kleiner als zweite Ebene */
+.reveal ul ul ul {
+  font-size: 0.9em !important;
+}
+
 .reveal ul li {
-  visibility: hidden;  /* Versteckt den gesamten Listenpunkt initial */
+  visibility: hidden;
 }
 
 .reveal ul li:before {
-  visibility: hidden;  /* Versteckt den Bullet Point */
+  visibility: hidden;
 }
 
-/* Zeige den Listenpunkt und seinen Bullet Point, wenn er kein Fragment ist */
 .reveal ul li:not(.fragment) {
   visibility: visible;
 }
@@ -48,7 +57,6 @@
   visibility: visible;
 }
 
-/* Zeige den Listenpunkt und seinen Bullet Point, wenn er ein sichtbares Fragment ist */
 .reveal ul li.fragment.visible {
   visibility: visible;
 }
@@ -86,5 +94,5 @@
 .reveal p:has(+ p:contains("2.2")),
 .reveal p:has(+ p:contains("2.3")),
 .reveal p:has(+ p:contains("3.2")) {
-  font-size: 0.72em !important; /* 90% von 0.8em */
+  font-size: 0.72em !important;
 }

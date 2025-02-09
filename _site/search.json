@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "index.html#links-zur-webseite",
+    "href": "index.html#links-zur-webseite",
+    "title": "Verteidigung",
+    "section": "Links zur Webseite",
+    "text": "Links zur Webseite\nLinks zur Seite\n\nHauptseite\nInnere Arbeit\nAnaerobe-alaktazide Energiekomponente (WPCr)\nEPOC: Shiny-App"
+  },
+  {
     "objectID": "index.html#inhalt",
     "href": "index.html#inhalt",
     "title": "Verteidigung",
@@ -25,7 +32,7 @@
     "href": "index.html#möglichkeiten-der-web-basierten-masterarbeit-1",
     "title": "Verteidigung",
     "section": "Möglichkeiten der Web-basierten Masterarbeit",
-    "text": "Möglichkeiten der Web-basierten Masterarbeit\n\nEffiziente Verarbeitung und Einbindung großer Datensätze\n\n\n\n# Excel-Datensatz laden und darstellen\nStichprobe_df &lt;- read_excel(\"Probanden_Daten 2.2.xlsm\", sheet = \"Stichprobe_final\", range = \"A1:Y10\") %&gt;%\n  mutate(across(everything(), ~gsub(\",\", \".\", .))) %&gt;%\n  mutate(across(-2, as.numeric)) %&gt;%\n  mutate(across(c(8, 10, 13, 15, 17, 19, 21, 23), ~round(., 2)))\ndatatable(Stichprobe_df, options = list(scrollX = TRUE, scrollY = \"240px\", dom = 't', order = list(list(0, 'asc')), \n                                        initComplete = JS(\"function(settings, json) {$(this.api().table().container()).css({'font-size': '70%'});}\")), rownames = FALSE)"
+    "text": "Möglichkeiten der Web-basierten Masterarbeit\n\nEffiziente Verarbeitung und Einbindung großer Datensätze\n\n\n# Excel-Datensatz laden und darstellen\nStichprobe_df &lt;- read_excel(\"Probanden_Daten 2.2.xlsm\", sheet = \"Stichprobe_final\", range = \"A1:Y10\") %&gt;%\n  mutate(across(everything(), ~gsub(\",\", \".\", .))) %&gt;%\n  mutate(across(-2, as.numeric)) %&gt;%\n  mutate(across(c(8, 10, 13, 15, 17, 19, 21, 23), ~round(., 2)))\ndatatable(Stichprobe_df, options = list(scrollX = TRUE, scrollY = \"240px\", dom = 't', order = list(list(0, 'asc')), \n                                        initComplete = JS(\"function(settings, json) {$(this.api().table().container()).css({'font-size': '70%'});}\")), rownames = FALSE)"
   },
   {
     "objectID": "index.html#möglichkeiten-der-web-basierten-masterarbeit-2",
@@ -35,6 +42,62 @@
     "text": "Möglichkeiten der Web-basierten Masterarbeit\n\nEinbindung interaktiver Anwendungen (Shiny-Apps)\nTransparente Darstellung des Quellcodes und der verwendeten Datensätze\n\n\n\nSehr hohe Reproduzierbarkeit der Analysen und der Ergebnisse\n\n\nLink: Website/Anaerobe-alaktazide Energiebereitstellung"
   },
   {
+    "objectID": "index.html#hinleitung-zum-thema",
+    "href": "index.html#hinleitung-zum-thema",
+    "title": "Verteidigung",
+    "section": "Hinleitung zum Thema",
+    "text": "Hinleitung zum Thema\n\nForschungsstand:\n\nMeiste Studien nur in sitzender Position\n22-34% der Bergauf-Zeit im Stehen\nHohe praktische Relevanz, aber wenig systematische Forschung\n\nBisherige Wirkungsgradanalysen:\n\nFokus auf ηBrutto und ηNetto\nKeine Berücksichtigung innerer Arbeit\nηmuskulär bisher nicht im Stehen untersucht\n\nForschungslücke:\n\nSystematischer Vergleich ηmuskulär Sitzen vs. Stehen\nEinfluss von Trittfrequenz und Intensität\nIntegration innerer Arbeit beim Stehen\n\n\n\n\nWirkungsgrad im Stehen wenig erforscht\nBisherige Parameter unvollständig\nHohe praktische Bedeutung"
+  },
+  {
+    "objectID": "index.html#unterschiede-sitzen-vs.-stehen",
+    "href": "index.html#unterschiede-sitzen-vs.-stehen",
+    "title": "Verteidigung",
+    "section": "Unterschiede Sitzen vs. Stehen",
+    "text": "Unterschiede Sitzen vs. Stehen\n\nBiomechanische Unterschiede:\n\nKörperschwerpunkt nach vorne verlagert\nHöhere tangentiale Pedalkräfte\nNiedrigere selbstgewählte Trittrate\nMehr Freiheitsgrade der Bewegung\n\nPhysiologische Anpassungen:\n\nVeränderte Muskelaktivierung:\n\n↓ Untere Beinmuskulatur\n↑ Obere Beinmuskulatur\n↑ Rumpf- & Oberkörpermuskulatur\n\nHöhere Kurzzeitleistung möglich (+26%)\nIntensitätsabhängige metabolische Anpassung\n\n\n\n\nKomplexe biomechanische Änderungen\nDifferenzierte Muskelaktivierung\nLeistungsvorteile bei hoher Intensität"
+  },
+  {
+    "objectID": "index.html#wirkungsgrad-η",
+    "href": "index.html#wirkungsgrad-η",
+    "title": "Verteidigung",
+    "section": "Wirkungsgrad (η)",
+    "text": "Wirkungsgrad (η)\n\nDer Wirkungsgrad beim Radfahren beschreibt das Verhältnis zwischen erzeugter externer Arbeit und aufgewendeter metabolischer Energie…\n\n\n\\[\n\\scriptsize\n\\text{η} = \\frac{\\text{W}_{mech} + \\text{W}_{Int}}{\\text{W}_{metabolisch}}\n\\]\n\n\n\nMetabolische Arbeit\n\n\nMechanische + Innere Arbeit\n\n\nη\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n→\n\n\n\n\n\n\n\n\n≈\n\n\n10-30%"
+  },
+  {
+    "objectID": "index.html#bruttowirkungsgrad-ηbrutto",
+    "href": "index.html#bruttowirkungsgrad-ηbrutto",
+    "title": "Verteidigung",
+    "section": "Bruttowirkungsgrad (ηBrutto)",
+    "text": "Bruttowirkungsgrad (ηBrutto)\n\nDer Wirkungsgrad beim Radfahren beschreibt das Verhältnis zwischen erzeugter externer Arbeit und aufgewendeter metabolischer Energie…\n\n\n\\[\n\\scriptsize\n\\text{η}_{Brutto} = \\frac{\\text{W}_{mech}}{\\text{W}_{Aerob}}\n\\]\n\n\n\nMetabolische Arbeit\n\n\nMechanische Arbeit\n\n\nηBrutto\n\n\n\n\n\n→\n\n\n\n\n\n≈\n\n\n10-20%"
+  },
+  {
+    "objectID": "index.html#nettowirkungsgrad-ηnetto",
+    "href": "index.html#nettowirkungsgrad-ηnetto",
+    "title": "Verteidigung",
+    "section": "Nettowirkungsgrad (ηNetto)",
+    "text": "Nettowirkungsgrad (ηNetto)\n\nDer Wirkungsgrad beim Radfahren beschreibt das Verhältnis zwischen erzeugter externer Arbeit und aufgewendeter metabolischer Energie…\n\n\n\\[\n\\scriptsize\n\\text{η}_{Netto} = \\frac{\\text{W}_{mech}}{\\text{W}_{Aerob} - \\text{W}_{Ruhe}}\n\\]\n\n\n\nMetabolische Arbeit\n\n\nMechanische Arbeit\n\n\nηNetto\n\n\n\n\n\n\n\n\n→\n\n\n\n\n\n≈\n\n\n10-20%"
+  },
+  {
+    "objectID": "index.html#gesamtwirkungsgrad-ηtotal",
+    "href": "index.html#gesamtwirkungsgrad-ηtotal",
+    "title": "Verteidigung",
+    "section": "Gesamtwirkungsgrad (ηTotal)",
+    "text": "Gesamtwirkungsgrad (ηTotal)\n\nDer Wirkungsgrad beim Radfahren beschreibt das Verhältnis zwischen erzeugter externer Arbeit und aufgewendeter metabolischer Energie…\n\n\n\\[\n\\scriptsize\n\\text{η}_{Total} = \\frac{\\text{W}_{mech}}{\\text{W}_{Tot} - \\text{W}_{Ruhe}}\n\\]\n\n\n\nMetabolische Arbeit\n\n\nMechanische Arbeit\n\n\nηTotal\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n→\n\n\n\n\n\n≈\n\n\n10-30%"
+  },
+  {
+    "objectID": "index.html#arbeitswirkungsgrad-ηarbeit",
+    "href": "index.html#arbeitswirkungsgrad-ηarbeit",
+    "title": "Verteidigung",
+    "section": "Arbeitswirkungsgrad (ηArbeit)",
+    "text": "Arbeitswirkungsgrad (ηArbeit)\n\nDer Wirkungsgrad beim Radfahren beschreibt das Verhältnis zwischen erzeugter externer Arbeit und aufgewendeter metabolischer Energie…\n\n\n\\[\n\\scriptsize\n\\text{η}_{Arbeit} = \\frac{\\text{W}_{mech}}{\\text{W}_{Tot} - \\text{W}_{Ruhe} - \\text{W}_{Leerbewegung}}\n\\]\n\n\n\nMetabolische Arbeit\n\n\nMechanische Arbeit\n\n\nηArbeit\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n→\n\n\n\n\n\n≈\n\n\n10-30%"
+  },
+  {
+    "objectID": "index.html#muskulärer-wirkungsgrad-ηmuskulär",
+    "href": "index.html#muskulärer-wirkungsgrad-ηmuskulär",
+    "title": "Verteidigung",
+    "section": "Muskulärer Wirkungsgrad (ηmuskulär)",
+    "text": "Muskulärer Wirkungsgrad (ηmuskulär)\n\nDer Wirkungsgrad beim Radfahren beschreibt das Verhältnis zwischen erzeugter externer Arbeit und aufgewendeter metabolischer Energie…\n\n\n\\[\n\\scriptsize\n\\text{η}_{muskulär} = \\frac{\\text{W}_{mech} + \\text{W}_{Int}}{\\text{W}_{Tot} - \\text{W}_{Ruhe}}\n\\]\n\n\n\nMetabolische Arbeit\n\n\nMechanische + Innere Arbeit\n\n\nηmuskulär\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n→\n\n\n\n\n\n\n\n\n≈\n\n\n10-30%"
+  },
+  {
     "objectID": "index.html#energieanteile",
     "href": "index.html#energieanteile",
     "title": "Verteidigung",
@@ -42,29 +105,78 @@
     "text": "Energieanteile\n\n\n\nAerobe Energiekomponente\n\nWAerob\n\n\n\n\n\nAnaerobe-laktazide Energiekomponente\n\nWBLC\n\n\n\n\n\nAnaerobe-alaktazide Energiekomponente\n\nWPCr"
   },
   {
-    "objectID": "index.html#energieanteile-1",
-    "href": "index.html#energieanteile-1",
+    "objectID": "index.html#aerobe-energiekomponente-waerob",
+    "href": "index.html#aerobe-energiekomponente-waerob",
     "title": "Verteidigung",
-    "section": "Energieanteile",
-    "text": "Energieanteile\n\n\n\nasdf\n…\n…\n\n\n\n\n\n\n\nWAerob\n\n\n\n\n\nWBLC\n\n\n\n\n\nWPCr"
+    "section": "Aerobe Energiekomponente (WAerob)",
+    "text": "Aerobe Energiekomponente (WAerob)\n\n\n\nMessung des Sauerstoffvolumenstrom in Ruhe \\(\\dot{V}O_{2, Ruhe}(t)\\) mittels Spirometrie und des kalorischen Äquivalents (kÄ) anhand des individuell gemessenen RQ (t)\nBerechnung von WAerob: \\[\n\\scriptsize\n\\dot{V}O_{2,Netto}(t) = \\dot{V}O_{2,Belastung}(t) - \\dot{V}O_{2,Ruhe}(t)\n\\\\\n\\scriptsize\nW_{Aerob} = \\overline{\\dot{V}O_{2,Netto}} \\cdot \\overline{kÄ}_{Bel} \\cdot t\n\\]"
   },
   {
-    "objectID": "index.html#link-zur-webseite",
-    "href": "index.html#link-zur-webseite",
+    "objectID": "index.html#aerobe-energiekomponente-waerob-1",
+    "href": "index.html#aerobe-energiekomponente-waerob-1",
     "title": "Verteidigung",
-    "section": "Link zur Webseite",
-    "text": "Link zur Webseite\nLinks zur Seite\n\nHauptseite\nInnere Arbeit\nAnaerobe-alaktazide Energiekomponente (WPCr)\nEPOC: Shiny-App"
+    "section": "Aerobe Energiekomponente (WAerob)",
+    "text": "Aerobe Energiekomponente (WAerob)\n\n\n\nBerechnung des \\(\\dot{V}O_{2, Ruhe}(t)\\) nach Harris-Benedict (1918)\n\n\\[\n\\scriptsize\n\\!\\begin{aligned}\n\\text{Grundumsatz:} \\rightarrow h_{f, m}\\,[kcal] &=\n\\begin{cases}\nh_{f} = 655.1 + (9.563 \\cdot M) + (1.850 \\cdot L) - (4.676 \\cdot A)\\\\    \nh_{m} = 66.5 \\,+  (13.75 \\cdot M) + (5.003 \\cdot L) - (6.775 \\cdot A)\n\\end{cases}\n\\end{aligned}\n\\]\n\\[\n\\scriptsize\n\\!\\begin{aligned}\n\\text{Ruheumsatz:} \\rightarrow RMR_{f, m}\\,[l \\cdot min^{-1}] &=\n\\begin{cases}\nRMR_{f} = \\left( \\frac{h_{f}}{24 \\, \\cdot 60 \\cdot kÄ} \\right) \\cdot 4.1868 \\cdot 1.278\\\\\nRMR_{m} = \\left( \\frac{h_{m}}{24 \\cdot 60 \\cdot kÄ} \\right) \\cdot 4.1868 \\cdot 1.287\n\\end{cases}\n\\end{aligned}\n\\]\n\nBerechnung von WAerob: \\[\n\\scriptsize\n\\dot{V}O_{2,Netto}(t) = \\dot{V}O_{2,Belastung}(t) - \\dot{V}O_{2,Ruhe}(t)\n\\\\\n\\scriptsize\nW_{Aerob} = \\overline{\\dot{V}O_{2,Netto}} \\cdot \\overline{kÄ}_{Bel} \\cdot t\n\\]"
+  },
+  {
+    "objectID": "index.html#anaerobe-laktazide-energiekomponente-wblc",
+    "href": "index.html#anaerobe-laktazide-energiekomponente-wblc",
+    "title": "Verteidigung",
+    "section": "Anaerobe-laktazide Energiekomponente (WBLC)",
+    "text": "Anaerobe-laktazide Energiekomponente (WBLC)\n\n\n\nBerechnung von WBLC aus:\n\nBlutlaktatwert vor Belastung (BLCPre)\nMaximaler Laktatwert nach Belastung (BLCmax)\nNettoblutlaktatwert: BLCNetto = BLCmax - BLCPre\n\nBerechnung von WBLC: \\[\n\\scriptsize\nW_{BLC} \\, [\\text{kJ}] =\n\\frac{\nBLC_{Netto} \\, [\\text{mmol} \\cdot \\text{l}^{-1}] \\cdot\n3.0 \\, [\\text{ml O}_2 \\cdot \\text{kg}^{-1} \\cdot \\text{mmol}^{-1} \\cdot \\text{l}] \\cdot\n\\text{Körpermasse} \\, [\\text{kg}] \\cdot\nkÄ_{\\text{KH}} \\, [\\text{J} \\cdot \\text{ml}^{-1} \\,\\text{O}_2]\n}{1000}\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSauerstoff-Laktat-Äquivalent: 3.0 [ml O2·kg-1·mmol-1·l]\nKalorisches Äquivalent für Kohlenhydrate (kÄKH): 21.131 [kJ·l-1 O2] bei RQ = 1.0"
+  },
+  {
+    "objectID": "index.html#anaerob-alaktazide-energiekomponente-wpcr",
+    "href": "index.html#anaerob-alaktazide-energiekomponente-wpcr",
+    "title": "Verteidigung",
+    "section": "Anaerob-alaktazide Energiekomponente (WPCr)",
+    "text": "Anaerob-alaktazide Energiekomponente (WPCr)\n\n\n\nBestimmung durch Excess Post-Exercise Oxygen Consumption (EPOC)\n\nSauerstoffmehraufnahme nach Belastungsende über Ruhebedarf\nEPOCfast: ATP/PCr- und O2-Speicher Wiederauffüllung (alaktazide anaerobe Energiebereitstellung)\nEPOCslow: Metabolische Nachbelastungseffekte (Sympathikus, Stoffwechsel, Laktat)"
+  },
+  {
+    "objectID": "index.html#anaerob-alaktazide-energiekomponente-wpcr-1",
+    "href": "index.html#anaerob-alaktazide-energiekomponente-wpcr-1",
+    "title": "Verteidigung",
+    "section": "Anaerob-alaktazide Energiekomponente (WPCr)",
+    "text": "Anaerob-alaktazide Energiekomponente (WPCr)\n\n\n\nDreistufige EPOC-Modellierung mittels bi-exponentieller Funktion:\n\n\n\\[\n\\scriptsize\n\\dot{V}O_{2EPOC}\\,(t) = A_{fast} \\cdot e^{-(t / \\tau_{fast})} + A_{slow} \\cdot e^{-(t / \\tau_{slow})} + \\dot{V}O_{2,Referenz}\n\\]\n\n\nBestimmung von \\(\\tau\\) zur Abgrenzung der Komponenten\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(A_{fast}\\): Amplitude der schnellen EPOC-Komponente\n\\(A_{slow}\\): Amplitude der langsamen EPOC-Komponente\n\\(\\tau_{fast}\\): Zeitkonstante der schnellen Komponente\n\\(\\tau_{slow}\\): Zeitkonstante der langsamen Komponente\n\\(\\dot{V}O_{2,Referenz}\\): Referenz-Sauerstoffaufnahme"
+  },
+  {
+    "objectID": "index.html#anaerob-alaktazide-energiekomponente-wpcr-2",
+    "href": "index.html#anaerob-alaktazide-energiekomponente-wpcr-2",
+    "title": "Verteidigung",
+    "section": "Anaerob-alaktazide Energiekomponente (WPCr)",
+    "text": "Anaerob-alaktazide Energiekomponente (WPCr)\n\n\n\nDreistufige EPOC-Modellierung mittels bi-exponentieller Funktion:\n\n\n\\[\n\\scriptsize\n\\dot{V}O_{2EPOC}\\,(t) = A_{fast} \\cdot e^{-(t / \\tau_{fast})} + A_{slow} \\cdot e^{-(t / \\tau_{slow})} + \\dot{V}O_{2,Referenz}\n\\]\n\n\nModellierung der EPOCslow\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(A_{fast}\\): Amplitude der schnellen EPOC-Komponente\n\\(A_{slow}\\): Amplitude der langsamen EPOC-Komponente\n\\(\\tau_{fast}\\): Zeitkonstante der schnellen Komponente\n\\(\\tau_{slow}\\): Zeitkonstante der langsamen Komponente\n\\(\\dot{V}O_{2,Referenz}\\): Referenz-Sauerstoffaufnahme"
+  },
+  {
+    "objectID": "index.html#anaerob-alaktazide-energiekomponente-wpcr-3",
+    "href": "index.html#anaerob-alaktazide-energiekomponente-wpcr-3",
+    "title": "Verteidigung",
+    "section": "Anaerob-alaktazide Energiekomponente (WPCr)",
+    "text": "Anaerob-alaktazide Energiekomponente (WPCr)\n\n\n\nDreistufige EPOC-Modellierung mittels bi-exponentieller Funktion:\n\n\n\\[\n\\scriptsize\n\\dot{V}O_{2EPOC}\\,(t) = A_{fast} \\cdot e^{-(t / \\tau_{fast})} + A_{slow} \\cdot e^{-(t / \\tau_{slow})} + \\dot{V}O_{2,Referenz}\n\\]\n\n\nModellierung der EPOCfast (= WPCr)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(A_{fast}\\): Amplitude der schnellen EPOC-Komponente\n\\(A_{slow}\\): Amplitude der langsamen EPOC-Komponente\n\\(\\tau_{fast}\\): Zeitkonstante der schnellen Komponente\n\\(\\tau_{slow}\\): Zeitkonstante der langsamen Komponente\n\\(\\dot{V}O_{2,Referenz}\\): Referenz-Sauerstoffaufnahme"
+  },
+  {
+    "objectID": "index.html#mechanische-gesamtarbeit",
+    "href": "index.html#mechanische-gesamtarbeit",
+    "title": "Verteidigung",
+    "section": "Mechanische Gesamtarbeit",
+    "text": "Mechanische Gesamtarbeit\n\nDie mechanische Gesamtarbeit beim Radfahren setzt sich aus zwei Komponenten zusammen:\n\n\\[\n\\scriptsize\n\\text{Mechanische Gesamtarbeit}\\,\\text{(W}_{Tot}\\text{)} = \\text{Mechanischen Arbeit}\\,\\text{(W}_{mech}\\text{)} + \\text{Innere Arbeit}\\,\\text{(W}_{Int}\\text{)}\n\\]"
   },
   {
     "objectID": "index.html#innere-arbeit",
     "href": "index.html#innere-arbeit",
     "title": "Verteidigung",
     "section": "Innere Arbeit",
-    "text": "Innere Arbeit\n\n\n\n\ntest 1\n\n\n\n\ntest 2"
+    "text": "Innere Arbeit\n\nDie innere Arbeit (WInt) beschreibt die energetischen Aufwendungen für die Bewegung der unteren Extremitäten zur Aufrechterhaltung der zyklischen Tretbewegung\nSegmente der unteren Extremitäten bewegen sich entlang eines spezifischen Pfades\nAus physikalischer Perspektive entsteht dabei keine Nettoarbeit"
   },
   {
     "objectID": "index.html#innere-arbeit-1",
     "href": "index.html#innere-arbeit-1",
+    "title": "Verteidigung",
+    "section": "Innere Arbeit",
+    "text": "Innere Arbeit\n\nDie innere Arbeit (WInt) beschreibt die energetischen Aufwendungen für die Bewegung der unteren Extremitäten zur Aufrechterhaltung der zyklischen Tretbewegung\nSegmente der unteren Extremitäten bewegen sich entlang eines spezifischen Pfades\nAus physikalischer Perspektive entsteht dabei keine Nettoarbeit"
+  },
+  {
+    "objectID": "index.html#innere-arbeit-2",
+    "href": "index.html#innere-arbeit-2",
     "title": "Verteidigung",
     "section": "Innere Arbeit",
     "text": "Innere Arbeit\n\n\n\ntest 2\ntest 2"
@@ -123,6 +235,153 @@
     "href": "index.html#pint",
     "title": "Verteidigung",
     "section": "PInt",
-    "text": "PInt\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLink: Website"
+    "text": "PInt"
+  },
+  {
+    "objectID": "index.html#limitationen-und-vorteile-der-verschiedenen-wirkungsgrade",
+    "href": "index.html#limitationen-und-vorteile-der-verschiedenen-wirkungsgrade",
+    "title": "Verteidigung",
+    "section": "Limitationen und Vorteile der verschiedenen Wirkungsgrade",
+    "text": "Limitationen und Vorteile der verschiedenen Wirkungsgrade"
+  },
+  {
+    "objectID": "index.html#literaturübersicht-der-wirkungsgrade",
+    "href": "index.html#literaturübersicht-der-wirkungsgrade",
+    "title": "Verteidigung",
+    "section": "Literaturübersicht der Wirkungsgrade",
+    "text": "Literaturübersicht der Wirkungsgrade"
+  },
+  {
+    "objectID": "index.html#welcher-probleme-gehen-aus-der-bestehenden-literatur-hervor",
+    "href": "index.html#welcher-probleme-gehen-aus-der-bestehenden-literatur-hervor",
+    "title": "Verteidigung",
+    "section": "Welcher Probleme gehen aus der bestehenden Literatur hervor",
+    "text": "Welcher Probleme gehen aus der bestehenden Literatur hervor"
+  },
+  {
+    "objectID": "index.html#forschungsfrage",
+    "href": "index.html#forschungsfrage",
+    "title": "Verteidigung",
+    "section": "Forschungsfrage",
+    "text": "Forschungsfrage"
+  },
+  {
+    "objectID": "index.html#hypothese",
+    "href": "index.html#hypothese",
+    "title": "Verteidigung",
+    "section": "Hypothese",
+    "text": "Hypothese"
+  },
+  {
+    "objectID": "index.html#methodik-einschlusskriterien-stichprobe",
+    "href": "index.html#methodik-einschlusskriterien-stichprobe",
+    "title": "Verteidigung",
+    "section": "Methodik: Einschlusskriterien & Stichprobe",
+    "text": "Methodik: Einschlusskriterien & Stichprobe\n\nExperimentelles ??? Design mit drei Intensitäten jewiels im Sitzen und Stehen\n2 Testtage: 1. EIngangsuntersucuhungen 2. Tatächihce Tests\n\nEinshclusskriterien: - ausdauertrainierte Personen ♀︎ & ♂ - Größteil aus Radsport oder Triathlon - \\(\\dot{V}O_{2,max}\\) &gt; 65 [ml·min-1]"
+  },
+  {
+    "objectID": "index.html#methodik-einschlusskriterien-stichprobe-1",
+    "href": "index.html#methodik-einschlusskriterien-stichprobe-1",
+    "title": "Verteidigung",
+    "section": "Methodik: Einschlusskriterien & Stichprobe",
+    "text": "Methodik: Einschlusskriterien & Stichprobe\n\nInsgesamt 24 Testpersonen\n\n11 erfüllten die Einschlusskriterien (2 entfernt)\n9 Testpersonen: (2 Frauen | 7 Männer)\n\\(\\dot{V}O_{2,max}\\): 3900 - 6181 [ml·min-1] | 67.8 - 81.3 [ml·min-1·kg-1]"
+  },
+  {
+    "objectID": "index.html#methodik---messmethoden",
+    "href": "index.html#methodik---messmethoden",
+    "title": "Verteidigung",
+    "section": "Methodik - Messmethoden",
+    "text": "Methodik - Messmethoden\n\n\nAnthropometrische Messungen: Körpermasse, Körperlänge, Umfang & Durchmesser der Gleidmaßen\nFahrradergometer: Lode - Excalibur Sport\nAtemgasanalyse: Cortex - MetaMax 3B\nBlutlaktatanalysegerät: EKF diagnostic- Biosen S-Line Lab+\nHerzratenmessung: Polar - H10\n3D-Kinematik Daten: Reflektierende Marker + Vicon Vero Kameras"
+  },
+  {
+    "objectID": "index.html#methodik---testtag-1",
+    "href": "index.html#methodik---testtag-1",
+    "title": "Verteidigung",
+    "section": "Methodik - Testtag 1",
+    "text": "Methodik - Testtag 1\n\n\n\n1. Stufentestsitzen\n\n\nStartlast: 60/80 [Watt]  Stufen: 15/20 [Watt]  Stufendauer: 30 [s]\n\n\n\n2. Stufenteststehen\n\n\nStartlast: 150/200 [Watt]  Stufen: 15/20 [Watt]  Stufendauer: 30 [s]\n\n\n\n3. Drehzahltest\n\n\nStart-Drehzahl: 70 [U·min-1]  Stufen: 5 [U·min-1]  Stufendauer: 30 [s]"
+  },
+  {
+    "objectID": "index.html#methodik---testtag-2",
+    "href": "index.html#methodik---testtag-2",
+    "title": "Verteidigung",
+    "section": "Methodik - Testtag 2",
+    "text": "Methodik - Testtag 2\n\n\n\n1. Leicht\n\n\nLast: \\(\\small P_{mech,VT_1}-0.075 \\cdot P_{mech,max}\\) [Watt]  Dauer: 300 [s]\n\n\n\n2. Moderat\n\n\nLast: \\(\\small P_{mech,VT_1}\\) [Watt]  Dauer: 300 [s]\n\n\n\n3. Schwer\n\n\nLast: \\(\\frac{P_{mech,VT_1} + P_{mech,VT_2}}{2}\\) [Watt]  Dauer: 300 [s]"
+  },
+  {
+    "objectID": "index.html#methodik-statistische-analyse",
+    "href": "index.html#methodik-statistische-analyse",
+    "title": "Verteidigung",
+    "section": "Methodik: Statistische Analyse",
+    "text": "Methodik: Statistische Analyse\n\n\nVoraussetzungsprüfungen:\n\nShapiro-Wilk (Normalverteilung), Levene (Varianzhomogenität), Mauchly (Sphärizität)\n\nHauptanalyse:\n\n2x3 ANOVA mit Messwiederholung\n\nFaktor A: Körperposition (sitzen, stehen)\nFaktor B: Intensität (leicht, moderat, schwer)\n\n\nPost-hoc Tests:\n\nGepaarte t-Tests mit Bonferroni-Korrektur\nBei Voraussetzungsverletzung: Wilcoxon-Tests\n\nSignifikanz:\n\nANOVA: ηp² (klein ≥ 0.01, mittel ≥ 0.06, groß ≥ 0.14)\nPaarvergleiche: d (trivial &lt; 0.2, klein ≥ 0.2, mittel ≥ 0.5, groß ≥ 0.8)\nSignifikanzniveau: α = .05 (*** p &lt; .001, ** p &lt; .01, * p &lt; .05)"
+  },
+  {
+    "objectID": "index.html#ergebnisse-1",
+    "href": "index.html#ergebnisse-1",
+    "title": "Verteidigung",
+    "section": "Ergebnisse 1",
+    "text": "Ergebnisse 1\n\n\nLink: Website/Wirkungsgrad- und Stoffwechselparameter"
+  },
+  {
+    "objectID": "index.html#ergebnisse---wirkungsgrade",
+    "href": "index.html#ergebnisse---wirkungsgrade",
+    "title": "Verteidigung",
+    "section": "Ergebnisse - Wirkungsgrade",
+    "text": "Ergebnisse - Wirkungsgrade"
+  },
+  {
+    "objectID": "index.html#ergebnisse---muskulärer-wirkungsgrad",
+    "href": "index.html#ergebnisse---muskulärer-wirkungsgrad",
+    "title": "Verteidigung",
+    "section": "Ergebnisse - Muskulärer Wirkungsgrad",
+    "text": "Ergebnisse - Muskulärer Wirkungsgrad\n\nMuskulärer Wirkungsgrad:\n\nSitzen &gt; Stehen (24.98 ± 1.06% vs. 24.07 ± 0.96%)\nSystematischer Abfall mit steigender Intensität\n\n\n\n\n\nGrößter Unterschied bei leichter Belastung\nEffekt nimmt mit steigender Intensität ab\nSignifikante Haupteffekte für Bedingung (p = .024) und Intensität (p = .018)\n\n\n\nLink: Website/Wirkungsgrad- und Stoffwechselparameter"
+  },
+  {
+    "objectID": "index.html#ergebnisse",
+    "href": "index.html#ergebnisse",
+    "title": "Verteidigung",
+    "section": "Ergebnisse",
+    "text": "Ergebnisse\n\nHypothesenprüfung:\n\nH0 wird für leichte Intensität abgelehnt\nH1 wird angenommen: Signifikante Unterschiede zwischen Positionen\nIntensitätsabhängiger Effekt bestätigt (p = .003)\n\nIntensitätsspezifische Unterschiede:\n\nLeicht: Signifikant (p = .011, d = 1.36)\nModerat: Nicht signifikant (p = .153, d = .76)\nSchwer: Nicht signifikant (p = .807, d = .40)\n\n\n\n\n\nGrößter Unterschied bei leichter Belastung\nEffekt nimmt mit steigender Intensität ab\nSignifikante Haupteffekte für Bedingung (p = .024) und Intensität (p = .018)\n\n\n\nLink: Website/Wirkungsgrad- und Stoffwechselparameter"
+  },
+  {
+    "objectID": "index.html#explorative-ergebnisse",
+    "href": "index.html#explorative-ergebnisse",
+    "title": "Verteidigung",
+    "section": "Explorative Ergebnisse",
+    "text": "Explorative Ergebnisse"
+  },
+  {
+    "objectID": "index.html#explorative-ergebnisse-1",
+    "href": "index.html#explorative-ergebnisse-1",
+    "title": "Verteidigung",
+    "section": "Explorative Ergebnisse",
+    "text": "Explorative Ergebnisse\n\nWeitere untersuchte Wirkungsgrade:\n\nBruttowirkungsgrad:\n\nSitzen: 22.30 ± 0.78% vs. Stehen: 22.55 ± 1.47%\n\nNettowirkungsgrad:\n\nSitzen: 24.81 ± 0.82% vs. Stehen: 25.07 ± 1.55%\n\nGesamtwirkungsgrad:\n\nSitzen: 22.06 ± 0.70% vs. Stehen: 22.32 ± 1.34%\n\nArbeitswirkungsgrad:\n\nNur sitzend: 25.91 ± 1.39%\n\n\nZentrale Befunde:\n\nKeine signifikanten Positionsunterschiede bei allen Wirkungsgraden\nSignifikanter Intensitätseffekt bei ηBrutto (p = .019)\n\n\n\n\n\nWirkungsgrade\nBerechnung\n\n\n\n\nηBrutto\nWmech / WAerob\n\n\nηNetto\nWmech / (WAerob - WRuhe)\n\n\nηTotal\nWmech / (WTot - WRuhe)\n\n\nηmuskulär\n(Wmech + WInt) / (WTot - WRuhe)\n\n\nηArbeit\nWmech / (WTot - WRuhe - WLeerbewegung)\n\n\nηdelta\nΔWmech / ΔWTot\n\n\n\n\n\nηTotal: Stabil über Intensitäten\nηNetto: Leichter Anstieg mit Intensität\nηBrutto: Signifikanter Anstieg (leicht zu schwer)\nηArbeit: Deutlicher Abfall mit Intensität\nAlle Wirkungsgrade zeigen spezifische Intensitätsabhängigkeit"
+  },
+  {
+    "objectID": "index.html#diskussion-besprechung-der-ergebnisse",
+    "href": "index.html#diskussion-besprechung-der-ergebnisse",
+    "title": "Verteidigung",
+    "section": "Diskussion: Besprechung der Ergebnisse",
+    "text": "Diskussion: Besprechung der Ergebnisse\n\nHypothesen:\n\nH0 für leichte Intensität widerlegt\nSignifikante Interaktion: Position × Intensität (p = .003)\n\nIntensitätsabhängige Unterschiede:\n\nLeicht: Signifikant höherer ηmuskulär im Sitzen (p = .011)\nModerat/Schwer: Keine signifikanten Unterschiede\nSystematische Angleichung mit steigender Intensität\n\nUrsachenanalyse:\n\nSignifikant höhere WInt im Sitzen\nUnterschiedliche Trittraten (Sitzen: 89 vs. Stehen: 70 U·min-1)\nηTotal ohne WInt zeigt keine Positionsunterschiede\n\n\n\n\nBestätigung der intensitätsabhängigen Beziehung\nWInt im Stehen möglicherweise unterschätzt\nPhysiologische Parameter sonst vergleichbar"
+  },
+  {
+    "objectID": "index.html#diskussion-praktische-relevanz",
+    "href": "index.html#diskussion-praktische-relevanz",
+    "title": "Verteidigung",
+    "section": "Diskussion: Praktische Relevanz",
+    "text": "Diskussion: Praktische Relevanz\n\nStehen als valide Alternative zum Sitzen:\n\nVergleichbare Wirkungsgrade (außer ηmuskulär)\nErmöglicht Variation der Muskelbelastung\nTendenziell sogar minimal höhere Werte im Stehen\n\nPraxisempfehlungen:\n\nVorzugsweise bei steilen Anstiegen\nBei niedrigen Geschwindigkeiten\nFür kurzzeitige Maximalleistungen\nBerücksichtigung erhöhter Luftwiderstand\n\n\n\n\nLaborwerte nicht 1:1 übertragbar\nMehr Freiheitsgrade auf realem Rad\nLuftwiderstand als limitierender Faktor"
+  },
+  {
+    "objectID": "index.html#diskussion-methodenkritik-limitationen",
+    "href": "index.html#diskussion-methodenkritik-limitationen",
+    "title": "Verteidigung",
+    "section": "Diskussion: Methodenkritik & Limitationen",
+    "text": "Diskussion: Methodenkritik & Limitationen\n\nStichprobe:\n\nGeringe Größe (n=9)\nUnausgewogenes Geschlechterverhältnis\nEingeschränkte statistische Power\n\nMethodische Aspekte:\n\nÜberschätzte ventilatorische Schwellen\n“Leichte” Intensität zu hoch (73% VO2max)\nKurze Erholungszeiten (10 min)\nAktive statt passive Nachbelastung\n\nWInt-Berechnung im Stehen:\n\nMöglicherweise unterschätzt\nModell bedarf Optimierung\nFehlende Validierung\n\n\n\n\nEingeschränkte Generalisierbarkeit\nIntensitätsabstufung suboptimal\nEPOC-Messung problematisch"
+  },
+  {
+    "objectID": "index.html#diskussion-ausblick",
+    "href": "index.html#diskussion-ausblick",
+    "title": "Verteidigung",
+    "section": "Diskussion: Ausblick",
+    "text": "Diskussion: Ausblick\n\nMethodische Verbesserungen:\n\nGrößere, ausgewogene Stichprobe\nOptimierte Intensitätsabstufung\nLängere Erholungsphasen\nPassive Nachbelastungsphasen\n\nWInt-Modellierung:\n\nAlternative Berechnungsansätze\nValidierung durch PTOT-Vergleiche\nIntegration von Lenker-/Sattelkräften\nIndividuelle Segmentparameter\n\nWeitere Forschungsaspekte:\n\nTorque Efficiency & negative Leistung\nErmüdungseffekte bei Leistungsspitzen\nWärmeenergieanteil & -messung\n\n\n\n\nFokus auf Methodenverbesserung\nWInt-Modell als Kernthema\nNeue Forschungsansätze identifiziert\n\n\n\n\n\nLink: Website"
   }
 ]
