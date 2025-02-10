@@ -126,7 +126,7 @@ datatable(Stichprobe_df, options = list(scrollX = TRUE, scrollY = "240px", dom =
 Link: [Website/Anaerobe-alaktazide Energiebereitstellung](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Theoretischer_Hintergrund/Energieumsatzberechnung/Anaerobe_alaktazide_Energiebereitstellung.html)
 :::
 
-## Wirkungsgrad beim sitzenden und stehenden Radfahren {.show-logo style="font-size: 0.85em"}
+## Wirkungsgrad beim Radfahren {.show-logo style="font-size: 0.85em"}
 :::::: columns
 ::: {.column width="83%"}
 - Wirkungsgrad als zentrale Größe der Energiekonversion beim Radfahren
@@ -163,8 +163,8 @@ Link: [Website/Radfahren im Sitzen und Stehen](https://jjrw96.github.io/Wirkungs
 **Biomechanische Unterschiede:**
 
 -   Körperschwerpunkt nach vorne verlagert
--   Höhere tangentiale Pedalkräfte
 -   Niedrigere selbstgewählte Trittrate bei vergleichbarer Belastung
+-   Höhere tangentiale Pedalkräfte
 -   Zusätzliche Freiheitsgrade durch laterale Schwingungsmöglichkeit
 -   Körpermasse nicht durch Sattel gestützt
     
@@ -205,7 +205,7 @@ Link: [Website/Radfahren im Sitzen und Stehen](https://jjrw96.github.io/Wirkungs
 **Intensitätsabhängige Effekte:**
 
 -   Höhere maximale Kurzzeitleistung (30s) im Stehen möglich (+26%) 
--   Metabolischen Beanspruchungsparameter ($\dot{V}O_{2,max}$ & Herzrate):
+-   Metabolische Beanspruchungsparameter ($\dot{V}O_{2,max}$ & Herzrate):
     -   Submaximal (<80% $\dot{V}O_{2,max}$): Erhöhte metabolische Beanspruchung im Stehen 
     -   Hochintensiv (>80% $\dot{V}O_{2,max}$): Angleichung zwischen den Positionen 
         
@@ -296,10 +296,10 @@ Mechanische + Innere Arbeit
 
 ATP = universeller Energieträger, muss ständig regeneriert werden über die 3 Energiebereitstellungswege
 
-- Anaerob-alaktazid
+- anaerobe-alaktazid
   - Kreatinphosphat-Spaltung
   - Sofort verfügbar, nur ca. 10 Sekunden
-- Anaerob-laktazid
+- anaerobe-laktazid
   - Glykolyse ohne O₂, erzeugt Laktat
   - Schnell verfügbar, mittlere Dauer
 - Aerob
@@ -365,10 +365,10 @@ Link: [Website/Wirkungsgrad](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io
 ::: notes
 ATP = universeller Energieträger, muss ständig regeneriert werden über die 3 Energiebereitstellungswege
 
-- Anaerob-alaktazid
+- anaerobe-alaktazid
   - Kreatinphosphat-Spaltung
   - Sofort verfügbar, nur ca. 10 Sekunden
-- Anaerob-laktazid
+- anaerobe-laktazid
   - Glykolyse ohne O₂, erzeugt Laktat
   - Schnell verfügbar, mittlere Dauer
 - Aerob
@@ -671,10 +671,10 @@ W~PCr~
 ::: notes
 ATP = universeller Energieträger, muss ständig regeneriert werden über die 3 Energiebereitstellungswege
 
-- Anaerob-alaktazid
+- anaerobe-alaktazid
   - Kreatinphosphat-Spaltung
   - Sofort verfügbar, nur ca. 10 Sekunden
-- Anaerob-laktazid
+- anaerobe-laktazid
   - Glykolyse ohne O₂, erzeugt Laktat
   - Schnell verfügbar, mittlere Dauer
 - Aerob
@@ -688,7 +688,7 @@ ATP = universeller Energieträger, muss ständig regeneriert werden über die 3 
 Link: [Website/Energieumsatzberechnung](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Theoretischer_Hintergrund/Energieumsatzberechnung/index_Energieumsatzberechnung.html)
 :::
 
-## Aerobe Energiekomponente (W~Aerob~) {.show-logo auto-animate="true" auto-animate-duration="1.2" style="font-size: 0.85em"}
+## Aerobe Energiekomponente (W~Aerob~) {.show-logo auto-animate="true" auto-animate-duration="1.2" style="font-size: 0.82em"}
 
 :::::::::: {.columns style="display: flex; width: 100%;"}
 :::: {.column style="width: 75%; font-size: 0.85em; flex: 1 1 75%; min-width: 0;"}
@@ -727,7 +727,7 @@ $$
 Link: [Website/Aerobe Energiekomponente](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Theoretischer_Hintergrund/Energieumsatzberechnung/Aerobe_Energiebereitstellung.html)
 :::
 
-## Aerobe Energiekomponente (W~Aerob~) {.show-logo auto-animate="true" auto-animate-duration="1.2" style="font-size: 0.85em"}
+## Aerobe Energiekomponente (W~Aerob~) {.show-logo auto-animate="true" auto-animate-duration="1.2" style="font-size: 0.82em"}
 
 ::::::::::: {.columns style="display: flex; width: 100%;"}
 ::::: {.column style="width: 75%; font-size: 0.85em; flex: 1 1 75%; min-width: 0;"}
@@ -788,7 +788,7 @@ $$
 Link: [Website/Aerobe Energiekomponente](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Theoretischer_Hintergrund/Energieumsatzberechnung/Aerobe_Energiebereitstellung.html)
 :::
 
-## Anaerobe-laktazide Energiekomponente (W~BLC~) {.show-logo auto-animate="true" auto-animate-duration="1.2" style="font-size: 0.85em"}
+## Anaerobe-laktazide Energiekomponente (W~BLC~) {.show-logo auto-animate="true" auto-animate-duration="1.2" style="font-size: 0.82em"}
 
 ::::::::: {.columns style="display: flex; width: 100%;"}
 ::: {.column style="width: 75%; font-size: 0.85em; flex: 1 1 75%; min-width: 0;"}
@@ -832,7 +832,7 @@ $$
 Link: [Website/Anaerobe- laktazide Energiekomponente](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Theoretischer_Hintergrund/Energieumsatzberechnung/Anaerobe_laktazide_Energiebereitstellung.html)
 :::
 
-## Anaerob-alaktazide Energiekomponente (W~PCr~) {.show-logo auto-animate="true" auto-animate-duration="1.2" style="font-size: 0.85em"}
+## Anaerobe-alaktazide Energiekomponente (W~PCr~) {.show-logo auto-animate="true" auto-animate-duration="1.2" style="font-size: 0.82em"}
 
 ::::::::: {.columns style="display: flex; width: 100%;"}
 ::: {.column style="width: 75%; font-size: 0.80em; flex: 1 1 75%; min-width: 0;"}
@@ -862,7 +862,7 @@ Link: [Website/Anaerobe- laktazide Energiekomponente](https://jjrw96.github.io/W
 Link: [Website/Anaerobe- alaktazide Energiekomponente](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Theoretischer_Hintergrund/Energieumsatzberechnung/Anaerobe_alaktazide_Energiebereitstellung.html)
 :::
 
-## Anaerob-alaktazide Energiekomponente (W~PCr~) {.show-logo auto-animate="true" auto-animate-duration="1.2" style="font-size: 0.85em"}
+## Anaerobe-alaktazide Energiekomponente (W~PCr~) {.show-logo auto-animate="true" auto-animate-duration="1.2" style="font-size: 0.82em"}
 
 :::::::::: {.columns style="display: flex; width: 100%;"}
 :::: {.column style="width: 75%; font-size: 0.85em; flex: 1 1 75%; min-width: 0;"}
@@ -916,7 +916,7 @@ $$
 Link: [Website/Anaerobe- alaktazide Energiekomponente](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Theoretischer_Hintergrund/Energieumsatzberechnung/Anaerobe_alaktazide_Energiebereitstellung.html)
 :::
 
-## Anaerob-alaktazide Energiekomponente (W~PCr~) {.show-logo style="font-size: 0.85em"}
+## Anaerobe-alaktazide Energiekomponente (W~PCr~) {.show-logo style="font-size: 0.85em"}
 
 :::::::::: {.columns style="display: flex; width: 100%;"}
 :::: {.column style="width: 75%; font-size: 0.85em; flex: 1 1 75%; min-width: 0;"}
@@ -968,7 +968,7 @@ $$
 Link: [Website/Anaerobe- alaktazide Energiekomponente](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Theoretischer_Hintergrund/Energieumsatzberechnung/Anaerobe_alaktazide_Energiebereitstellung.html)
 :::
 
-## Anaerob-alaktazide Energiekomponente (W~PCr~) {.show-logo style="font-size: 0.85em"}
+## Anaerobe-alaktazide Energiekomponente (W~PCr~) {.show-logo style="font-size: 0.85em"}
 
 :::::::::: {.columns style="display: flex; width: 100%;"}
 :::: {.column style="width: 75%; font-size: 0.85em; flex: 1 1 75%; min-width: 0;"}
@@ -1092,9 +1092,9 @@ Link: [Website/Mechanische Arbeit](https://jjrw96.github.io/Wirkungsgrad-Rad.git
 
 ## Innere Arbeit (W~Int~) {.show-logo style="font-size: 0.85em"}
 
-- Beschreibt die energetischen Aufwendungen für die Bewegung der unteren Extremitäten zur Aufrechterhaltung der zyklischen Tretbewegung
-- Segmente der unteren Extremitäten bewegen sich entlang eines spezifischen Pfades
-- Aus physikalischer Perspektive entsteht dabei keine Nettoarbeit
+-   Beschreibt die energetischen Aufwendungen für die Bewegung der unteren Extremitäten zur Aufrechterhaltung der zyklischen Tretbewegung
+-   Segmente der unteren Extremitäten bewegen sich entlang eines spezifischen Pfades
+-   Aus physikalischer Perspektive entsteht dabei keine Nettoarbeit
 
 ::::: columns
 ::: {.column style="width: 75%;"}
@@ -1110,9 +1110,9 @@ Link: [Website/Mechanische Arbeit](https://jjrw96.github.io/Wirkungsgrad-Rad.git
 Link: [Website/Innere Arbeit](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Theoretischer_Hintergrund/Innere_Arbeit.html)
 :::
 
-## Innere Arbeit {.show-logo style="font-size: 0.85em"}
+## Innere Arbeit (W~Int~) {.show-logo style="font-size: 0.85em"}
 
--   Die innere Arbeit (W~Int~) beschreibt die energetischen Aufwendungen für die Bewegung der unteren Extremitäten zur Aufrechterhaltung der zyklischen Tretbewegung
+-   Beschreibt die energetischen Aufwendungen für die Bewegung der unteren Extremitäten zur Aufrechterhaltung der zyklischen Tretbewegung
 -   Segmente der unteren Extremitäten bewegen sich entlang eines spezifischen Pfades
 -   Aus physikalischer Perspektive entsteht dabei keine Nettoarbeit
 
@@ -1173,6 +1173,16 @@ Link: [Website/Innere Arbeit](https://jjrw96.github.io/Wirkungsgrad-Rad.github.i
 ::: {style="margin-top: -1.5em;"}
 ![](images/Innere%20Arbeit/p_Int_Modell_Zyklus_positiv.png){height="320px"}
 :::
+
+::: footer
+Link: [Website/Innere Arbeit](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Theoretischer_Hintergrund/Innere_Arbeit.html)
+:::
+
+## Innere Arbeit (W~Int~) {.show-logo style="font-size: 0.85em"}
+
+![](images/Innere Arbeit/P_Int.png){}
+
+
 
 ::: footer
 Link: [Website/Innere Arbeit](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Theoretischer_Hintergrund/Innere_Arbeit.html)
@@ -2284,86 +2294,83 @@ Link: [Website/Innere Arbeit - Winter (1979)](https://jjrw96.github.io/Wirkungsg
 :::
 
 
-## Aktuelle Forschungslücken {.show-logo}
+## Forschungsstand {.show-logo style="font-size: 0.80em"}
 
--   Forschungsstand:
-    -   Meiste Studien nur in sitzender Position
-    -   22-34% der Bergauf-Zeit im Stehen
-    -   Hohe praktische Relevanz, aber wenig systematische Forschung
--   Bisherige Wirkungsgradanalysen:
-    -   Fokus auf η~Brutto~ und η~Netto~
-    -   Keine Berücksichtigung innerer Arbeit
-    -   η~muskulär~ bisher nicht im Stehen untersucht
--   Forschungslücke:
-    -   Systematischer Vergleich η~muskulär~ Sitzen vs. Stehen
-    -   Einfluss von Trittfrequenz und Intensität
-    -   Integration innerer Arbeit beim Stehen
+::: {style="font-size: 0.92em"}
+- Großteil der Wirkungsgradbestimmungen primär in sitzender Position
 
-::: notes
--   Wirkungsgrad im Stehen wenig erforscht
--   Bisherige Parameter unvollständig
--   Hohe praktische Bedeutung
+**Bisherige vergleichende Wirkungsgradbestimmungen:** 
+
+- Bruttowirkungsgrad:
+    - Millet et al. (2002): Sitzen 22.4% vs. Stehen 22.5% 
+    - Bouillod & Pinot (2014): Sitzen 20.6% vs. Stehen 21.5% (signifikant)
+    - Carlsson et al. (2024): Sitzen 21.3% vs. Stehen 21.3% vs. alternierend 21.0% 
+    
+- Nettowirkungsgrad:
+    - Harnish et al. (2007):
+        - Bei 50% P~max~: Sitzen 24.2% vs. Stehen 25.1%
+        - Bei 65% P~max~: Sitzen 25.2% vs. Stehen 25.7%
+        - Bei 75% P~max~: Sitzen 26.0% vs. Stehen 26.7%
+        - Intensitätsabhängiger Anstieg + signifikanten Positionsunterschiede
+    
 :::
+::: notes
 
--   Methodische Limitationen:
-    -   Unvollständige Energieumsatzbestimmung
-        -   Meist nur Sauerstoffaufnahme gemessen
-        -   Anaerobe Komponenten vernachlässigt
--   Position-spezifische Defizite:
-    -   Innere Arbeit im Stehen unerforscht
-    -   Komplexere Bewegungsmuster nicht berücksichtigt
-    -   Fehlende η~muskulär~ Vergleiche Sitzen/Stehen
--   Vergleichbarkeit erschwert durch:
-    -   Verschiedene Intensitäten/Protokolle
-    -   Unterschiedliche Trittfrequenzen
-    -   Uneinheitliche Berechnungsmethoden
+:::
 
 ::: footer
 Link: [Website/Radfahren im Sitzen und Stehen](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Theoretischer_Hintergrund/Sitzen_Stehen.html)
 :::
 
-## Forschungsbedarf {.show-logo}
+## Forschungsfrage {.show-logo style="font-size: 0.85em"}
 
--   Systematische Untersuchung von η~muskulär~:
-    -   Vergleich Sitzen vs. Stehen
-    -   Bei verschiedenen Intensitäten
-    -   Mit unterschiedlichen Trittfrequenzen
--   Methodische Verbesserungen:
-    -   Vollständige Energieumsatzerfassung
-    -   Standardisierte Messverfahren
-    -   Berücksichtigung der inneren Arbeit
--   Ziel: Besseres Verständnis der Effizienzunterschiede zwischen den Körperpositionen beim Radfahren
+- Fokus in der Literatur auf η~Brutto~ und η~Netto~
+    - Keine Integration anaerober Energieanteile
+    - Vernachlässigung der inneren Arbeit im Stehen → Drehzahlabhängigkeit
 
-::: footer
-Link: [Website/Radfahren im Sitzen und Stehen](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Forschungsfragen_Hypothesen.html)
+**Keine empirischen Untersuchungen, die den η~muskulär~ zwischen sitzender und stehender Fahrposition systematisch vergleichen**
+
+<br>
+
+::: {.fragment}
+**Forschungsfrage:**<br>*Wie unterscheidet sich der muskuläre Wirkungsgrad zwischen sitzender und stehender Position bei verschiedenen Intensitäten?*
 :::
 
-## Forschungsfrage {.show-logo}
+        
+::: notes
 
-Kernfrage: - Wie unterscheidet sich der muskuläre Wirkungsgrad (η~muskulär~) zwischen: - Sitzender vs. stehender Position - Bei verschiedenen Intensitäten (leicht/moderat/schwer)
-
-Begründung: - Bisherige Studien nur η~brutto~ und η~netto~ - Keine systematische Untersuchung von η~muskulär~ - Fehlende Berücksichtigung der inneren Arbeit im Stehen - Unvollständige Energieumsatzerfassung
-
-::: footer
-Link: [Website/Radfahren im Sitzen und Stehen](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Forschungsfragen_Hypothesen.html)
 :::
 
-## Hypothese {.show-logo}
+::: footer
+Link: [Website/Forschungsfragen & Hypothesen](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Forschungsfragen_Hypothesen.html)
+:::
 
-Haupthypothese: - Intensitätsabhängige Unterschiede zwischen den Positionen - Leichte Intensität: Signifikante Unterschiede - Moderate/Schwere Intensität: Keine signifikanten Unterschiede
+## Hypothese {.show-logo style="font-size: 0.85em"}
 
-Explorative Analysen: - Vergleich verschiedener Wirkungsgrade - η~Total~, η~Netto~, η~Brutto~, η~Arbeit~ - Analyse der Energiekomponenten - Mechanische vs. physiologische Energie - Positionsvergleich unabhängig von Intensität
+::: {style="font-size: 0.70em; text-align: justify"}
+*"Es wird erwartet, dass die Unterschiede des muskulären Wirkungsgrades zwischen den Fahrpositionen intensitätsabhängig sind. Die Annahme ist, dass sich bei leichter Belastungsintensität der muskuläre Wirkungsgrad signifikant zwischen sitzender und stehender Position unterscheidet, während bei moderater und schwerer Intensität keine signifikanten Unterschiede des muskulären Wirkungsgrades zwischen den Fahrpositionen vermutet werden."*
+::: 
+
+<br>
+
+-   **H~0~**: Der muskuläre Wirkungsgrad (η~muskulär~) unterscheidet sich in keiner Intensitätsstufe signifikant zwischen sitzender und stehender Fahrposition.<br>➙ η~muskulär,sitzen~ = η~muskulär,stehen~
+-   **H~1~**: Der muskuläre Wirkungsgrad (η~muskulär~) unterscheidet sich in mindestens einer Intensitätsstufe signifikant zwischen sitzender und stehender Fahrposition.<br>➙ η~muskulär,sitzen~ ≠ η~muskulär,stehen~
 
 ::: footer
-Link: [Website/Radfahren im Sitzen und Stehen](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Forschungsfragen_Hypothesen.html)
+Link: [Website/Forschungsfragen & Hypothesen](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Forschungsfragen_Hypothesen.html)
 :::
 
 ## Methodik: Einschlusskriterien & Stichprobe {.show-logo style="font-size: 0.85em"}
+
+::: {style="font-size: 0.95em"}
 
 -   Insgesamt 24 Testpersonen\
 -   11 erfüllten die Einschlusskriterien → $\dot{V}O_{2,max}$ \> 65 \[ml·min^-1^\]
 -   9 Testpersonen: (2 Frauen \| 7 Männer)
 -   $\dot{V}O_{2,max}$ = 3900 - 6181 \[ml·min^-1^\] \| $\dot{V}O_{2,max,relativ}$ = 67.8 - 81.3 \[ml·min^-1^·kg^-1^\]
+
+:::
+
 
 ```{r}
 #| warning: false
@@ -2385,7 +2392,7 @@ Link: [Website/Stichprobe](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/M
 ## Methodik: Messmethoden {.show-logo style="font-size: 0.85em"}
 
 ::: {style="font-size: 0.78em"}
--   **Anthropometrische Messungen:** Körpermasse, Körperlänge, Umfang & Durchmesser der Gleidmaßen
+-   **Anthropometrische Messungen:** Körpermasse, Körperlänge, Umfang & Durchmesser der Gliedmaßen
 -   **Fahrradergometer:** Lode - Excalibur Sport
 -   **Atemgasanalyse:** Cortex - MetaMax 3B
 -   **Blutlaktatanalysegerät:** EKF diagnostic- Biosen S-Line Lab+
@@ -2509,6 +2516,9 @@ Link: [Website/Studiendesign](https://jjrw96.github.io/Wirkungsgrad-Rad.github.i
     -   Signifikanzniveau: α = .05 (\*\*\* p \< .001, \*\* p \< .01, \* p \< .05)
 :::
 
+::: footer 
+Link: [Website/Statistische Analyseverfahren](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Methodik/Statistische_Analyseverfahren.html)
+:::
 
 ## Ergebnisse: Bedingungen {.show-logo style="font-size: 0.85em"}
 
@@ -2654,67 +2664,110 @@ Link: [Website/Wirkungsgrad- und Stoffwechselparameter](https://jjrw96.github.io
 Link: [Website/Wirkungsgrad- und Stoffwechselparameter](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Ergebnisse/Wirkungsgrad_Statistik.html)
 :::
 
-## Diskussion: Besprechung der Ergebnisse {.show-logo style="font-size: 0.85em"}
+## Einordnung der Ergebnisse {.show-logo style="font-size: 0.85em"}
 
--   Hypothesen:
-    -   H0 für leichte Intensität widerlegt
-    -   Signifikante Interaktion: Position × Intensität (p = .003)
--   Intensitätsabhängige Unterschiede:
-    -   Leicht: Signifikant höherer η~muskulär~ im Sitzen (p = .011)
-    -   Moderat/Schwer: Keine signifikanten Unterschiede
-    -   Systematische Angleichung mit steigender Intensität
--   Ursachenanalyse:
-    -   Signifikant höhere W~Int~ im Sitzen
-    -   Unterschiedliche Trittraten (Sitzen: 89 vs. Stehen: 70 U·min^-1^)
-    -   η~Total~ ohne W~Int~ zeigt keine Positionsunterschiede
+::: center
+$$
+\scriptsize
+\text{η}_{muskulär} = \frac{\text{W}_{mech} + \text{W}_{Int}}{\text{W}_{Aerob} + \text{W}_{BLC} + \text{W}_{PCr} - \text{W}_{Ruhe}}
+$$
+:::
+
+
+::: {style="font-size: 0.95em"}
+- Keine signifikanten Unterschiede in metabolischer Arbeit (W~TOT~, W~Aerob~, W~PCr~, W~BLC~)
+- Signifikant höhere mechanische Arbeit (W~mech~) im Stehen
+- Signifikant höhere innere Leistung (P~Int~) im Sitzen → Kubische Drehzahlabhängigkeit 
+- Signifikant höhere externe Gesamtarbeit (W~Tot~) im Sitzen
+:::
+
+
+
+![](./images/Tabelle_ANOVA_Diskussion.png){}
+
 
 ::: notes
--   Bestätigung der intensitätsabhängigen Beziehung
--   W~Int~ im Stehen möglicherweise unterschätzt
--   Physiologische Parameter sonst vergleichbar
+- Bestätigung der intensitätsabhängigen Beziehung
+- Physiologische Parameter sonst vergleichbar
 :::
 
 ::: footer
 Link: [Website/Diskussion](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Diskussion.html)
 :::
 
-## Diskussion: Praktische Relevanz {.show-logo style="font-size: 0.85em"}
+## Einordnung der Ergebnisse {.show-logo style="font-size: 0.85em"}
+
+::: {style="font-size: 0.95em"}
+→ Unterschiede von η~muskulär~ wahrscheinlich durch P~Int~-Berechnung bedingt <br>
+→ η~total~ zeigt keine signifikanten Positionsunterschiede <br>
+→ Trotz unterschiedlicher Trittraten sollten P~Int~-Werte vergleichbar sein
+:::
+<br>
+
+**Validität der P~Int~-Berechnung:**
+
+::: {style="margin-top: -0.5em;"}
+- Im Sitzen: Bestätigung durch Literaturwerte (Hansen et al., 2004)
+- Im Stehen: 
+    - Keine Referenzwerte verfügbar
+    - Wahrscheinlich methodisch bedingte Unterschätzung
+    - Nach Winter-Berechnungsmethode sind P~Int~-Werte im Stehen deutlich höher
+    - Notwendigkeit einer methodischen Überarbeitung
+
+:::
+
+::: notes
+- Vergleichbarkeit der Gesamtarbeit:
+- Keine signifikanten Unterschiede in η~total~ und η~Brutto~, η~Netto~
+- Vergleichbarer physiologischer Gesamtenergieumsatz
+:::
+
+::: footer
+Link: [Website/Diskussion](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Diskussion.html)
+:::
+
+## Praktische Relevanz {.show-logo style="font-size: 0.85em"}
 
 -   Stehen als valide Alternative zum Sitzen:
     -   Vergleichbare Wirkungsgrade (außer η~muskulär~)
     -   Ermöglicht Variation der Muskelbelastung
-    -   Tendenziell sogar minimal höhere Werte im Stehen
--   Praxisempfehlungen:
-    -   Vorzugsweise bei steilen Anstiegen
-    -   Bei niedrigen Geschwindigkeiten
+    -   Tendenziell minimal höhere η-Werte im Stehen
+    
+<br>
+
+-  Praxisempfehlungen:
     -   Für kurzzeitige Maximalleistungen
-    -   Berücksichtigung erhöhter Luftwiderstand
+    -   Bei niedrigen Geschwindigkeiten → Luftwiderstand ↑
+    -   Vorzugsweise bei steilen Anstiegen
 
 ::: notes
--   Laborwerte nicht 1:1 übertragbar
--   Mehr Freiheitsgrade auf realem Rad
--   Luftwiderstand als limitierender Faktor
+
 :::
 
 ::: footer
 Link: [Website/Diskussion](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Diskussion.html)
 :::
 
-## Diskussion: Methodenkritik & Limitationen {.show-logo style="font-size: 0.85em"}
+## Methodenkritik & Limitationen {.show-logo style="font-size: 0.85em"}
 
--   Stichprobe:
-    -   Geringe Größe (n=9)
-    -   Unausgewogenes Geschlechterverhältnis
-    -   Eingeschränkte statistische Power
--   Methodische Aspekte:
-    -   Überschätzte ventilatorische Schwellen
-    -   "Leichte" Intensität zu hoch (73% VO~2max~)
-    -   Kurze Erholungszeiten (10 min)
-    -   Aktive statt passive Nachbelastung
--   W~Int~-Berechnung im Stehen:
-    -   Möglicherweise unterschätzt
-    -   Modell bedarf Optimierung
-    -   Fehlende Validierung
+::: {style="font-size: 0.91em"}
+
+Stichprobe:
+
+-   Geringe Stichprobengröße (N=9)
+-   Unausgewogenes Geschlechterverhältnis
+-   Eingeschränkte statistische Power
+
+Methodische Aspekte:
+
+-   Laborwerte nicht 1:1 übertragbar mehr → laterale Freiheitsgrade in der Praxis
+-   Überschätzte ventilatorische Schwellen
+-   "Leichte" Intensität zu hoch (73% VO~2max~)
+-   Kurze Erholungszeiten (10 min)
+-   Aktive statt passive Nachbelastung 
+-   Trittrate während Nachbelastung nicht kontrolliert
+
+:::
 
 ::: notes
 -   Eingeschränkte Generalisierbarkeit
@@ -2726,27 +2779,77 @@ Link: [Website/Diskussion](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/D
 Link: [Website/Diskussion](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Diskussion.html)
 :::
 
-## Diskussion: Ausblick {.show-logo style="font-size: 0.85em"}
+## Ausblick {.show-logo style="font-size: 0.85em"}
 
--   Methodische Verbesserungen:
-    -   Größere, ausgewogene Stichprobe
-    -   Optimierte Intensitätsabstufung
-    -   Längere Erholungsphasen
-    -   Passive Nachbelastungsphasen
--   W~Int~-Modellierung:
-    -   Alternative Berechnungsansätze
-    -   Validierung durch P~TOT~-Vergleiche
-    -   Integration von Lenker-/Sattelkräften
-    -   Individuelle Segmentparameter
--   Weitere Forschungsaspekte:
-    -   Torque Efficiency & negative Leistung
-    -   Ermüdungseffekte bei Leistungsspitzen
-    -   Wärmeenergieanteil & -messung
+
+
+:::::: columns
+::: {.column width="65%"}
+::: {style="font-size: 0.91em"}
+**Verbesserte P~Int~-Modellierung:**
+
+::: {style="margin-top: -0.5em;"}
+- Alternative Berechnungsansätze:
+    - Validierung durch Vergleiche bei definierten externen Gesamtleistungen $P_{TOT} = P_{mech} + P_{Int}$
+    - Extrapolation über $\Delta\dot{V}O_{2,\text{unloaded}}$ durch absolvieren mehrere Leistungsstufen bei konstanter Trittrate
+- Integration von Zusatzmessungen für das HAT-Segment:
+    - Messung von Lenkerkräften zur Massenverteilungsbestimmung
+    - Erfassung der Oberkörperoszillationen
+    - Berücksichtigung der isometrischen Haltearbeit
+- Optimierung der Segmentparameter:
+    - Individuelle bildgebende Verfahren
+    - Präzise anthropometrische Messungen
+    
+:::
+:::
+:::
+
+::: {.column width="35%"}
+
+![](images/Innere Arbeit/Hintzy-Cloutier_linear.png){}
+
+::: {style="text-align: center"}
+![](images/Innere Arbeit/kinematik_stehen_HAT_cropped.gif){style="max-height: 260px; width: auto"}
+:::
+
+
+
+:::
+::::::
+
 
 ::: notes
--   Fokus auf Methodenverbesserung
--   W~Int~-Modell als Kernthema
--   Neue Forschungsansätze identifiziert
+:::
+
+::: footer
+Link: [Website/Diskussion](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Diskussion.html)
+:::
+
+## Ausblick {.show-logo style="font-size: 0.85em"}
+
+::::: {.columns}
+::: {.column width="65%"}
+::: {style="font-size: 0.92em"}
+**Weitere Forschungsaspekte:**
+
+- Torque Efficiency & negative Leistung:
+    - Zusammenhang mit Wirkungsgraden
+- Ermüdungseffekte bei Leistungsspitzen:
+    - Pedal Smoothness 
+    - Neuromuskuläre Ermüdung
+- Wärmeenergieanteil & -messung:
+    - Validierung der Wirkungsgradberechnungen
+    - Direkte Wirkungsgradbestimmung
+    
+:::
+:::
+
+::: {.column width="35%"}
+![](images/Torque_Efficiency_Kreis.png){}
+:::
+:::::
+
+::: notes
 :::
 
 ::: footer
