@@ -134,7 +134,7 @@ Link: [Website/Anaerobe-alaktazide Energiebereitstellung](https://jjrw96.github.
   - Messbare externe mechanische Leistung 
   - Messbaren metabolischen Energieumsatz
 - Forschungsschwerpunkt auf sitzender Position
-- Stehende Position trotz praktischer Relevanz wenig untersucht:
+- Stehende Position trotz praktischer Relevanz wenig untersucht
   - 22-34% der Fahrtzeit bei Bergaufzeitfahren im Stehen (Steigung 5-7%)
 
 ::: {.fragment}
@@ -150,6 +150,10 @@ Link: [Website/Anaerobe-alaktazide Energiebereitstellung](https://jjrw96.github.
 ![](images/Innere%20Arbeit/kinematik_stehen_cropped.gif){style="height: 240px; margin-bottom: 20px;"}
 :::
 ::::::
+
+::: notes
+- Bergaufzeitfahren Bouillod & Grappe (2018b) und Harnish et al. (2007)
+:::
 
 ::: footer
 Link: [Website/Radfahren im Sitzen und Stehen](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Theoretischer_Hintergrund/Sitzen_Stehen.html)
@@ -186,7 +190,6 @@ Link: [Website/Radfahren im Sitzen und Stehen](https://jjrw96.github.io/Wirkungs
 ::::::
 
 ::: notes
--   Bergaufzeitfahren Bouillod & Grappe (2018b) und Harnish et al. (2007)
 -   Muskelaktivierung: (Arkesteijn et al., 2016; Berkemeier et al., 2020; Kistemaker et al., 2023; Li & Caldwell, 1998)
 -   Komplexe biomechanische Änderungen
 -   Differenzierte Muskelaktivierung
@@ -221,11 +224,8 @@ Link: [Website/Radfahren im Sitzen und Stehen](https://jjrw96.github.io/Wirkungs
 
 ::: notes
 -   Höhere Kurzzeitleistung im Stehen möglich (+26%) (Millet et al., 2002)
--   Submaximal (<80% $\dot{V}O_{2,max}$): Erhöhte metabolsche Beanspruchung im Stehen (Ryschon & Stray-Gundersen, 1991; Tanaka et al., 1996)
--   Hochintensiv (>80% $\dot{V}O_{2,max}$): Angleichung zwischen den Positionen (Hansen & Waldeland, 2008; Tanaka et al., 1996)
--   Komplexe biomechanische Änderungen
--   Differenzierte Muskelaktivierung
--   Leistungsvorteile bei hoher Intensität
+-   Submaximal (<80% $\dot{V}O_{2,max}$) -> (Ryschon & Stray-Gundersen, 1991; Tanaka et al., 1996)
+-   Hochintensiv (>80% $\dot{V}O_{2,max}$) -> (Hansen & Waldeland, 2008; Tanaka et al., 1996)
 :::
 
 ::: footer
@@ -294,15 +294,14 @@ Mechanische + Innere Arbeit
 ::: notes
 -   Ein bedeutender Teil dieser Wärme entsteht durch Reibungsprozesse
 
-ATP = universeller Energieträger, muss ständig regeneriert werden über die 3 Energiebereitstellungswege
-
-- anaerobe-alaktazid
+ATP = universeller Energieträger, muss ständig regeneriert werden
+1. anaerobe-alaktazid
   - Kreatinphosphat-Spaltung
   - Sofort verfügbar, nur ca. 10 Sekunden
-- anaerobe-laktazid
-  - Glykolyse ohne O₂, erzeugt Laktat
+2. anaerobe-laktazid
+  - Glykolyse ohne O~2~ -> erzeugt Laktat
   - Schnell verfügbar, mittlere Dauer
-- Aerob
+3. Aerob
   - Verstoffwechselung mit O~2~ (Kohlenhydrate/Fette)
   - Langsam verfügbar, lange Dauer
   - Hauptenergiequelle bei langen Belastungen
@@ -363,15 +362,14 @@ Link: [Website/Wirkungsgrad](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io
 :::
 
 ::: notes
-ATP = universeller Energieträger, muss ständig regeneriert werden über die 3 Energiebereitstellungswege
-
-- anaerobe-alaktazid
+ATP = universeller Energieträger, muss ständig regeneriert werden
+1. anaerobe-alaktazid
   - Kreatinphosphat-Spaltung
   - Sofort verfügbar, nur ca. 10 Sekunden
-- anaerobe-laktazid
-  - Glykolyse ohne O₂, erzeugt Laktat
+2. anaerobe-laktazid
+  - Glykolyse ohne O~2~ -> erzeugt Laktat
   - Schnell verfügbar, mittlere Dauer
-- Aerob
+3. Aerob
   - Verstoffwechselung mit O~2~ (Kohlenhydrate/Fette)
   - Langsam verfügbar, lange Dauer
   - Hauptenergiequelle bei langen Belastungen
@@ -492,6 +490,20 @@ Mechanische Arbeit
 ? %
 :::
 ::::::::::::::
+
+::: notes
+ATP = universeller Energieträger, muss ständig regeneriert werden
+1. anaerobe-alaktazid
+  - Kreatinphosphat-Spaltung
+  - Sofort verfügbar, nur ca. 10 Sekunden
+2. anaerobe-laktazid
+  - Glykolyse ohne O~2~ -> erzeugt Laktat
+  - Schnell verfügbar, mittlere Dauer
+3. Aerob
+  - Verstoffwechselung mit O~2~ (Kohlenhydrate/Fette)
+  - Langsam verfügbar, lange Dauer
+  - Hauptenergiequelle bei langen Belastungen
+:::
 
 ::: footer
 Link: [Website/Wirkungsgrad](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Theoretischer_Hintergrund/Wirkungsgrad_Theorie.html)
@@ -825,6 +837,7 @@ $$
 
 ::: notes
 -   Sauerstoff-Laktat-Äquivalent: 3.0 \[ml O~2~·kg^-1^·mmol^-1^·l\]
+    - Menge O~2~ um ein mmol Laktat abzubauen   
 -   Kalorisches Äquivalent für Kohlenhydrate (kÄ~KH~): 21.131 \[kJ·l^-1^ O~2~\] bei RQ = 1.0
 :::
 
@@ -875,7 +888,7 @@ $$
 $$
 :::
 
-1.  Bestimmung von $\tau$ zur Abgrenzung der Komponenten
+1.  Bestimmung von $\tau$ zur zeitlichen Abgrenzung der Komponenten
 
 ::: {style="margin-top: -1.3em;"}
 $$
@@ -916,7 +929,7 @@ $$
 Link: [Website/Anaerobe- alaktazide Energiekomponente](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Theoretischer_Hintergrund/Energieumsatzberechnung/Anaerobe_alaktazide_Energiebereitstellung.html)
 :::
 
-## Anaerobe-alaktazide Energiekomponente (W~PCr~) {.show-logo style="font-size: 0.85em"}
+## Anaerobe-alaktazide Energiekomponente (W~PCr~) {.show-logo auto-animate="true" auto-animate-duration="1.2" style="font-size: 0.82em"}
 
 :::::::::: {.columns style="display: flex; width: 100%;"}
 :::: {.column style="width: 75%; font-size: 0.85em; flex: 1 1 75%; min-width: 0;"}
@@ -968,7 +981,7 @@ $$
 Link: [Website/Anaerobe- alaktazide Energiekomponente](https://jjrw96.github.io/Wirkungsgrad-Rad.github.io/Theoretischer_Hintergrund/Energieumsatzberechnung/Anaerobe_alaktazide_Energiebereitstellung.html)
 :::
 
-## Anaerobe-alaktazide Energiekomponente (W~PCr~) {.show-logo style="font-size: 0.85em"}
+## Anaerobe-alaktazide Energiekomponente (W~PCr~) {.show-logo auto-animate="true" auto-animate-duration="1.2" style="font-size: 0.82em"}
 
 :::::::::: {.columns style="display: flex; width: 100%;"}
 :::: {.column style="width: 75%; font-size: 0.85em; flex: 1 1 75%; min-width: 0;"}
